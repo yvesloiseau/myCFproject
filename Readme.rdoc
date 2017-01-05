@@ -1,0 +1,2 @@
+This is my first server side application using Rails, Git and GitHub products.
+I'm an experience IT person, did a lot of development, analysis and project leading in my career so far.
