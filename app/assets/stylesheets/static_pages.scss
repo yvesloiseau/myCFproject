@@ -1,3 +1,230 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+nav {
+
+//	div.navbar-collapse.collapse
+//	,
+//	nav.navbar.navbar-inverse.navbar-static-top.navbar-fixed-top
+//	,
+//	.navbar-inverse,
+//	.navbar-default
+//		{
+//		background-color: #264553;
+//		}
+
+	.navbar-nav>li>a {
+	    line-height: 20px;
+	    font-size: 1.75em;
+	}
+
+ .navbar-nav>li>a {
+	    padding-top: 30px;
+	    padding-bottom: 20px;
+	}
+
+//	.navbar-inverse {
+//		background-color: #264553;
+//		}
+
+	div.projectName.navbar-brand {
+   padding-top: 10px;
+   padding-bottom: 25px;
+	}
+}
+
+	.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #b2d235; //#fff;
+    background-color: transparent;
+	}
+
+.navbar_custom {
+    background-color: #fff; //#9d9d9d; //#264553;
+    color: white; //#ffffff;
+    border-radius:0;
+}
+
+div.projectName.navbar-brand {
+//    padding-top: 15px;
+//    padding-bottom: 15px;
+  //  margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a.language {
+	float: right;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #264553; //#9d9d9d;
+}
+
+.chair_header {
+	width: 350px;
+	height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chair_footer {
+	width: 420px;
+	height: 40px;	
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3.chair_text {
+	width: 325px;
+	height: 40px;	
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgTwo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgAbout {
+  width: 300px;
+  height: 350px;
+  padding-left: 50px;
+}
+
+p {
+	font-size: 14px;
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.contact_email  {
+	display: inline-block;
+	width: 800px;
+}
+
+.about_page_indent {
+	padding-left: 15px;
+}
+
+.contact_page_indent {
+	padding-left: 5px;
+}
+
+// *****************************************************
+// *  Footer section rules                             *
+// *****************************************************
+
+.social-links li {
+	margin-right: 10px;
+ 	font-size: 20px;
+ 	list-style-type: none;
+	text-align: center;
+ 	display: inline;
+}
+
+footer {
+//   background-color: #005082;    // #404040; #F1F5F6  #404040
+//   color: white; //#FF9933;
+//   font-size: 22px;
+}
+
+footer {
+  clear: both;
+  width:100%;
+  margin-right:auto;
+  margin-left:auto;
+  padding:8px;
+  height:125px;
+  font-size: 22px;
+}
+
+// ******************************************************
+// *  Anchor tags and pages height                      *
+// ******************************************************
+.anchor_about {
+  padding-top: 75px;
+  }
+
+.anchor_contact {
+  padding-top: 5px;  //*30px;*/
+  padding-left: 1em; //*12px;*/
+  padding-right: 0px;
+	}
+
+.anchor_index {
+  padding-top: 90px;
+	}
+
+div#index.container-fluid.anchor_index {
+  height: 820px;
+	}
+
+div#about.container-fluid.work.anchor_about {
+  height: 690px;
+  max-height: 100%;
+	}
+
+div#contactus.container-fluid.anchor_contact {
+  height: 700px;
+	}
+
+// container-fluid contactc anchor_contact
+
+// ******************************************************
+// *  Topographic rules                                 *
+// ******************************************************
+
+h1,
+h2,
+h3 { font-family: Futura, Helvetica, Arial, sans-serif; }
+
+h1,h2 {
+	color: #5535D2; // #1158dc;
+}
+
+.email_bold {
+	color: #5535D2;
+}
+// ******************************************************
+// *  Footer rules                                      *
+// ******************************************************
+
+footer,
+footer h3 {
+	color: #254451 //#264553;
+}
+
+footer a {
+  color: #264553; //white;
+}
+
+footer {
+  background-color: #9d9d9d; //#264553; grey;  #101010; #809af3; 
+}
+
+ul.social-links {
+	padding: 0;
+}
+
+//  My logos colors:
+// #254553 or #254451
+// #b2d235 or b3d043
+
+// Other colors
+// #707070
+// #99cc00;
+// #fff
+
+
+

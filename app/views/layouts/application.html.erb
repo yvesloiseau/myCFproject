@@ -2,26 +2,101 @@
 <html>
   <head>
     <title>MyCFproject</title>
-    <%= csrf_meta_tags %>
+
+	<!-- Bootstrap CDN -->	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+	<!-- Bootstrap CDN -->	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Metatag for mobile applications -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+
   </head>
 
   <body>
-    <nav>
+<!--     <nav>
   <ul>
-    <li><a href="http://localhost:3000">Home</a></li>
+ --><!--     <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+ -->    
+<!--  	<li><a href="http://localhost:3000">Home</a></li>
     <li><a href="http://localhost:3000/static_pages/about">About</a></li>
-    <li><a href="http://localhost:3000/static_pages/contact">Contact</a></li>
+    <li><a href="http://localhost:3000/static_pages/contact">Contact</a></li> 
   </ul>
 	</nav>
+ -->
+	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top navbar_custom" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      </button>
+	      <div class="projectName navbar-brand">
+	        <a class="logoimg" href="http://localhost:3000">
+	        <%= image_tag("Logo_Interface_design_seul.png", size: "50x50", alt: "Edit Entry", class: "logoimg")%> 
+	        </a>
+	      </div> 
+	    </div> 
 
-<%= yield %>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav menu">
+	        <li><a href="http://localhost:3000/static_pages/about">About</a></li>
+	        <li><a href="http://localhost:3000/static_pages/contact">Contact</a></li>
+	      </ul>
 
-<footer>
-  &copy; 2015 Bike Berlin
-</footer>
+	      <ul class="nav navbar-nav menu pull-right">
+					<!-- French/English switch - Eventual pop-up window -->
+	        <!-- <li><a class="language pull-right" href="http://localhost:3000/French">FR</a></li> -->
+	       </ul>
+	      </div> 
+
+	  </div> 
+	</nav> <!-- end navbar-->
+
+
+
+	<%= yield %>
+
+	<footer>
+	  &copy; 2017 Interface Design Web
+	  <!-- Copyright div -->
+		<div class="container-fluid footerclass anchorfooter" id="footer">
+
+		  <div class="row" id="footerpage">
+		    <div class="col-xs-12 col-sm-6 col-md-4">
+		    <!-- <div class="col-md-4 col-xs-8"> -->
+		      <h3>My social links</h3>
+		      <ul class="social-links">
+		        <li>
+		        	<a href="http://linkedin.com/in/yves-loiseau-66980312" target="_blank">
+		        		<!-- <img src="img/LinkedIn.png" width="20px" height="20px"> -->
+				        <%= image_tag("LinkedIn.png", size: "20x20", alt: "Edit Entry")%> 
+		        	</a></li>
+		        <li>
+		        	<a href="https://twitter.com/interface_y" target="_blank">
+		        		<!-- <img src="img/social-twitter_v1.png" width="20px" height="20px"> -->
+				        <%= image_tag("social-twitter_v1.png", size: "20x20", alt: "Edit Entry")%> 
+	        		</a></li>
+		        <li>
+		        	<a href="https://www.facebook.com/InterfaceDesignweb"target="_blank">
+		        		<!-- <img src="img/Facebook.png" width="20px" height="20px"> -->
+				        <%= image_tag("Facebook.png", size: "20x20", alt: "Edit Entry")%> 
+	        		</a></li>
+		        </ul>
+		    </div>
+		  </div>
+		</div>
+	</footer>
 
   </body>
 </html>
