@@ -1,0 +1,25 @@
+<!-- *********************************************************************************************************** -->
+<!-- NEW PRODUCTS PAGE STARTS HERE                                                                          *******-->
+<!-- *********************************************************************************************************** -->
+<div class="container-fluid anchor_new" id="new">
+  <div class="row">
+    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+    	<div class="newProduct">
+
+				<h1>Create a new product</h1>
+
+				<%= render 'form', product: @product %>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Buttons to create a new product -->
+	<!-- Back to Product list -->
+	<%= button_to "Back", products_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+	<!-- Go back HOME-->
+	<%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+</div>

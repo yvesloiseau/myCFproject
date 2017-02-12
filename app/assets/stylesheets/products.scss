@@ -1,0 +1,192 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//  Product rules saved
+
+
+.anchor_product {
+  padding-top: 90px;
+	}
+
+.anchor_show {
+  padding-top: 90px;
+	}
+
+.anchor_edit {
+  padding-top: 90px;
+	}
+
+.anchor_new {
+  padding-top: 90px;
+	}
+
+div#product.container-fluid.anchor_product {
+  height: 675px;
+  max-width: 100%;
+  max-height: 100%;
+	}
+
+div#show.container-fluid.anchor_show {
+  height: 675px;
+  max-width: 100%;
+  max-height: 100%;
+	}	
+
+div#edit.container-fluid.anchor_edit {
+  height: 675px;
+  max-width: 100%;
+  max-height: 100%;
+	}	
+
+div#new.container-fluid.anchor_new {
+  height: 800px;
+  max-width: 100%;
+  max-height: 100%;
+	}	
+
+
+div.editProduct {
+	padding-left: 50px;
+}
+
+div.newProduct {
+	padding-left: 25px;
+}
+
+div.productFields {
+	margin-top: 100px;
+}
+
+th {
+	padding-right: 5px;
+//	padding-bottom: 19px;
+	font-size: 24px;
+	color: #5535D2;
+	clear: both;
+}
+
+td.productBorders {
+	border-style: solid;
+	border-width: 2px;
+	border-color: grey;
+}
+
+#product_name, #product_description, #product_prd_type, #product_brand, #product_price, #product_color, #product_image_url, #product_feature1, #product_feature2, #product_feature3 {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #5535D2;
+}
+
+textarea, input {
+	color: #264553;
+	font-size: 1.25em;
+}
+
+label {
+	font-weight: 900;
+}
+
+form.button_to, .inline {
+	display: inline;
+}
+
+.productName {
+	color: #5535D2;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th.paddingVertical {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+th.productActions {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+	padding-bottom: 31px;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-top: 9px;
+	margin-right: 10px;
+	font-size: 1em;
+}
+
+th.productActionsRemove {
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 33px;
+}
+
+
+.btn {
+	//color: red;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+}
+
+.glyphicon:hover { color:white; }
+.glyphicon { color:blue; }
+
+textarea#product_description {
+	width:  50%;          //34.72222222%;					// 500px;
+	height: 7.142857143em;  // 200px / 16px = 
+	//height: auto;
+}
+
+.actions {
+	display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+  background: none;
+}
+
+
+// ******************************************************
+// *  Topographic rules                                 *
+// ******************************************************
+
+.h1Products {
+	color: red;
+}
+
+.actions {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: normal;
+  background-color: #337ab7;
+  color: #fff;
+  border-color: #2e6da4;
+}
+
+div.actions input {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+	
+}
+
+.actions:hover,  div.actions input:hover {
+	background-color: #286090;
+}

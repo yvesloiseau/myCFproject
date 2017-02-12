@@ -1,0 +1,80 @@
+<!-- *********************************************************************************************************** -->
+<!-- PRODUCT PAGE STARTS HERE                                                                          *******-->
+<!-- *********************************************************************************************************** -->
+<div class="container-fluid anchor_product" id="product">
+  <div class="row">
+    <div class="col-md-12 col-xs-12"> <!-- col-md-4 col-xs-8 -->
+
+    <p id="notice"><%= notice %></p>
+
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<h1 class="h1Products">Products list</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name </th>
+      <th>Description </th>
+      <th>Type </th>
+      <th>Brand </th>
+      <th>Color </th>
+      <th>Price </th>
+      <th>Image</th>
+      <!-- <th>Feature1 </th> -->
+      <!-- <th>Feature2 </th> -->
+      <!-- <th>Feature3 </th> -->
+      <th class="paddingVertical"></th>
+      <th class="productActions">SHOW</th>
+      <th class="productActions">EDIT</th>
+      <th class="productActions productActionsRemove">REMOVE</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td class="productBorders"><%= product.name %></td>
+        <td class="productBorders"><%= product.description %></td>
+        <td class="productBorders"><%= product.prd_type %></td>
+        <td class="productBorders"><%= product.brand %></td>
+        <td class="productBorders"><%= product.color %></td>
+        <td class="productBorders"><%= product.price %></td>
+        <!-- <td><%= product.image_url %></td> -->
+        <!-- <td><%= product.feature1 %></td> -->
+        <!-- <td><%= product.feature2 %></td> -->
+        <!-- <td><%= product.feature3 %></td> -->
+        <td class="productBorders"> <a class="logoimg" href="/#"><%= image_tag(product.image_url, size: "50x50", alt: "Edit Entry", class: "logoimg")%></a></td>
+        <td><%= link_to product, class: "btn btn-default btn-circle" do %>
+          <span class="glyphicon glyphicon-ok"></span><% end %></td>  
+
+        <td><%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %>
+          <span class="glyphicon glyphicon-edit"></span><% end %></td>
+        <td><%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %>
+          <span class="glyphicon glyphicon-remove"></span><% end %></td>
+      </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<!-- Buttons to create a new product -->
+<!-- Create a new product -->
+<%= button_to "New product", new_product_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+<!-- Edit first product on the page -->
+<%= button_to "Edit first", edit_product_path(1), class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+<!-- Go back -->
+<%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+
+
+

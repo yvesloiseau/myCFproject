@@ -7,6 +7,13 @@ $primary-color: #333;
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  width: 100%;
+  margin: 0;
+}
+
+.container-fluid {
+//	padding-left: 7px;
+//	padding-right: 7px;
 }
 
 nav {
@@ -76,7 +83,7 @@ a.language {
 }
 
 .chair_footer {
-	width: 45%; //24.30555556%; // 350px;
+	width: 60%; //24.30555556%; // 350px;
 	height: 2.857142857em; // 40px;
 	height: auto;  
 //	width: 420px;
@@ -86,7 +93,7 @@ a.language {
 }
 
 h3.chair_text {
-	width: 325px;
+	width: 350px;
 	height: 40px;	
   margin-left: auto;
   margin-right: auto;
@@ -105,6 +112,7 @@ h3.chair_text {
 
 p {
 	font-size: 14px;
+	margin: 0;
 }
 
 .center {
@@ -164,6 +172,10 @@ p {
 	display: block;
 }
 
+p, ol, ul, td {
+	margin:0;
+}
+
 // *****************************************************
 // *  Footer section rules                             *
 // *****************************************************
@@ -185,6 +197,7 @@ footer {
 footer {
   clear: both;
   width:100%;
+  max-width: 100%;
   margin-right:auto;
   margin-left:auto;
   padding:8px;
@@ -248,6 +261,10 @@ h1,h2 {
 // *  Footer rules                                      *
 // ******************************************************
 
+footer {
+	margin-top: 30px;
+}
+
 footer,
 footer h3 {
 	color: #254451 //#264553;
@@ -273,6 +290,14 @@ ul.social-links {
 // #707070
 // #99cc00;
 // #fff
+
+//th {
+//	padding-right: 5px;
+//	padding-bottom: 17px;
+//	font-size: 24px;
+//	color: #5535D2;
+//	clear: both;
+//}
 
 /*****************************************************/
 /*  Min-width = 700px                               */
@@ -318,3 +343,6 @@ ul.social-links {
 	}
 
 }
+
+
+

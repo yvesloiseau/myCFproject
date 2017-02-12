@@ -1,0 +1,28 @@
+<!-- *********************************************************************************************************** -->
+<!-- EDIT PRODUCTS PAGE STARTS HERE                                                                          *******-->
+<!-- *********************************************************************************************************** -->
+<div class="container-fluid anchor_edit" id="edit">
+  <div class="row">
+    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+    	<div class="editProduct">
+
+				<h1>Editing Product: 	<%= @product.name %></h1>
+
+				<%= render 'form', product: @product %>
+
+		</div>
+	<%= link_to 'Show', @product %> |
+	<%= link_to 'Back', products_path %>
+	<!-- Buttons to create a new product -->
+
+	<!-- Show current product -->
+	<%= button_to "Show", @product, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+	<!-- Back to product list -->
+	<%= button_to "Back", products_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+	<!-- Go back Home-->
+	<%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+		</div>
+	</div>
+</div>
