@@ -21,7 +21,7 @@
 	}
 
 div#product.container-fluid.anchor_product {
-  height: 675px;
+  height: 1500px;
   max-width: 100%;
   max-height: 100%;
 	}
@@ -44,6 +44,15 @@ div#new.container-fluid.anchor_new {
   max-height: 100%;
 	}	
 
+.bagImage {
+	width: 100%; // 300px;
+	height: 25em;
+}
+
+.fullBagImage {
+	width: 65%; // 450px;
+	height: 32.14285714em;
+}
 
 div.editProduct {
 	padding-left: 50px;
@@ -57,21 +66,27 @@ div.productFields {
 	margin-top: 100px;
 }
 
-th {
-	padding-right: 5px;
-//	padding-bottom: 19px;
-	font-size: 24px;
-	color: #5535D2;
-	clear: both;
+div.textBox {
+	height: 10.71428571em; // 150px;
+	max-width: 100%;
+	margin-top: 10px;
+	font-size: 12px;
 }
 
-td.productBorders {
+div.productDetails {
+	height: 25%;
+	width: 100%;
+	padding: 5px;
+}
+
+.productRow {
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 	border-color: grey;
+	padding: 0;
 }
 
-#product_name, #product_description, #product_prd_type, #product_brand, #product_price, #product_color, #product_image_url, #product_feature1, #product_feature2, #product_feature3 {
+#product_name, #product_description, #product_product_type, #product_brand, #product_price, #product_color, #product_image_url, #product_top_size, #product_other_features, #product_number_of_pockets, #product_gender {
 	border-style: solid;
 	border-width: 2px;
 	border-color: #5535D2;
@@ -86,39 +101,29 @@ label {
 	font-weight: 900;
 }
 
-form.button_to, .inline {
+p.link_to, form.button_to, .inline {
 	display: inline;
 }
 
-.productName {
-	color: #5535D2;
-	width: 65%;
-	margin-left: auto;
+.productLinkButton {
+	width: 35%;
+	margin-left:auto;
 	margin-right: auto;
 }
 
-th.paddingVertical {
-	padding-left: 0px;
-	padding-right: 0px;
+.productPrice {
+	width: 35%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 15px;
 }
 
-th.productActions {
-	transform: rotate(90deg);
-	transform-origin: left top 0;
-	padding-bottom: 31px;
-	padding-right: 0px;
-	padding-left: 0px;
-	padding-top: 9px;
-	margin-right: 10px;
-	font-size: 1em;
+.productName {
+	//color: #5535D2;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-th.productActionsRemove {
-	padding-right: 0px;
-	padding-left: 0px;
-	padding-bottom: 33px;
-}
-
 
 .btn {
 	//color: red;
@@ -161,6 +166,51 @@ textarea#product_description {
 }
 
 
+.productIndexButtons {
+	clear: both;
+	margin-top: 25px;
+	padding-left: 10px;
+}
+
+//  th and td rules will be deleted once the old index page will not be used
+//  Currently: COUld be used as a miantenance page for the products
+
+th {
+	padding-right: 5px;
+//	padding-bottom: 19px;
+	font-size: 24px;
+	color: #5535D2;
+	clear: both;
+}
+
+td.productBorders {
+	border-style: solid;
+	border-width: 2px;
+	border-color: grey;
+}
+th.paddingVertical {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+th.productActions {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+	padding-bottom: 31px;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-top: 9px;
+	margin-right: 10px;
+	font-size: 1em;
+}
+
+th.productActionsRemove {
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 33px;
+}
+
+
 // ******************************************************
 // *  Topographic rules                                 *
 // ******************************************************
@@ -190,3 +240,459 @@ div.actions input {
 .actions:hover,  div.actions input:hover {
 	background-color: #286090;
 }
+
+div.textBox {
+	font-size: 12px;
+}
+
+/****************************************************************************************************/
+/* Breakpoints                                                                                      */
+/****************************************************************************************************/
+
+/*****************************************************/
+/*  Max-width = 1050px  up to 1400                   */
+/*****************************************************/
+@media (max-width: 1400px) {
+
+.anchor_product {
+	}
+
+	div#product.container-fluid.anchor_product {
+	  height: 1550px;
+	  max-width: 100%;
+	  max-height: 100%;
+	}
+
+	.fullBagImage {
+		width: 80%; // 450px;
+		height: 31em;
+	}
+
+	.bagImage {
+		width: 90%; // 300px;
+		height: 27em;
+	}
+
+.productName {
+	width: 75%;
+}
+
+h3.productName {
+	font-size: 24px;
+}
+
+div.textBox {
+	font-size: 12px;
+}
+
+}
+
+/*****************************************************/
+/*  Max-width = 1040px                               */
+/*****************************************************/
+@media (max-width: 1040px) {
+
+.anchor_product {
+	}
+
+.anchor_show {
+	}
+
+.anchor_edit {
+	}
+
+.anchor_new {
+	}
+
+	div#product.container-fluid.anchor_product {
+	  //height: 3100px;
+	  //max-width: 100%;
+	  //max-height: 100%;
+	}
+
+	div#show.container-fluid.anchor_show {
+		}	
+
+	div#edit.container-fluid.anchor_edit {
+		}	
+
+	div#new.container-fluid.anchor_new {
+		}	
+
+	.fullBagImage {
+		width: 80%; // 450px;
+		height: 30em;
+	}
+
+		.bagImage {
+	//		width: 85%; // 300px;
+			height: 25em;
+		}
+
+.productName {
+	width: 75%;
+}
+
+h3.productName {
+	font-size: 24px;
+}
+
+div.textBox {
+	font-size: 12px;
+
+}
+
+}
+
+/*****************************************************/
+/*  Max-width = 991px                                */
+/*****************************************************/
+@media (max-width: 991px) {
+
+	.anchor_product {
+		}
+
+	.anchor_show {
+		}
+
+	.anchor_edit {
+		}
+
+	.anchor_new {
+		}
+
+	div#product.container-fluid.anchor_product {
+	  height: 3100px;
+	  max-width: 100%;
+	  max-height: 100%;
+		}
+
+	div#show.container-fluid.anchor_show {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#edit.container-fluid.anchor_edit {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#new.container-fluid.anchor_new {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	.fullBagImage {
+		width: 85%; // 450px;
+		height: 28.5em;
+	}
+
+	.bagImage {
+		width: 85%; // 300px;
+		height: 30em;
+	}	
+
+div.textBox {
+	height: 10.71428571em; // 150px;
+	margin-top: 10px;
+}
+
+.productName {
+	width: 75%;
+}
+
+h3.productName {
+	font-size: 24px;
+}
+
+div.textBox {
+	font-size: 12px;
+}
+
+}
+
+/*****************************************************/
+/*  Min-width = 780px                                */
+/*****************************************************/
+@media (max-width: 780px) {
+
+.anchor_product {
+	}
+
+.anchor_show {
+	}
+
+.anchor_edit {
+	}
+
+.anchor_new {
+	}
+
+	div#product.container-fluid.anchor_product {
+	  height: 2775px;
+		}
+
+	div#show.container-fluid.anchor_show {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#edit.container-fluid.anchor_edit {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#new.container-fluid.anchor_new {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	.fullBagImage {
+		width: 87.5%; // 450px;
+		height: 25em;
+	}
+
+	.bagImage {
+		width: 100%; // 300px;
+		height: 25em;
+	}
+
+div.textBox {
+	height: 13em; // 150px;
+	margin-top: 10px;
+}
+
+.productName {
+	width: 75%;
+}
+
+.logoimg {
+	width: 40px;
+	height: 40px
+}
+
+h3.productName {
+	font-size: 20px;
+}
+
+div.textBox {
+	font-size: 10px;
+}
+
+}
+
+/*****************************************************/
+/*  Max-width = 620px                                */
+/*****************************************************/
+@media (max-width: 620px) {
+
+	.anchor_product {
+		}
+
+	.anchor_show {
+		}
+
+	.anchor_edit {
+		}
+
+	.anchor_new {
+		}
+
+	div#product.container-fluid.anchor_product {
+	  height: 2875px;
+	  max-width: 100%;
+	  max-height: 100%;
+		}
+
+	div#show.container-fluid.anchor_show {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#edit.container-fluid.anchor_edit {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#new.container-fluid.anchor_new {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	.fullBagImage {
+		width: 90%; // 450px;
+		height: 20em;
+	}
+
+	.bagImage {
+		width: 100%; // 300px;
+		height: 25em;
+	}
+
+.productLinkButton {
+	width: 40%;
+}
+
+.productPrice {
+	width: 40%;
+}
+
+div.textBox {
+	height: 16em; // 150px;
+	margin-top: 10px;
+}
+
+.productName {
+	width: 75%;
+}
+
+h3.productName {
+	font-size: 16px;
+}
+
+div.textBox {
+	font-size: 10px;
+}
+
+}
+
+/*****************************************************/
+/*  Max-width = 550px                                */
+/*****************************************************/
+@media (max-width: 550px) {
+
+.productLinkButton {
+	width: 45%;
+}
+.productPrice {
+	width: 45%;
+}
+
+}
+/*****************************************************/
+/*  Max-width = 490px                                */
+/*****************************************************/
+@media (max-width: 490px) {
+
+	.anchor_product {
+		}
+
+	.anchor_show {
+		}
+
+	.anchor_edit {
+		}
+
+	.anchor_new {
+		}
+
+	div#product.container-fluid.anchor_product {
+	  height: 3025px;
+		}
+
+	div#show.container-fluid.anchor_show {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#edit.container-fluid.anchor_edit {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+	div#new.container-fluid.anchor_new {
+	  max-width: 100%;
+	  max-height: 100%;
+		}	
+
+  footer {
+    max-height: 100%;
+  }
+
+	.fullBagImage {
+		width: 92.5%; // 450px;
+		height: 15em;
+	}
+
+	.bagImage {
+		width: 100%; // 300px;
+		height: 25em;
+	}
+
+.productLinkButton {
+	width: 50%;
+}
+
+.productPrice {
+	width: 50%;
+}
+
+div.textBox {
+	height: 20em; // 150px;
+	margin-top: 10px;
+}
+
+.productName {
+	width: 75%;
+}
+
+h3.productName {
+	font-size: 14px;
+}
+
+div.textBox {
+	font-size: 10px;
+}
+
+}
+
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (max-width: 467px) {
+
+	div#product.container-fluid.anchor_product {
+	  height: 3125px;
+		}
+
+	.fullBagImage {
+		width: 92.5%; // 450px;
+		height: 15em;
+	}
+
+	.bagImage {
+		width: 100%; // 300px;
+		height: 25em;
+	}
+
+.productLinkButton {
+	width: 55%;
+}
+
+.productPrice {
+	width: 55%;
+}
+
+div.textBox {
+	height: 23em; // 150px;
+	margin-top: 10px;
+}
+
+.productName {
+	width: 75%;
+}
+
+h3.productName {
+	font-size: 13px;
+}
+
+div.textBox {
+	font-size: 10px;
+}
+
+}
+
+/******************************************************************************************/
+/*  END OF MEDIA RULES */
+/******************************************************************************************/
+

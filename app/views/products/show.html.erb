@@ -1,4 +1,4 @@
-<!-- *********************************************************************************************************** -->
+  <!-- *********************************************************************************************************** -->
 <!-- SHOW PRODUCTS PAGE STARTS HERE                                                                          *******-->
 <!-- *********************************************************************************************************** -->
 <div class="container-fluid anchor_show" id="show">
@@ -11,7 +11,7 @@
         <strong><%= @product.name %></strong>
       </h2>
 
-      <p><%= image_tag(@product.image_url, size: "450x450", alt: "Edit Entry", class: "logoimg")%></p>
+      <p><%= image_tag(@product.image_url, size: "450x450", alt: "Edit Entry", class: "fullBagImage")%></p>
 
     </div>
 
@@ -27,7 +27,7 @@
         <br>
         <p>
           <strong>Type:</strong>
-          <%= @product.prd_type %>
+          <%= @product.product_type %>
         </p>
 
         <p>
@@ -48,15 +48,19 @@
         <h3>Other features</h3>
 
         <p>
-          <%= @product.feature1 %>
+          <%= @product.gender %>
         </p>
 
         <p>
-          <%= @product.feature2 %>
+          <%= @product.top_size %>
         </p>
 
         <p>
-          <%= @product.feature3 %>
+          <%= @product.other_features %>
+        </p>
+
+        <p>
+          <%= @product.number_of_pockets %>
         </p>
       </div>
 
