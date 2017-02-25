@@ -2,15 +2,16 @@
 <!-- This time, showing TalylorMade bags that discounted this week!! -->
 <!-- CAROUSSEL IMAGE SECTION -->
 
-<div class="container-fluid anchor_product" id="product">
-  <h1 class="h1Products">Golf bags</h1>
-  <p id="notice"><%= notice %></p>
+<div class="container-fluid anchor_landingPageProducts" id="landingPageProducts">
 		<% count = 0 %>
+
+  <h1 class="h1Products">Featured products of this week:  <span class="productBrand"><%= @featuredBrand %> bags</span> up to 30% off!!</h1>
+  <p id="notice"><%= notice %></p>
 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
 	  <!-- Indicators -->
     <ol class="carousel-indicators">
-			<% Product.where(brand: "TaylorMade").find_each do |featured|  %>
+			<% Product.where(brand: @brand).find_each do |featured|  %>
 
       <li data-target="#carousel-example-generic" data-slide-to="<%= count %>"<%= ' class="active"' if count == 0 %></li>
       <!-- <li data-target="#carousel-example-generic" data-slide-to="1"></li> -->
@@ -36,17 +37,17 @@
 
 				<% count += 1 %>
 
-		      <div class="item <%= " active" if count == 1 %>">
-		        <p><%= image_tag(featured.image_url,  alt: "Bag caroussel image", class: "bagCaroussel img-responsive")%></p>
-			      <div class="product_textBox">
-		        	<!-- <div class="carousel-caption evolution"> -->
-		        	<div class="productDetails">
-			        	<h3 class=""><%= featured.name %></h3>
-			        	<h3 class=""><%= featured.description %></h3>
-			        	<h4 class=""><%= number_to_currency(featured.price) %></h4>
-		        	</div>
-		      	</div>
-		    	</div>
+	      <div class="item <%= " active" if count == 1 %>">
+	        <p><%= image_tag(featured.image_url,  alt: "Bag caroussel image", class: "bagCaroussel img-responsive")%></p>
+		     <div class="carousel-caption product_textBox">
+	        	<!-- <div class="carousel-caption evolution"> -->
+	        	<div class="productDetails">
+		        	<h3 class="landPageProductName"><%= featured.name %></h3>
+		        	<h4 class="landPageProductDescription"><%= featured.description %></h3>
+		        	<h3 class="landPageProductPrice">Reg. price: <%= number_to_currency(featured.price) %> This week at:  <span class="landPageSpecialPrice"><%= number_to_currency((featured.price/1.40).round(2)) %></</h3>
+	        	</div>
+	      	</div>
+	    	</div>
 
 			<% end  %>
 		</div>    
@@ -66,6 +67,3 @@
 <!-- ******************************************************************************************************* -->
 <!-- End of caroussel image and loop                                                                         -->
 <!-- ******************************************************************************************************* -->
-
-<h2 class="featured_product">Featured Product:</h2>
-<%= @featured_product.name %>

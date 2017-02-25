@@ -227,78 +227,67 @@ ul.social-links {
 // ******************************************************
 // Rules in lesson 4.5 - Caroussel image and other work
 
-h2.featured_product, h2.mainOrders {
-	margin-top: 100px;
+h1.h1Products {
+	width: 80%;
+	margin-top: 0.277777778em; //10px;
+	margin-bottom: 0.555555556em; // 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.carousel-control.left, .carousel-control.right {
-   background-image:none !important;
-   filter:none !important;
+h2.featured_product, h2.mainOrders { margin-top: 4.166666667em; //100px;
 }
 
-.item {
-  height:.88888888888889%;
-  /*max-height: 100%;*/
-}
+.item { height:.88888888888889%; }
 
 .bagCaroussel {
-//	width: 70%; // 450px;
-//	height: 32.14285714em;
-width: 600px;
-height: 600px;
-//width:200px;
-//height: 200px;
+width: 26.59574468%;   //375px; base is 1410px
+height: 28.92857143em; //405px; base is 16px 
 margin-left: auto;
 margin-right: auto;
 }
 
-//.carousel-caption h3 {
-//  font-size: 1.8em;
-//  color: #1e62bc;
-//  margin-top: 7.142857143em;
-//}
-
-.productDetails h3 {
-  font-size: 2em;
-  color: #1e62bc;
-}
-
 .product_textBox {
-	margin-top: 7.142857143em;	
+	margin-top: 2em; //base is 10px;	
 }
 
-//.carousel-caption.evolution {
-//  top: 0;
-//  margin-top: 450px;
-//  right: 25%;
-//  left: auto;
-//  bottom: auto;
-//  width: 700px;
-//  height: auto;
-//  text-align: right;
-//}
-
-.productDetails h3 {
-  width: 700px;
+.landPageProductDescription {
+  width: 95.74468085%; //800px; base is 1410px * 60%
   height: auto;
   margin-left: auto;
   margin-right: auto;
-//  margin-top: 7.142857143em;
 }
 
-.productDetails h4 {
-	width: 100px;
-  color: #1e62bc;
+.landPageProductPrice {
+	width: 95%;  //base is 1410px 
   margin-left: auto;
   margin-right: auto;
-  font-size: 2em;
-//  margin-top: 7.142857143em;
 }
 
-ol.carousel-indicators li,
-.carousel-indicators li {
-	visibility: hidden;
+div#product.container-fluid.anchor_landingPageProducts {
+  height: 700px;
+  max-width: 100%;
+  max-height: 100%;
+	}
+
+.anchor_landingPageProducts {
+  padding-top: 9em; //90px; base at 10px
+	}
+
+h3.landPageProductName {
+	width: 35%;
+  margin-left: auto;
+  margin-right: auto;	
 }
+
+.carousel-caption {
+  top: 35em; //350px; base at 10px
+}
+
+div.carousel-inner {
+	height: 66em; //660px; base at 10px
+}
+
 // ******************************************************
 // *  Topographic rules                                 *
 // ******************************************************
@@ -345,6 +334,45 @@ footer a {
 
 footer {
   background-color: #9d9d9d; //#264553; grey;  #101010; #809af3; 
+}
+
+.productDetails {
+  font-size: 2em;
+  color: #1e62bc;
+}
+
+.landPageProductPrice {
+  color: #1e62bc;
+  font-size: 1.6em;
+}
+
+ol.carousel-indicators li,
+.carousel-indicators li {
+	visibility: hidden;
+}
+
+.productBrand, landPageProductName {
+	color: #5535D2;
+	font-weight: bold;
+}
+
+h3.landPageProductName {
+	font-weight: 900;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+    filter: none !important;
+}
+
+a.right.carousel-control,
+a.left.carousel-control  {
+	background-color: transparent;
+}
+
+.landPageSpecialPrice {
+	color: red;
+	font-size: 1.8em;
 }
 
 //th {
