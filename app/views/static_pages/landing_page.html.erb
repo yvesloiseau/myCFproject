@@ -1,2 +1,71 @@
+<!-- Caroussel images showing featured products -->
+<!-- This time, showing TalylorMade bags that discounted this week!! -->
+<!-- CAROUSSEL IMAGE SECTION -->
+
+<div class="container-fluid anchor_product" id="product">
+  <h1 class="h1Products">Golf bags</h1>
+  <p id="notice"><%= notice %></p>
+		<% count = 0 %>
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+	  <!-- Indicators -->
+    <ol class="carousel-indicators">
+			<% Product.where(brand: "TaylorMade").find_each do |featured|  %>
+
+      <li data-target="#carousel-example-generic" data-slide-to="<%= count %>"<%= ' class="active"' if count == 0 %></li>
+      <!-- <li data-target="#carousel-example-generic" data-slide-to="1"></li> -->
+      <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+			<% count += 1 %>
+			<% end  %>
+      <!-- <li data-target="#carousel-example-generic" data-slide-to="3"></li> -->
+    </ol>
+
+<!-- Insert loop for showing slides -->
+<!-- Display up to 4 featured products -->
+<!-- This week's products will be the Taylor Made bags -->
+<!-- Initialize variables -->
+
+		<% numberOfImages = 0 %>
+		<% count = 0 %>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			
+		<!-- Start the loop until getting a favorble response from the user and until the users chooses to quit -->
+			<% Product.where(brand: "TaylorMade").find_each do |featured|  %>
+
+				<% count += 1 %>
+
+		      <div class="item <%= " active" if count == 1 %>">
+		        <p><%= image_tag(featured.image_url,  alt: "Bag caroussel image", class: "bagCaroussel img-responsive")%></p>
+			      <div class="product_textBox">
+		        	<!-- <div class="carousel-caption evolution"> -->
+		        	<div class="productDetails">
+			        	<h3 class=""><%= featured.name %></h3>
+			        	<h3 class=""><%= featured.description %></h3>
+			        	<h4 class=""><%= number_to_currency(featured.price) %></h4>
+		        	</div>
+		      	</div>
+		    	</div>
+
+			<% end  %>
+		</div>    
+
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+  </div>
+</div>
+
+<!-- ******************************************************************************************************* -->
+<!-- End of caroussel image and loop                                                                         -->
+<!-- ******************************************************************************************************* -->
+
 <h2 class="featured_product">Featured Product:</h2>
 <%= @featured_product.name %>

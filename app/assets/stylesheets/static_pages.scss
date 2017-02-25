@@ -16,10 +16,6 @@ body {
 //	padding-right: 7px;
 }
 
-// Rules in lesson 4.2 - TO BE REMOVED LATER
-h2.featured_product, h2.mainOrders {
-	margin-top: 100px;
-}
 // ******************************************************
 // *  Nav bar styling rules                             *
 // ******************************************************
@@ -226,6 +222,83 @@ ul.social-links {
 	padding: 0;
 }
 
+// ******************************************************
+// *  Landing page styling                              *
+// ******************************************************
+// Rules in lesson 4.5 - Caroussel image and other work
+
+h2.featured_product, h2.mainOrders {
+	margin-top: 100px;
+}
+
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
+
+.item {
+  height:.88888888888889%;
+  /*max-height: 100%;*/
+}
+
+.bagCaroussel {
+//	width: 70%; // 450px;
+//	height: 32.14285714em;
+width: 600px;
+height: 600px;
+//width:200px;
+//height: 200px;
+margin-left: auto;
+margin-right: auto;
+}
+
+//.carousel-caption h3 {
+//  font-size: 1.8em;
+//  color: #1e62bc;
+//  margin-top: 7.142857143em;
+//}
+
+.productDetails h3 {
+  font-size: 2em;
+  color: #1e62bc;
+}
+
+.product_textBox {
+	margin-top: 7.142857143em;	
+}
+
+//.carousel-caption.evolution {
+//  top: 0;
+//  margin-top: 450px;
+//  right: 25%;
+//  left: auto;
+//  bottom: auto;
+//  width: 700px;
+//  height: auto;
+//  text-align: right;
+//}
+
+.productDetails h3 {
+  width: 700px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+//  margin-top: 7.142857143em;
+}
+
+.productDetails h4 {
+	width: 100px;
+  color: #1e62bc;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2em;
+//  margin-top: 7.142857143em;
+}
+
+ol.carousel-indicators li,
+.carousel-indicators li {
+	visibility: hidden;
+}
 // ******************************************************
 // *  Topographic rules                                 *
 // ******************************************************
