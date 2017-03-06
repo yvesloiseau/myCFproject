@@ -2,77 +2,36 @@
 <!-- PRODUCT PARTIAL PAGE STARTS HERE                                                                          *******-->
 <!-- *********************************************************************************************************** -->
 
-  <!-- Set working variables -->
-  
-  <% count = 0 %>
-  <% previous_count = 0 %>
-  <% number_of_products = 0 %>
-  <% first_product_id = 0 %>
+<!-- Show 4 products per line -->
+<div class="col-md-3 col-xs-6 productRow"> <!-- col-md-4 col-xs-8 --> 
+  <h3 class="productName"><%= product.name %></h3> 
 
-  <% id_array = Array.new %>
-  <% name_array = Array.new %>
-  <% price_array = Array.new %>
-  <% description_array = Array.new %>
-  <% image_url_array = Array.new %>
+  <div class="productDetails"> 
+    <p><%= image_tag(product.image_url, alt: "Edit Entry", class: "bagImage img-responsive")%></p> 
 
-
-  <!-- Lop thru the product table -->
-  <!-- IMPORTANT: Multipage functionnalitis to be added later -->
-  <% @products.each do |product| %>
-    <% id_array[count] = product.id %>
-    <% name_array[count] = product.name %>
-    <% description_array[count] = product.description %>
-    <% price_array[count] = product.price %>
-    <% id_array[count] = product.id %>
-    <% image_url_array[count] = product.image_url %>
-    <% number_of_products += 1 %>
-
-
-  <!-- Show 4 products per line -->
-  <div class="col-md-3 col-xs-6 productRow"> <!-- col-md-4 col-xs-8 -->
-    <h3 class="productName"><%= product.name %></h3>
-    <div class="productDetails">
-      <p><%= image_tag(product.image_url,  alt: "Edit Entry", class: "bagImage img-responsive")%></p>
-      <div class="textBox">
-        <p><%= product.description %></p>
-      </div>
-      
-      <h2 class="productPrice"><%= number_to_currency(product.price) %></h2>
-      <br>
-      <p class="productLinkButton"><%= link_to product, class: "btn btn-default btn-circle" do %>
-          <span class="glyphicon glyphicon-ok"></span><% end %> 
-      <%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %>
-          <span class="glyphicon glyphicon-edit"></span><% end %>
-      <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %><span class="glyphicon glyphicon-remove"></span><% end %></p>
-    </div>
-
-    <% if count == 0 %> 
-      <% first_product_id = product.id %>
-    <% end %>
-
-    <% count += 1 %>
-  </div>
-
-  <% end %>
-
-</div>
-
-<div class="productIndexButtons">
-
-  <!-- Buttons to create a new product -->
-  <!-- Create a new product -->
-  <%= button_to "New product", new_product_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
-
-  <!-- Edit first product on the page -->
-  <%= button_to "Edit first", edit_product_path(first_product_id), class: 'btn btn-primary btn-sm inline', :method => :get %>
-
-  <!-- Go back -->
-  <%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
-
-  <!-- Next page -->
-      <% if number_of_products > 8 %> 
-        <%= button_to "Next page", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+    <div class="textBox"> 
+      <p><%= product.description %></p> 
+      <% if @number_of_products == 0 %> 
+        <% @first_product_id = product.id %>
       <% end %>
+    </div> 
 
+    <h2 class="productPrice"><%= number_to_currency(product.price) %></h2>
+    <br> 
+
+    <p class="productLinkButton"> 
+      <%= link_to product, class: "btn btn-default btn-circle" do %> 
+        <span class="glyphicon glyphicon-ok"></span> 
+      <% end %> 
+
+      <%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %> 
+        <span class="glyphicon glyphicon-edit"></span> 
+      <% end %> 
+
+      <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %>   <span class="glyphicon glyphicon-remove"></span> 
+      <% end %> 
+    </p>
+  </div> 
 </div>
+
 

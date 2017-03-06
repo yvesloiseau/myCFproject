@@ -1,15 +1,29 @@
 <!-- *********************************************************************************************************** -->
-<!-- PRODUCT PAGE STARTS HERE                                                                          *******-->
+<!-- PRODUCT PAGE STARTS HERE                                                                             *******-->
 <!-- *********************************************************************************************************** -->
 
 <div class="container-fluid anchor_product" id="product">
   <h1 class="h1Products">Golf bags</h1>
   <p id="notice"><%= notice %></p>
 
-<!-- Display the partial page here -->
-  <% @products.each do |product| %>
-    <%= render @products %>  
-  <% end %>
+  <% @number_of_products = 0 %>
+  <% @first_product_id = 0 %>
+  
+  <!-- Display the partial page here -->
+
+  <%= render partial: "product", collection: @products %>
 
 </div>
+
+<div class="productIndexButtons">
+  <!-- Create a new product -->
+  <%= button_to "New product", new_product_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+  <!-- Edit first product on the page -->
+  <%= button_to "Edit first", edit_product_path(@first_product_id), class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+  <!-- Go back -->
+  <%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+</div>
+
 
