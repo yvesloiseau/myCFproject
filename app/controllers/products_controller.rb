@@ -1,11 +1,14 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-
+  before_action :save_my_previous_url, only: [:index, :show, :new]
   # GET /products
   # GET /products.json
+
+
   def index
     @products = Product.all
+    respond_to :html
   end
 
   # GET /products/1
@@ -29,8 +32,9 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
+#       format.html { redirect_to "/orders", notice: 'Product was successfully created.' }
+        format.html { redirect_to "/orders", notice: 'Product was successfully created.' }
+#        format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -62,6 +66,7 @@ class ProductsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -72,5 +77,16 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :product_type, :brand, :color, :price, :image_url, :top_size, :other_features, :number_of_pockets, :gender)
     end
+
+  def save_my_previous_url
+    # This is a commented line session[:previous_url] is a Rails built-in variable to save last url. 
+    session[:my_previous_url] = URI(request.referer || '').path
+  #  session[:my_previous_url] = request_url
+    @back_url = session[:my_previous_url]
+    session[:previous_url] = @back_url
+    #@back_url = "this is my session url here"
+  end
+
+ 
 
 end

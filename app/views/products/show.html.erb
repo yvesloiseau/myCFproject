@@ -1,16 +1,18 @@
-  <!-- *********************************************************************************************************** -->
+<!-- *********************************************************************************************************** -->
 <!-- SHOW PRODUCTS PAGE STARTS HERE                                                                          *******-->
 <!-- *********************************************************************************************************** -->
 <div class="container-fluid anchor_show" id="show">
   <div class="row">
     <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
 
+
       <p id="notice"><%= notice %></p>
 
       <h2 class="productName">    
         <strong><%= @product.name %></strong>
       </h2>
-
+ <!-- <p> This is the latest url visited <%= @back_url%> </p> -->
+  
       <p><%= image_tag(@product.image_url, size: "450x450", alt: "Edit Entry", class: "fullBagImage")%></p>
 
     </div>
