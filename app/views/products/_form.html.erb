@@ -1,72 +1,100 @@
-<%= form_for(product) do |f| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<div class="container">
+  <%= form_for(product) do |f| %>
+    <% if product.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-      <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+<div class="row">
+  <div class="col-md-6 col-xs-12"> 
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, size: 30 %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-xs-12"> 
+    <div class="field inline">
+      <%= f.label :product_type %>
+      <%= f.text_field :product_type %>
+    </div>
+
+    <div class="field">
+      <%= f.label :color, class:"color"%>
+      <%= f.text_field :color %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="col-md-6 col-xs-12"> 
+    <div class="field">
+      <%= f.label :brand %>
+      <%= f.text_field :brand %>
+    </div>
+
+    <div class="field">
+      <%= f.label :price %>
+      <%= f.text_field :price, size: 10 %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-xs-12"> 
+    <div class="field">
+      <%= f.label :image_url %>
+      <%= f.text_field :image_url, size:60 %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-xs-12"> 
+    <h2>Other features:</h2>
+    <div class="field">
+      <%= f.label :top_size %>
+      <%= f.text_field :top_size, size:10 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :number_of_pockets %>
+      <%= f.text_field :number_of_pockets %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :product_type %>
-    <%= f.text_field :product_type %>
+  <div class="col-md-6 col-xs-12"> 
+    <br><br><br><br><br>
+    <div class="field">
+      <%= f.label :gender %>
+      <%= f.text_field :gender, size:10 %>
+    </div>
+    <div class="field">
+      <%= f.label :other_features %>
+      <%= f.text_field :other_features %>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :brand %>
-    <%= f.text_field :brand %>
+<div class="row">
+  <div class="col-md-6 col-xs-12"> 
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :color %>
-    <%= f.text_field :color %>
-  </div>
-
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.text_field :price %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :top_size %>
-    <%= f.text_field :top_size %>
-  </div>
-
-  <div class="field">
-    <%= f.label :other_features %>
-    <%= f.text_field :other_features %>
-  </div>
-
-  <div class="field">
-    <%= f.label :number_of_pockets %>
-    <%= f.text_field :number_of_pockets %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
+</div>

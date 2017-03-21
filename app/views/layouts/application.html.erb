@@ -54,13 +54,18 @@
 	        <li><a href="/static_pages/contact">Contact</a></li>
 	        <li><a href="/products">Products</a></li>
 	        <li><a href="/static_pages/landing_page">Featured Products</a></li>
-
 	        <li><a href="/orders">Orders</a></li>
+
 
 
 	      </ul>
 
 	      <ul class="nav navbar-nav menu pull-right">
+	        <li><a><%= form_tag("/products", method: "get") do %>
+  						<%= text_field_tag(:q, "",class: "searchField")  %><%= submit_tag("Find product", class: "searchSubmit btn btn-primary btn-sm inline") %>
+							<% end %>
+						</a>
+					</li>
 					<!-- French/English switch - Eventual pop-up window -->
 	        <!-- <li><a class="language pull-right" href="http://localhost:3000/French">FR</a></li> -->
 	       </ul>

@@ -2,13 +2,18 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   before_action :save_my_previous_url, only: [:index, :show, :new]
+
   # GET /products
   # GET /products.json
-
-
   def index
-    @products = Product.all
-    respond_to :html
+    # @products = Product.all
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+    else
+      @products = Product.all
+    end    # search_term = params[:q]
+    #respond_to :html
   end
 
   # GET /products/1

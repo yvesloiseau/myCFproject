@@ -4,7 +4,8 @@
 <%= button_to "Show products", products_path, class: 'btn btn-primary btn-sm', :method => :get %>
 
 <!-- Re-direct the user from where he came from -->
-<%= button_to "Previous", my_previous_url, class: 'btn btn-primary btn-sm inline', :method => :get  %>
- 
+<%= button_to "Previous", session[:previous_url], class: 'btn btn-primary btn-sm inline', :method => :get  %>
+
 <!-- Re-direct the user from where he came from -->
 <%= button_to "Back", :back, class: 'btn btn-primary btn-sm inline', :method => :get  %>
+

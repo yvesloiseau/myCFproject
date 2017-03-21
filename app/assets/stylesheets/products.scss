@@ -22,24 +22,28 @@
 
 div#product.container-fluid.anchor_product {
   height: 1500px;
+  height: auto;
   max-width: 100%;
   max-height: 100%;
 	}
 
 div#show.container-fluid.anchor_show {
   height: 675px;
+  height: auto;
   max-width: 100%;
   max-height: 100%;
 	}	
 
 div#edit.container-fluid.anchor_edit {
   height: 675px;
+  height: auto;
   max-width: 100%;
   max-height: 100%;
 	}	
 
 div#new.container-fluid.anchor_new {
   height: 800px;
+  height: auto;
   max-width: 100%;
   max-height: 100%;
 	}	
@@ -92,13 +96,9 @@ div.productDetails {
 	border-color: #5535D2;
 }
 
-textarea, input {
-	color: #264553;
-	font-size: 1.25em;
-}
-
 label {
-	font-weight: 900;
+	margin-top: 10px;
+	font-size: 2em;
 }
 
 p.link_to, form.button_to, .inline {
@@ -143,9 +143,15 @@ p.link_to, form.button_to, .inline {
 .glyphicon { color:blue; }
 
 textarea#product_description {
-	width:  50%;          //34.72222222%;					// 500px;
-	height: 7.142857143em;  // 200px / 16px = 
+	width:  133%;          //34.72222222%;					// 500px;
+	height: 8em;  // 200px / 16px = 
 	//height: auto;
+}
+
+text_field, textarea, input {
+	color: #264553;
+	font-size: 1.25em;
+	padding-left: 5px;
 }
 
 .actions {
@@ -163,13 +169,22 @@ textarea#product_description {
   border-radius: 4px;
   padding: 10px 16px;
   background: none;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
-
 
 .productIndexButtons {
 	clear: both;
 	margin-top: 25px;
 	padding-left: 10px;
+}
+
+.editButton {
+	margin-left: 70px;
+}
+
+.newButton {
+	margin-left: 40px;
 }
 
 //  th and td rules will be deleted once the old index page will not be used
@@ -210,6 +225,22 @@ th.productActionsRemove {
 	padding-bottom: 33px;
 }
 
+.searchField {
+	color: #b2d235;
+	width: 175px;
+	line-height: 10px;
+  font-size: .75em;
+  border-style: solid;
+	border-width: 1.5px;
+	border-color: #264553;
+	//height: auto;
+}
+
+.searchSubmit {
+	background-color: #264553; //#337ab7;
+	color: #b2d235;
+	margin-left: 5px;
+}
 
 // ******************************************************
 // *  Topographic rules                                 *
@@ -235,6 +266,16 @@ div.actions input {
   color: #fff;
   border: none;
 	
+}
+
+label {
+	font-weight: 900;
+}
+
+
+textarea, input {
+	color: #264553;
+	font-size: 1.25em;
 }
 
 .actions:hover,  div.actions input:hover {
