@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
+  post 'static_pages/thank_you'
+
 # This is lesson 5.1 new root page
   # get 'static_pages/index'
 	 root 'static_pages#index'

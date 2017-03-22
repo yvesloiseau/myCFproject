@@ -4,10 +4,10 @@
 
 <div class="container-fluid contactc anchor_contact" id="contactus">
   <div class="row" id="work">
-    <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="col-xs-12 col-sm-6 col-md-6">
 
     	<div class="contactHeader">
-				<h1>Contact Page</h1>
+				<!-- <h1>Contact Page</h1> -->
 				<h2>My name is : Yves the Bird</h2>
 				<div class="contact_email">
 					<h3>You can reach me at this email address: 
@@ -42,13 +42,36 @@
 					<p>Thanks you and have a nice day</p>
 				</div>
 			</div>
-<!-- For future usage - Have user leave their contact info  -->
-<!--   Use a form to retreive that info and save in a database -->
+		</div>
+		<!-- For future usage - Have user leave their contact info  -->
+		<!--   Use a form to retreive that info and save in a database -->
 		<!-- <h3>Please leave your contact information</h3> -->
 			<!-- <div class="about_page_indent"> -->
-
 			<!-- </div> -->
-		</div>
+<!-- Lesson 5.3 code - Sending emails - Capture the user information for sending emails -->
+	 <!-- <div class="row" id="work"> -->
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    	<h1>Please contact us</h1>
+    	<%= flash[:notice] %>
+
+    	<%= form_tag("/static_pages/thank_you") do %>
+    	<div class="fieldgroupContactUsForm">
+    		<%= label_tag :name %>
+    		<%= text_field_tag(:name, nil, class: "nameContactUsForm", placeholder: "Enter Your Name", size: 30) %>
+			</div>
+    	<div class="fieldgroupContactUsForm">
+    		<%= label_tag :email %>
+    		<%= text_field_tag :email, nil, class: "nameContactUsForm", placeholder: "Enter Your email", size: 40 %>
+			</div>
+    	<div class="fieldgroupContactUsForm">
+	      <%= label_tag :message %>
+  	    <%= text_area_tag :message, nil, class: "messageContactUsForm", placeholder: "Enter Your Message", cols: 60, rows: 25 %>
+      </div>
+
+      <%= submit_tag "Send", class: "contactSubmit btn btn-primary btn-sm" %>   
+			<% end %>
+    </div>
+
 	</div>
 </div>
 

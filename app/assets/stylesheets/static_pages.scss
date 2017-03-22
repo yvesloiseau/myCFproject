@@ -117,23 +117,23 @@ h3.chair_text {
 
 .contactHeader  {
 	display: inline-block;
-	width: 55.55555556%;  // 800px;
+	width: 100%; // 55.55555556%;  // 800px;
 	height: auto;
 }
 
 .contactEmail  {
 //	display: inline-block;
-	width: 34.72222222%;  // 500px;
+	width: 100%; // 34.72222222%;  // 500px;
 	height: auto;
 }
 
 .myBackground  {
-	width: 55.55555556%;  // 800px;
+	width: 90%;  // 55.55555556%;  // 800px;
 	height: auto;
 }
 
 .moreInfo  {
-	width: 34.72222222%;  // 500px;
+	width: 100%; //34.72222222%;  // 500px;
 	height: auto;
 }
 
@@ -157,7 +157,7 @@ p, ol, ul, td {
   }
 
 .anchor_contact {
-  padding-top: 5px;  //*30px;*/
+  padding-top: 100px;  //*30px;*/
   padding-left: 1em; //*12px;*/
   padding-right: 0px;
 	}
@@ -180,9 +180,31 @@ div#about.container-fluid.work.anchor_about {
 
 div#contactus.container-fluid.anchor_contact {
   height: 700px;
+  height: auto;
   max-width: 100%;
   max-height: 100%;
 	}
+
+.thankYouPopup {
+	border-style: solid;
+	border-width: 2px;
+	border-color: grey;
+  padding-top: 5px;  //*30px;*/
+  padding-left: 1em; //*12px;*/
+  padding-bottom: 10px;
+  margin-top: 120px;
+  margin-left: 100px;
+ // padding-right: 0px;
+  height: 300px;
+  height: auto;
+  max-width: 40%;
+ // max-height: 100%;
+	
+}
+
+.thankyouButton {
+	margin-left: 10px;
+}
 
 // container-fluid contactc anchor_contact
 
@@ -221,6 +243,29 @@ footer {
 ul.social-links {
 	padding: 0;
 }
+
+// ******************************************************
+// *  Contacts Us page and form styling                 *
+// ******************************************************
+// Rules for lesson 5.3 - Sending emails
+
+.nameContactUsForm {
+	
+}
+
+.emailContactUsForm {
+	
+}
+
+.fieldgroupContactUsForm {
+	
+}
+
+.messageContactUsForm {
+	
+}
+
+
 
 // ******************************************************
 // *  Landing page styling                              *
