@@ -71,27 +71,33 @@ class ProductsController < ApplicationController
     end
   end
 
-
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:name, :description, :product_type, :brand, :color, :price, :image_url, :top_size, :other_features, :number_of_pockets, :gender)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:name,
+                                    :description,
+                                    :product_type,
+                                    :brand,
+                                    :color,
+                                    :price,
+                                    :image_url,
+                                    :top_size,
+                                    :other_features,
+                                    :number_of_pockets,
+                                    :gender)
+  end
 
   def save_my_previous_url
-    # This is a commented line session[:previous_url] is a Rails built-in variable to save last url. 
     session[:my_previous_url] = URI(request.referer || '').path
-  #  session[:my_previous_url] = request_url
+    #  session[:my_previous_url] = request_url
     @back_url = session[:my_previous_url]
     session[:previous_url] = @back_url
     #@back_url = "this is my session url here"
   end
-
- 
 
 end
