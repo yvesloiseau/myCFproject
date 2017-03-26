@@ -10,7 +10,7 @@
 				<!-- <h1>Contact Page</h1> -->
 				<h2>My name is : Yves the Bird</h2>
 				<div class="contact_email">
-					<h3>You can reach me at this email address: 
+					<h3>You can reach me at this email address:
 						<span class="email_bold rwd-line"><strong>loiseau.y@gmail.com</strong>
 						</span>
 					</h3>
@@ -43,13 +43,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- For future usage - Have user leave their contact info  -->
-		<!--   Use a form to retreive that info and save in a database -->
-		<!-- <h3>Please leave your contact information</h3> -->
-			<!-- <div class="about_page_indent"> -->
-			<!-- </div> -->
-<!-- Lesson 5.3 code - Sending emails - Capture the user information for sending emails -->
-	 <!-- <div class="row" id="work"> -->
+
+		<!-- Form to caputre users feedback and to get teheir contact information -->
     <div class="col-xs-12 col-sm-6 col-md-6">
     	<h1>Please contact us</h1>
     	<%= flash[:notice] %>
@@ -68,7 +63,7 @@
   	    <%= text_area_tag :message, nil, class: "messageContactUsForm", placeholder: "Enter Your Message", cols: 60, rows: 25 %>
       </div>
 
-      <%= submit_tag "Send", class: "contactSubmit btn btn-primary btn-sm" %>   
+      <%= submit_tag "Send", class: "contactSubmit btn btn-primary btn-sm" %>
 			<% end %>
     </div>
 

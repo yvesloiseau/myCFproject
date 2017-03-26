@@ -32,21 +32,21 @@ div#show.container-fluid.anchor_show {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-	}	
+	}
 
 div#edit.container-fluid.anchor_edit {
   height: 675px;
   height: auto;
   max-width: 100%;
   max-height: 100%;
-	}	
+	}
 
 div#new.container-fluid.anchor_new {
   height: 800px;
   height: auto;
   max-width: 100%;
   max-height: 100%;
-	}	
+	}
 
 .bagImage {
 	width: 100%; // 300px;
@@ -90,7 +90,9 @@ div.productDetails {
 	padding: 0;
 }
 
-#product_name, #product_description, #product_product_type, #product_brand, #product_price, #product_color, #product_image_url, #product_top_size, #product_other_features, #product_number_of_pockets, #product_gender {
+#product_name, #product_description, #product_product_type, #product_brand,
+#product_price, #product_color, #product_image_url, #product_top_size,
+#product_other_features, #product_number_of_pockets, #product_gender {
 	border-style: solid;
 	border-width: 2px;
 	border-color: #5535D2;
@@ -144,7 +146,7 @@ p.link_to, form.button_to, .inline {
 
 textarea#product_description {
 	width:  133%;          //34.72222222%;					// 500px;
-	height: 8em;  // 200px / 16px = 
+	height: 8em;  // 200px / 16px =
 	//height: auto;
 }
 
@@ -265,7 +267,7 @@ div.actions input {
   background-color: #337ab7;
   color: #fff;
   border: none;
-	
+
 }
 
 label {
@@ -352,13 +354,13 @@ div.textBox {
 	}
 
 	div#show.container-fluid.anchor_show {
-		}	
+		}
 
 	div#edit.container-fluid.anchor_edit {
-		}	
+		}
 
 	div#new.container-fluid.anchor_new {
-		}	
+		}
 
 	.fullBagImage {
 		width: 80%; // 450px;
@@ -411,17 +413,17 @@ div.textBox {
 	div#show.container-fluid.anchor_show {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#edit.container-fluid.anchor_edit {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#new.container-fluid.anchor_new {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	.fullBagImage {
 		width: 85%; // 450px;
@@ -431,7 +433,7 @@ div.textBox {
 	.bagImage {
 		width: 85%; // 300px;
 		height: 30em;
-	}	
+	}
 
 div.textBox {
 	height: 10.71428571em; // 150px;
@@ -476,17 +478,17 @@ div.textBox {
 	div#show.container-fluid.anchor_show {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#edit.container-fluid.anchor_edit {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#new.container-fluid.anchor_new {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	.fullBagImage {
 		width: 87.5%; // 450px;
@@ -548,17 +550,17 @@ div.textBox {
 	div#show.container-fluid.anchor_show {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#edit.container-fluid.anchor_edit {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#new.container-fluid.anchor_new {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	.fullBagImage {
 		width: 90%; // 450px;
@@ -634,17 +636,17 @@ div.textBox {
 	div#show.container-fluid.anchor_show {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#edit.container-fluid.anchor_edit {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
 	div#new.container-fluid.anchor_new {
 	  max-width: 100%;
 	  max-height: 100%;
-		}	
+		}
 
   footer {
     max-height: 100%;
