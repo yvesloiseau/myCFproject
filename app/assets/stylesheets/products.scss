@@ -4,21 +4,13 @@
 //  Product rules saved
 
 
-.anchor_product {
+.anchor_product,
+.anchor_show,
+.anchor_edit,
+.anchor_new,
+.anchorShow {
   padding-top: 90px;
-	}
-
-.anchor_show {
-  padding-top: 90px;
-	}
-
-.anchor_edit {
-  padding-top: 90px;
-	}
-
-.anchor_new {
-  padding-top: 90px;
-	}
+}
 
 div#product.container-fluid.anchor_product {
   height: 1500px;
@@ -30,6 +22,13 @@ div#product.container-fluid.anchor_product {
 div#show.container-fluid.anchor_show {
   height: 675px;
   height: auto;
+  max-width: 100%;
+  max-height: 100%;
+	}
+
+div#Show.container-fluid.anchorShow {
+  height: 575px;
+  //height: auto;
   max-width: 100%;
   max-height: 100%;
 	}

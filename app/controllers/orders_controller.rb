@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
-#  after_filter :save_my_previous_url, only: [:show, :edit, :update, :destroy]
-    before_action :save_my_previous_url, only: [:show, :index, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
+  before_action :save_my_previous_url, only: [:show, :index, :edit, :update, :destroy]
 
   def index
   end

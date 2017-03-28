@@ -1,0 +1,25 @@
+<!-- *********************************************************************** -->
+<div class="container-fluid anchor_new" id="new">
+  <div class="row">
+    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+      <div class="newProduct">
+        <h1>New User</h1>
+
+        <%= render 'form', user: @user %>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="newButton">
+    <!-- Buttons to create a new product -->
+    <!-- Back to Product list -->
+    <%= button_to "Back", users_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+    <!-- Go back HOME-->
+    <%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+  </div>
+
+</div>

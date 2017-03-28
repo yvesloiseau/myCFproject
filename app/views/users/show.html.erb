@@ -1,0 +1,28 @@
+<div class="container-fluid anchorShow" id="Show">
+  <div class="row">
+    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Alternate email address:</strong>
+  <%= @user.email_address %>
+</p>
+
+    </div>
+  </div>
+
+<%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-primary btn-sm' %>
+<%= link_to 'Back', :back, class: 'btn btn-primary btn-sm' %>
+</div>

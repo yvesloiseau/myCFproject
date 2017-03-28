@@ -44,14 +44,30 @@
 	        <li><%= link_to "Products", products_path %> </li>
 	        <li><%= link_to "Featured Products", static_pages_landing_page_path %> </li>
 	        <li><%= link_to "Orders", orders_path %> </li>
-	      </ul>
 
-	      <ul class="nav navbar-nav menu pull-right">
 	        <li><a><%= form_tag("/products", method: "get") do %>
   						<%= text_field_tag(:q, "",class: "searchField")  %><%= submit_tag("Find product", class: "searchSubmit btn btn-primary btn-sm inline") %>
 							<% end %>
 						</a>
 					</li>
+	      </ul>
+
+	      <ul class="nav navbar-nav menu pull-right userNavLinks">
+					<% if user_signed_in? %>
+						<li class="userFirstName"><%= current_user.first_name %></li>
+			      <li class="userNavLinks"><%= link_to "Profile", edit_user_path(current_user) %> </li>
+	        <% end %>
+
+					<% if user_signed_in? %>
+						<li><%= link_to("Logout", destroy_user_session_path, :method => :delete, class: "inline") %></li>
+						<li class="userFirstName"> / </li>
+						<li><%= link_to "Change pwd", edit_user_registration_path, class: "inline" %></li>
+					<% else %>
+						<li><%= link_to("Login", new_user_session_path) %></li>
+						<li class="userFirstName"> / </li>
+						<li><%= link_to("Sign-up", new_user_registration_path) %></li>
+					<% end %>
+					<!-- </li> -->
 					<!-- French/English switch - Eventual pop-up window -->
 	        <!-- <li><a class="language pull-right" href="http://localhost:3000/French">FR</a></li> -->
 	       </ul>
@@ -60,7 +76,9 @@
 	  </div>
 	</nav> <!-- end navbar-->
 
-
+	<!-- Flash to display a welcome message for the devise gem -->
+	<p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 	<%= yield %>
 

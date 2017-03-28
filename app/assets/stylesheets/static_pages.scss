@@ -56,7 +56,7 @@ a.language {
 .chair_header {
 	width: 24.30555556%; // 350px;
 	height: 2.857142857em; // 40px;
-	height: auto;  
+	height: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -64,14 +64,14 @@ a.language {
 .chair_footer {
 	width: 60%; //24.30555556%; // 350px;
 	height: 2.857142857em; // 40px;
-	height: auto;  
+	height: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
 h3.chair_text {
 	width: 350px;
-	height: 40px;	
+	height: 40px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -95,7 +95,7 @@ h3.chair_text {
 
 .aboutTools {
 	width: 90%;
-	height: auto;	
+	height: auto;
 }
 
 .aboutRubyandRails {
@@ -105,14 +105,14 @@ h3.chair_text {
 
 .moreInfoAbout {
 	width: 70%;
-	height: auto;	
+	height: auto;
 }
 
 .about_page_indent {
 	padding-left: 15px;
 	width: 50%;
-	height: auto;	
-	
+	height: auto;
+
 }
 
 .contactHeader  {
@@ -163,7 +163,7 @@ p, ol, ul, td {
 	}
 
 .anchor_index {
-  padding-top: 90px;
+  padding-top: 50px;
 	}
 
 div#index.container-fluid.anchor_index {
@@ -199,7 +199,7 @@ div#contactus.container-fluid.anchor_contact {
   height: auto;
   max-width: 40%;
  // max-height: 100%;
-	
+
 }
 
 .thankyouButton {
@@ -250,19 +250,19 @@ ul.social-links {
 // Rules for lesson 5.3 - Sending emails
 
 .nameContactUsForm {
-	
+
 }
 
 .emailContactUsForm {
-	
+
 }
 
 .fieldgroupContactUsForm {
-	
+
 }
 
 .messageContactUsForm {
-	
+
 }
 
 
@@ -287,13 +287,13 @@ h2.featured_product, h2.mainOrders { margin-top: 4.166666667em; //100px;
 
 .bagCaroussel {
 width: 26.59574468%;   //375px; base is 1410px
-height: 28.92857143em; //405px; base is 16px 
+height: 28.92857143em; //405px; base is 16px
 margin-left: auto;
 margin-right: auto;
 }
 
 .product_textBox {
-	margin-top: 2em; //base is 10px;	
+	margin-top: 2em; //base is 10px;
 }
 
 .landPageProductDescription {
@@ -304,7 +304,7 @@ margin-right: auto;
 }
 
 .landPageProductPrice {
-	width: 95%;  //base is 1410px 
+	width: 95%;  //base is 1410px
   margin-left: auto;
   margin-right: auto;
 }
@@ -322,7 +322,7 @@ div#product.container-fluid.anchor_landingPageProducts {
 h3.landPageProductName {
 	width: 35%;
   margin-left: auto;
-  margin-right: auto;	
+  margin-right: auto;
 }
 
 .carousel-caption {
@@ -378,7 +378,7 @@ footer a {
 }
 
 footer {
-  background-color: #9d9d9d; //#264553; grey;  #101010; #809af3; 
+  background-color: #9d9d9d; //#264553; grey;  #101010; #809af3;
 }
 
 .productDetails {
@@ -441,7 +441,7 @@ a.left.carousel-control  {
 /*****************************************************/
 /*  Max-width = 480px                                */
 /*****************************************************/
-@media (max-width: 480px) {  
+@media (max-width: 480px) {
 	div#index.container-fluid.anchor_index {
 	max-width: 100%;
 	}

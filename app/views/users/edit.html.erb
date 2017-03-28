@@ -1,0 +1,18 @@
+<!-- *********************************************************************************************************** -->
+<!-- EDIT PRODUCTS PAGE STARTS HERE                                                                          *******-->
+<!-- *********************************************************************************************************** -->
+<div class="container-fluid anchor_userProfile" id="profile">
+  <div class="row">
+    <div class="col-md-12 col-xs-12"> <!-- col-md-4 col-xs-8 -->
+      <div>
+        <h2 class="editUserProfile">Update your profile</h2>
+        <%= render 'form', user: @user %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="userLinkButtons">
+  <%= link_to 'Show', @user, class: 'btn btn-primary btn-sm inline' %>
+  <%= link_to 'Back', root_path, class: 'btn btn-primary btn-sm inline' %>
+</div>

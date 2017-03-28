@@ -6,6 +6,6 @@ class Product < ApplicationRecord
   		Product.where("name LIKE ?", "%#{search_term}%")
   	else
   		Product.where("name ilike ?", "%#{search_term}%")
-		end  		
+		end
 	end
 end
