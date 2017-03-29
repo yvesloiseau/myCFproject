@@ -10,13 +10,15 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-  	*= require_self
-  	*= require 'scaffolds.scss'
-  	*= require 'static_pages.scss'
-  	*= require 'products.scss'
+    *= require 'scaffolds.scss'
+    *= require_self
+    *= require 'static_pages.scss'
+    *= require 'products.scss'
     *= require 'users.scss'
- 	*= require_tree .
+  *= require_tree .
  */
-@import static_pages;
-@import products;
-@import users
+
+
+//@import static_pages;
+//@import products;
+//@import users
