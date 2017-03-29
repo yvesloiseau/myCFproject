@@ -17,6 +17,6 @@
     *= require 'users.scss'
  	*= require_tree .
  */
-@import "static_pages.scss";
-@import "products.scss";
-@import "users.scss"
+@import static_pages;
+@import products;
+@import users
