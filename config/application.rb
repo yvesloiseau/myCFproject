@@ -11,6 +11,10 @@ require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
+# In config/application.rb
+# In config/application.rb
+require 'rails/all'
+require 'dotenv' ; Dotenv.load ".env.development.env", ".env.#{Rails.env}"
 
 
 # Require the gems listed in Gemfile, including any gems
