@@ -56,6 +56,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #  adding devise gem for user authentication and stuff
 gem 'devise'
 
+# gem file to generate environments variables
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Production gem
 group :production do
   gem 'pg'
