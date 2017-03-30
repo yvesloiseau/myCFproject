@@ -13,9 +13,6 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 # In config/application.rb
 # In config/application.rb
-require 'rails/all'
-require 'dotenv' ; Dotenv.load ".env.development.env", ".env.#{Rails.env}"
-
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
