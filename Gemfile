@@ -27,6 +27,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -58,6 +59,9 @@ gem 'devise'
 
 # gem file to generate environments variables
 gem 'dotenv-rails', groups: [:development, :test]
+
+# gem file for cancancan - Autorization gem version 1.16.0 installed
+gem 'cancancan', '~> 1.16'
 
 # Production gem
 group :production do

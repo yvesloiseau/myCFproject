@@ -3,7 +3,7 @@
   <div class="row" id="work">
     <div class="col-xs-12 col-sm-6 col-md-6">
 
-    	<div class="contactHeader">
+    	<div class="contact_Header">
 				<!-- <h1>Contact Page</h1> -->
 				<h2>My name is : Yves the Bird</h2>
 				<div class="contact_email">
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 
-			<div class="contactEmail">
+			<div class="contact_Email">
 				<h3>Or by phone at: <span class="email_bold rwd-line"><strong>+1(514) 999-9999</strong></span></h3>
 			</div>
 
@@ -32,7 +32,7 @@
 
 			<div class="moreInfo">
 				<h3>More about me:</h3>
-				<div class="contact_page_indent">
+				<div class="contact_Page_Indent">
 					<p>You can find more about me visiting thise website:</p>
 					<p>This is a work in progress wevsite that I'm building through this course</p>
 					<p><strong>http://freight-forwarder-surprises-42305.bitballoon.com/</strong></p>
@@ -49,15 +49,15 @@
     	<%= form_tag("/static_pages/thank_you") do %>
     	<div class="fieldgroupContactUsForm">
     		<%= label_tag :name %>
-    		<%= text_field_tag(:name, nil, class: "nameContactUsForm", placeholder: "Enter Your Name", size: 30) %>
+    		<%= text_field_tag(:name, nil, class: "name_ContactUs_Form", placeholder: "Enter Your Name", size: 30) %>
 			</div>
     	<div class="fieldgroupContactUsForm">
     		<%= label_tag :email %>
-    		<%= text_field_tag :email, nil, class: "nameContactUsForm", placeholder: "Enter Your email", size: 40 %>
+    		<%= text_field_tag :email, nil, class: "name_ContactUs_Form", placeholder: "Enter Your email", size: 40 %>
 			</div>
     	<div class="fieldgroupContactUsForm">
 	      <%= label_tag :message %>
-  	    <%= text_area_tag :message, nil, class: "messageContactUsForm", placeholder: "Enter Your Message", cols: 60, rows: 25 %>
+  	    <%= text_area_tag :message, nil, class: "message_ContactUs_Form", placeholder: "Enter Your Message", cols: 60, rows: 25 %>
       </div>
 
       <%= submit_tag "Send", class: "contactSubmit btn btn-primary btn-sm" %>

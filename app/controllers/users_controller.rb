@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  # Make sure user authentication rules are applied
+  before_filter :authenticate_user!
+  #people can see all the users of your app without signing in. You create an exception like this:
+  #before_action :authenticate_user!, :except => [:show, :index]
+
+  # Load authorizaton rules for users
+  load_and_authorize_resource
+
   # GET /users
   # GET /users.json
   def index
@@ -59,6 +67,11 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  #  Capturing cancan exception and sisplaying a flash error message
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_url, :alert => exception.message
   end
 
   private
