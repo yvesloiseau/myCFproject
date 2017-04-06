@@ -22,7 +22,7 @@
           <strong>Product features:</strong>
         </h2>
         <p>
-          <strong><%= @product.id %></strong>
+          <!-- <strong><%= @product.id %></strong> -->
         </p>
         <p>
           <strong><%= @product.description %></strong>
@@ -66,6 +66,79 @@
           <%= @product.number_of_pockets %>
         </p>
       </div>
+
+      <!-- Show comments review rating here -->
+      <!-- GET ONLY THIS PPRODUCT RELATED COMMENTS -->
+        <% if @product.highest_rating_comment != nil %>
+          <h3>Best review</h3>
+        <p><%= @product.comments.rating_desc.first.text %></p>
+        <p>Rating:
+        <% if @product.comments.rating_desc.first.rating == 1 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.first.rating == 2 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.first.rating == 3 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.first.rating == 4 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.first.rating == 5 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        </p>
+
+        <h3>Worst review</h3>
+        <p>
+          <%= @product.comments.rating_desc.last.text %>
+        </p>
+
+        <!-- Dislay rating -->
+        <p>Rating:
+        <% if @product.comments.rating_desc.last.rating == 1 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.last.rating == 2 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.last.rating == 3 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.last.rating == 4 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% if @product.comments.rating_desc.last.rating == 5 %>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+            <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
+        <% end %>
+        <% else %>
+          <br>
+          <p class="noReviews">No reviews yet   </p>
+          <%= button_to "Make a review", edit_product_path(@product), class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+      <% end %>
+      <!-- PLACEHOLDER TO ADD REVIEW ENTRY  -->
 
 
     </div>

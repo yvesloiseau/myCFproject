@@ -3,35 +3,35 @@
 <!-- *********************************************************************************************************** -->
 
 <!-- Show 4 products per line -->
-<div class="col-md-3 col-xs-6 productRow"> <!-- col-md-4 col-xs-8 --> 
-  <h3 class="productName"><%= product.name %></h3> 
+<div class="col-md-3 col-xs-6 productRow"> <!-- col-md-4 col-xs-8 -->
+  <h3 class="productName"><%= product.name %></h3>
 
-  <div class="productDetails"> 
-    <p><%= image_tag(product.image_url, alt: "Edit Entry", class: "bagImage img-responsive")%></p> 
+  <div class="thumbnails productDetails">
+    <p><%= image_tag(product.image_url, alt: "Edit Entry", class: "bagImage img-responsive")%></p>
 
-    <div class="textBox"> 
-      <p><%= product.description %></p> 
-      <% if @number_of_products == 0 %> 
+    <div class="textBox">
+      <p><%= product.description %></p>
+      <% if @number_of_products == 0 %>
         <% @first_product_id = product.id %>
       <% end %>
-    </div> 
+    </div>
 
     <h2 class="productPrice"><%= number_to_currency(product.price) %></h2>
-    <br> 
+    <br>
 
-    <p class="productLinkButton"> 
-      <%= link_to product, class: "btn btn-default btn-circle" do %> 
-        <span class="glyphicon glyphicon-ok"></span> 
-      <% end %> 
+    <p class="productLinkButton">
+      <%= link_to product, class: "btn btn-default btn-circle" do %>
+        <span class="glyphicon glyphicon-ok"></span>
+      <% end %>
 
-      <%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %> 
-        <span class="glyphicon glyphicon-edit"></span> 
-      <% end %> 
+      <%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %>
+        <span class="glyphicon glyphicon-edit"></span>
+      <% end %>
 
-      <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %>   <span class="glyphicon glyphicon-remove"></span> 
-      <% end %> 
+      <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %>   <span class="glyphicon glyphicon-remove"></span>
+      <% end %>
     </p>
-  </div> 
+  </div>
 </div>
 
 
