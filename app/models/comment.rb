@@ -5,4 +5,9 @@ class Comment < ApplicationRecord
   scope :rating_desc, -> { order(rating: :desc) }
   scope :rating_asc, -> { order(rating: :asc) }
 
+  def user_info
+#    User.joins(:comments)
+  end
+
+
 end

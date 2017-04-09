@@ -1,0 +1,84 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.formText {
+  margin-top: 10px;
+}
+
+.formField {
+  margin: 0;
+}
+
+.bestReviews {
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  padding: 0;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  height: 25em;
+  margin-top: 20px;
+  height: auto;
+  width: auto;
+}
+
+.newComment {
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.product-reviews {
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  padding: 0;
+  margin-top: 50px;
+  padding-left: 10px;
+  height: auto;
+}
+
+.reviewHeaders, .ratings {
+  color: #3366cc;
+  width: auto;
+}
+
+.ratings {
+  font-weight: 900;
+}
+
+.reviews {
+  padding-left: 10px;
+}
+
+.ratings {
+
+}
+
+.reviewUserText {
+  width: 75px;
+  display: inline;
+}
+
+.reviewText, .reviewUserText {
+  color: #3399ff;
+}
+
+.show-div {
+  //visibility: hidden;
+  display: block;
+}
+
+.hide-div {
+  visibility: hidden;
+  //display: block;
+}
+
+.ratingField {
+  font-size: 2em;
+  font-weight: 900;
+}

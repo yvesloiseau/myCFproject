@@ -66,7 +66,7 @@ div.newProduct {
 }
 
 div.productFields {
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 div.textBox {
@@ -247,6 +247,8 @@ th.productActionsRemove {
 	width: 150px;
 	display: inline;
 }
+
+
 // ******************************************************
 // *  Topographic rules                                 *
 // ******************************************************
@@ -292,17 +294,7 @@ div.textBox {
 	font-size: 12px;
 }
 
-.reviewHeaders {
-	color: #3366cc;
-}
 
-.reviewText {
-	color: #3399ff;
-}
-
-.rating {
-	font-weight: 900;
-}
 /****************************************************************************************************/
 /* Rules from users.scss addded here                                                                */
 /****************************************************************************************************/

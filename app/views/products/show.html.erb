@@ -32,137 +32,128 @@
           <strong>Type:</strong>
           <%= @product.product_type %>
         </p>
-
         <p>
           <strong>Brand:</strong>
           <%= @product.brand %>
         </p>
-
         <p>
           <strong>Color:</strong>
           <%= @product.color %>
         </p>
-
         <p>
           <strong>Price:</strong>
           <%= number_to_currency(@product.price) %>
         </p>
 
         <h3>Other features</h3>
-
         <p>
           <%= @product.gender %>
         </p>
-
         <p>
           <%= @product.top_size %>
         </p>
-
         <p>
           <%= @product.other_features %>
         </p>
-
         <p>
           <%= @product.number_of_pockets %>
         </p>
+        <!-- Determine if reviews exist for this product and set an instance variable true or false -->
+        <% if @reviews == nil %>
+          <% @haveReviews = false %>
+        <% else %>
+          <% @haveReviews = true %>
+        <% end %>
+
       </div>
 
-      <!-- Show comments review rating here -->
-      <!-- GET ONLY THIS PPRODUCT RELATED COMMENTS -->
+        <!-- Show comments review rating here -->
+      <div class="bestReviews">
         <% if @product.highest_rating_comment != nil %>
-          <% if @product.comments.rating_desc.first.id != @product.comments.rating_desc.last.id %>
-              <h3 class="reviewHeaders">Best customer review</h3>
-            <p class="reviewText"><%= @product.comments.rating_desc.first.text %></p>
-            <p class="rating">Rating:
-            <% if @product.comments.rating_desc.first.rating == 1 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.first.rating == 2 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.first.rating == 3 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.first.rating == 4 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.first.rating == 5 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            </p>
+          <% if @commentsFirst.id != @commentsLast.id %>
+            <h3 class="reviewHeaders">Best customer review</h3>
 
+            <p class="reviewUserText">Review by: <%= @commentsFirst.user.first_name %></p>
+            <p class="reviewUserText">
+            <small><em><%= "#{time_ago_in_words(@commentsFirst.created_at)} ago" %></em></small>
+            </p>
+            <br>
+
+            <p class="ratings inline">Rating :
+              <div class="rated inline" data-score="<%= @commentsFirst.rating %>"></div>
+            </p>
+            <br>
+            <p class="reviewText">«<%= @commentsFirst.text %>»</p>
+
+            <!-- WORST Customer review section -->
             <h3 class="reviewHeaders">Worst customer review</h3>
-            <p class="reviewText">
-              <%= @product.comments.rating_desc.last.text %>
+
+            <p class="reviewUserText">Review by: <%= @commentsLast.user.first_name %></p>
+            <p class="reviewUserText">
+            <small><em><%= "#{time_ago_in_words(@commentsLast.created_at)} ago" %></em></small>
             </p>
 
-            <!-- Dislay rating -->
-            <p class="rating">Rating:
-            <% if @product.comments.rating_desc.last.rating == 1 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.last.rating == 2 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.last.rating == 3 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.last.rating == 4 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
-            <% if @product.comments.rating_desc.last.rating == 5 %>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            <% end %>
+            <br>
+            <p class="ratings inline">Rating :
+              <div class="rated inline" data-score="<%= @commentsLast.rating %>"></div>
+            </p>
+            <br>
+            <p class="reviewText">«<%= @commentsLast.text %>»</p>
+
           <% else %>
-            <h3 class="reviewHeaders">One customer review</h3>
-            <p class="reviewText">
-              <%= @product.comments.rating_desc.last.text %>
-            </p>
 
-            <!-- Dislay rating -->
-            <p class="rating">Rating:
-                <%= image_tag("Fotolia_Stars.jpg", size: "20x20", alt: "Edit Entry", class: "stars inline")%>
-            </p>
-            <% end %>
+          <h3 class="reviewHeaders">One customer review</h3>
+          <!-- TEST TO DISPLAY COMMENT USER INFO -->
+          <p class="reviewUserText">Review by: <%= @commentsFirst.user.first_name %></p>
+          <p class="reviewUserText">
+          <small><em><%= "#{time_ago_in_words(@commentsFirst.created_at)} ago" %></em></small>
+          </p>
+          <br>
+
+          <br>
+          <p class="ratings inline">Rating :
+            <div class="rated inline" data-score="<%= @commentsFirst.rating %>"></div>
+          </p>
+          <br>
+          <p class="reviewText">«<%= @commentsFirst.text %>»</p>
+
+          <% end %>
+          <h3 class="reviewHeaders">Average rating</h3>
+          <p>
+            <div class="rated" data-score="<%= @product.average_rating %>"></div>
+          </p>
 
         <% else %>
-          <br>
-          <p class="noReviews">Be the first to review this product  </p>
-          <%= button_to "Make a review", edit_product_path(@product), class: 'btn btn-primary btn-sm inline', :method => :get %>
+          <h4 class="reviewHeaders">No reviews yet on this product</h4>
 
-      <% end %>
-      <!-- PLACEHOLDER TO ADD REVIEW ENTRY  -->
+        <% end %>
 
-
+      </div>
     </div>
   </div>
 
-<!-- Edit current product -->
-<%= button_to "Edit", edit_product_path(@product), class: 'btn btn-primary btn-sm', :method => :get %>
+  <div class="row">
+    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+      <!-- PLACEHOLDER TO ADD REVIEW ENTRY  -->
+      <%= render partial: "comments/new_comment" %>
+    </div>
+    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+      <%= render partial: "comments/comments" %>
+    </div>
+  </div>
 
-<!-- Back to product list -->
-<%= button_to "Back", products_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+  <div class="row">
+    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
 
+      <!-- Edit current product -->
+      <%= button_to "Edit", edit_product_path(@product),
+      class: 'btn btn-primary btn-sm', :method => :get %>
 
-
+      <!-- Back to product list -->
+      <%= button_to "Back", products_path,
+      class: 'btn btn-primary btn-sm inline', :method => :get %>
+    </div>
+  </div>
 </div>
+
+

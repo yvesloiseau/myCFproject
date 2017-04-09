@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-	# resources :products
- 	resources :products
+
+  # nested resources for comments
+  resources :products do
+    resources :comments
+  end
 
   resources :orders, only: [:index, :show, :create, :destroy]
 

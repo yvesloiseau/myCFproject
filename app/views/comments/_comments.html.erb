@@ -1,0 +1,17 @@
+<div id="product-reviews" class="product-reviews">
+  <% if @product.highest_rating_comment != nil %>
+    <h3 class="reviewHeaders">Reviews:</h3>
+  <% else %>
+    <h3 class="reviewHeaders noReviews">&larr;  Be the first to review this product  </h3>
+  <% end %>
+
+  <% @comments.each do |comment| %>
+    <div class="row reviews">
+      <br>
+      <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+      </p>
+    <div class="rated" data-score="<%= comment.rating %>"></div>
+      <p>"<%= comment.text %>"</p>
+    </div>
+  <% end %>
+</div>

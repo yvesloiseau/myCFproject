@@ -19,8 +19,10 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @Comments = Comment.all
-    @users = User.all
+    @comments = @product.comments.order("created_at DESC")
+    @commentsFirst = @product.comments.rating_desc.first
+    @commentsLast = @product.comments.rating_desc.last
+    @reviews = @product.highest_rating_comment
   end
 
   # GET /products/new
