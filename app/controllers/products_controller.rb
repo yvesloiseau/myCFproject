@@ -5,24 +5,33 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
+  #  Added pagination with will_paginate on search and product all actions
   def index
     # @products = Product.all
     if params[:q]
       search_term = params[:q]
-      @products = Product.search(search_term)
+      #@products = Product.search(search_term)
+      @products = Product.search(search_term).paginate(page: params[:page], per_page: 4)
+
     else
-      @products = Product.all
-    end    # search_term = params[:q]
+      @products = Product.all.paginate(page: params[:page], per_page: 2)
+    end
+
+    # search_term = params[:q]
     #respond_to :html
+
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC")
+    #@comments = @product.comments.order("created_at DESC")
     @commentsFirst = @product.comments.rating_desc.first
     @commentsLast = @product.comments.rating_desc.last
     @reviews = @product.highest_rating_comment
+    # Pagination for comments
+    @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 3)
+
   end
 
   # GET /products/new

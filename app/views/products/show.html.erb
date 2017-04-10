@@ -139,6 +139,7 @@
     </div>
     <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
       <%= render partial: "comments/comments" %>
+      <%= will_paginate @comments, :class => 'flickr_pagination' %>
     </div>
   </div>
 

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
 
   # nested resources for comments
-  resources :products do
+  resources :products  do
     resources :comments
   end
 
@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'static_pages/landing_page'
 
   post 'static_pages/thank_you'
+
+  post 'products/index'
 
 # This is lesson 5.1 new root page
   # get 'static_pages/index'

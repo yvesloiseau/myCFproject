@@ -63,6 +63,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 # gem file for cancancan - Autorization gem version 1.16.0 installed
 gem 'cancancan', '~> 1.16'
 
+# Pagination gem
+gem 'will_paginate', '~> 3.1.5'
+
 # Production gem
 group :production do
   gem 'pg'

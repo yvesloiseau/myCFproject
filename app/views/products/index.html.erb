@@ -11,10 +11,19 @@
   <!-- Display the partial page here -->
 
   <%= render partial: "product", collection: @products %>
-
 </div>
 
-<div class="productIndexButtons">
+<div class="new_pagination">
+<!-- <div class="col-md-3 col-xs-6">  -->
+  <!-- <div class= "row"> -->
+    <%= will_paginate @products, :class => 'flickr_pagination' %>
+  <!-- </div> -->
+<!-- </div> -->
+</div>
+
+<!-- <div class="col-md-3 col-xs-6">  -->
+  <!-- <div class= "row"> -->
+  <div class="productIndexButtons">
   <!-- Create a new product -->
   <%= button_to "New product", new_product_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
 
@@ -23,6 +32,8 @@
 
   <!-- Go back -->
   <%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+<!-- </div> -->
+<!-- </div> -->
 </div>
 
 
