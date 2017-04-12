@@ -6,3 +6,5 @@
 $(document).on "turbolinks:load", ->
  $('.alert-danger').hide().delay(1000).fadeIn(2000).delay(2000).fadeOut(4000)
 
+$(document).on "turbolinks:load", ->
+ $('.alert-success').delay(4000).fadeOut(4000)

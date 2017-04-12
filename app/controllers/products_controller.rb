@@ -1,7 +1,13 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  load_and_authorize_resource
+
   before_action :save_my_previous_url, only: [:index, :show, :new]
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to products_path, :alert => exception.message
+    end
 
   # GET /products
   # GET /products.json

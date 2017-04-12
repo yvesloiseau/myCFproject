@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  #  Customized devise controller (not using it, was not workng, to be removed)
+  #devise_for :users, :controllers => { registrations: 'registrations' }
+
   devise_for :users
   resources :users
 
@@ -19,13 +23,13 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
-  post 'products/index'
+  #post 'products/index'
 
-# This is lesson 5.1 new root page
+  # This is lesson 5.1 new root page
   # get 'static_pages/index'
 	 root 'static_pages#index'
-# This was my root page before  lesson 5.1 (to put back after)
+  # This was my root page before  lesson 5.1 (to put back after)
    #root 'static_pages#landing_page'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

@@ -6,34 +6,25 @@
 
   <% @number_of_products = 0 %>
   <% @first_product_id = 0 %>
-  <!-- <p> This is the latest url visited <%= @back_url%> </p> -->
-
-  <!-- Display the partial page here -->
 
   <%= render partial: "product", collection: @products %>
 </div>
 
 <div class="new_pagination">
-<!-- <div class="col-md-3 col-xs-6">  -->
-  <!-- <div class= "row"> -->
     <%= will_paginate @products, :class => 'flickr_pagination' %>
-  <!-- </div> -->
-<!-- </div> -->
 </div>
 
-<!-- <div class="col-md-3 col-xs-6">  -->
-  <!-- <div class= "row"> -->
   <div class="productIndexButtons">
-  <!-- Create a new product -->
-  <%= button_to "New product", new_product_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+  <% if signed_in? && current_user.admin? %>
+    <!-- Create a new product -->
+    <%= button_to "New product", new_product_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
 
-  <!-- Edit first product on the page -->
-  <%= button_to "Edit first", edit_product_path(@first_product_id), class: 'btn btn-primary btn-sm inline', :method => :get %>
+    <!-- Edit first product on the page -->
+    <%= button_to "Edit first", edit_product_path(@first_product_id), class: 'btn btn-primary btn-sm inline', :method => :get %>
+    <% end %>
 
   <!-- Go back -->
   <%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
-<!-- </div> -->
-<!-- </div> -->
 </div>
 
 

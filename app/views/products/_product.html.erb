@@ -22,11 +22,14 @@
         <span class="glyphicon glyphicon-ok"></span>
       <% end %>
 
-      <%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %>
-        <span class="glyphicon glyphicon-edit"></span>
-      <% end %>
+      <% if signed_in? && current_user.admin? %>
 
-      <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %>   <span class="glyphicon glyphicon-remove"></span>
+        <%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %>
+          <span class="glyphicon glyphicon-edit"></span>
+        <% end %>
+
+        <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %>   <span class="glyphicon glyphicon-remove"></span>
+        <% end %>
       <% end %>
     </p>
   </div>
