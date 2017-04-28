@@ -10,8 +10,10 @@ class UserMailer < ApplicationMailer
 
   # For messages sent from the User sign-up form
   def welcome(user)
-    @appname = "Birdy's golf blog"
-    mail( :to => user.email,
+  #def welcome(email)
+    @appname = "Birdy's golf store"
+        mail( :to => user.email,
+    #mail( :to => email,
         :subject => "Welcome to #{@appname}!")
   end
 
