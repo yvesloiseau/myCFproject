@@ -1,30 +1,26 @@
 <!-- *********************************************************************** -->
-<div class="container-fluid anchor_show" id="show">
+<div class="container-fluid anchor-show" id="show">
   <div class="row">
-    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
-
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
       <p id="notice"><%= notice %></p>
 
-      <h2 class="productName">
+      <h2 class="full-product-name">
         <strong><%= @product.name %></strong>
       </h2>
- <!-- <p> This is the latest url visited <%= @back_url%> </p> -->
 
-      <p><%= image_tag(@product.image_url, size: "450x450", alt: "Edit Entry", class: "fullBagImage")%></p>
-
+      <p><%= image_tag(@product.image_url, alt: "Edit Entry",
+      class: "full-bag-image img-responsive")%></p>
     </div>
 
-    <div class="col-md-6 col-xs-6">
-      <div class="productFields">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="product-fields">
 
         <h2>
           <strong>Product features:</strong>
         </h2>
-        <p>
-          <!-- <strong><%= @product.id %></strong> -->
-        </p>
-        <p>
+
+        <p class="product-description">
           <strong><%= @product.description %></strong>
         </p>
         <br>
@@ -58,7 +54,8 @@
         <p>
           <%= @product.number_of_pockets %>
         </p>
-        <!-- Determine if reviews exist for this product and set an instance variable true or false -->
+        <!-- Determine if reviews exist for this product and
+          set an instance variable true or false -->
         <% if @reviews == nil %>
           <% @haveReviews = false %>
         <% else %>
@@ -67,64 +64,80 @@
 
       </div>
 
-        <!-- Show comments review rating here -->
-      <div class="bestReviews">
+      <!-- Show comments review rating here -->
+      <div class="best-reviews">
         <% if @product.highest_rating_comment != nil %>
           <% if @commentsFirst.id != @commentsLast.id %>
-            <h3 class="reviewHeaders">Best customer review</h3>
+            <h3 class="review-headers">Best customer review</h3>
 
-            <p class="reviewUserText">Review by: <%= @commentsFirst.user.first_name %></p>
-            <p class="reviewUserText">
-            <small><em><%= "#{time_ago_in_words(@commentsFirst.created_at)} ago" %></em></small>
+            <p class="review-user-text">Review by:
+            <%= @commentsFirst.user.first_name %>
+
+            </p>
+            <p class="review-user-text">
+            <small>
+              <em><%= "#{time_ago_in_words(@commentsFirst.created_at)} ago" %>
+              </em>
+            </small>
             </p>
             <br>
 
             <p class="ratings inline">Rating :
-              <div class="rated inline" data-score="<%= @commentsFirst.rating %>"></div>
+              <div class="rated inline"
+              data-score="<%= @commentsFirst.rating %>">
+              </div>
             </p>
             <br>
-            <p class="reviewText">«<%= @commentsFirst.text %>»</p>
+            <p class="review-text">«<%= @commentsFirst.text %>»</p>
 
             <!-- WORST Customer review section -->
-            <h3 class="reviewHeaders">Worst customer review</h3>
+            <h3 class="review-headers">Worst customer review</h3>
 
-            <p class="reviewUserText">Review by: <%= @commentsLast.user.first_name %></p>
-            <p class="reviewUserText">
-            <small><em><%= "#{time_ago_in_words(@commentsLast.created_at)} ago" %></em></small>
+            <p class="review-user-text">Review by:
+            <%= @commentsLast.user.first_name %></p>
+            <p class="review-user-text">
+            <small>
+              <em><%= "#{time_ago_in_words(@commentsLast.created_at)} ago" %>
+              </em>
+            </small>
             </p>
 
             <br>
             <p class="ratings inline">Rating :
-              <div class="rated inline" data-score="<%= @commentsLast.rating %>"></div>
+              <div class="rated inline" data-score="<%= @commentsLast.rating %>">
+              </div>
             </p>
             <br>
-            <p class="reviewText">«<%= @commentsLast.text %>»</p>
+            <p class="review-text">«<%= @commentsLast.text %>»</p>
 
           <% else %>
 
-          <h3 class="reviewHeaders">One customer review</h3>
+          <h3 class="review-headers">One customer review</h3>
           <!-- TEST TO DISPLAY COMMENT USER INFO -->
-          <p class="reviewUserText">Review by: <%= @commentsFirst.user.first_name %></p>
-          <p class="reviewUserText">
-          <small><em><%= "#{time_ago_in_words(@commentsFirst.created_at)} ago" %></em></small>
+          <p class="review-user-text">Review by:
+          <%= @commentsFirst.user.first_name %></p>
+          <p class="review-user-text">
+          <small><em><%= "#{time_ago_in_words(@commentsFirst.created_at)} ago" %>
+          </em></small>
           </p>
           <br>
 
           <br>
           <p class="ratings inline">Rating :
-            <div class="rated inline" data-score="<%= @commentsFirst.rating %>"></div>
+            <div class="rated inline" data-score="<%= @commentsFirst.rating %>">
+            </div>
           </p>
           <br>
-          <p class="reviewText">«<%= @commentsFirst.text %>»</p>
+          <p class="review-text">«<%= @commentsFirst.text %>»</p>
 
           <% end %>
-          <h3 class="reviewHeaders">Average rating</h3>
+          <h3 class="review-headers">Average rating</h3>
           <p>
             <div class="rated" data-score="<%= @product.average_rating %>"></div>
           </p>
 
         <% else %>
-          <h4 class="reviewHeaders">No reviews yet on this product</h4>
+          <h4 class="review-headers">No reviews yet on this product</h4>
 
         <% end %>
 
@@ -133,18 +146,19 @@
   </div>
 
   <div class="row">
-    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+    <div class="col-md-6 col-xs-12"> <!-- col-md-4 col-xs-8 -->
       <!-- PLACEHOLDER TO ADD REVIEW ENTRY  -->
       <%= render partial: "comments/new_comment" %>
     </div>
-    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+
+    <div class="col-md-6 col-xs-12"> <!-- col-md-4 col-xs-8 -->
       <%= render partial: "comments/comments" %>
       <%= will_paginate @comments, :class => 'flickr_pagination' %>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6 col-xs-6"> <!-- col-md-4 col-xs-8 -->
+    <div class="col-md-6 col-xs-12"> <!-- col-md-4 col-xs-8 -->
 
       <!-- Edit current product -->
       <%= button_to "Edit", edit_product_path(@product),

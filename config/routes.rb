@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   #  Customized devise controller (not using it, was not workng, to be removed)
   #devise_for :users, :controllers => { registrations: 'registrations' }
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "user_registrations" }
   resources :users
 
   # nested resources for comments

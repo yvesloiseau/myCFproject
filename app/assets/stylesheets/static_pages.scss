@@ -5,6 +5,10 @@ $font-stack:    "Helvetica Neue";
 //Helvetica,Arial,sans-serif;
 $primary-color: #333;
 
+html, body {
+    font-size: 16px;
+}
+
 body {
   font: 100% $font-stack;
   color: $primary-color;
@@ -21,7 +25,7 @@ body {
 // *  Nav bar styling rules                             *
 // ******************************************************
 
-nav {
+//nav {
 
 //	div.navbar-collapse.collapse
 //	,
@@ -48,7 +52,7 @@ nav {
    padding-bottom: 25px;
    margin-bottom: 5px;
 	}
-}
+//}
 
 a.language {
 	float: right;
@@ -173,21 +177,23 @@ p, ol, ul, td {
 
 div#index.container-fluid.anchor_index {
   height: 820px;
-  max-width: 100%;
-  max-height: 100%;
+  height: auto;
+  //max-width: 100%;
+  //max-height: 100%;
 	}
 
 div#about.container-fluid.work.anchor_about {
   height: 690px;
-  max-width: 100%;
-  max-height: 100%;
+  height: auto;
+//  max-width: 100%;
+//  max-height: 100%;
 	}
 
 div#contactus.container-fluid.anchor_contact {
   height: 700px;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
+//  max-width: 100%;
+//  max-height: 100%;
 	}
 
 .thankYouPopup {
@@ -211,8 +217,6 @@ div#contactus.container-fluid.anchor_contact {
 	margin-left: 10px;
 }
 
-// container-fluid contactc anchor_contact
-
 // *****************************************************
 // *  Footer section rules                             *
 // *****************************************************
@@ -226,12 +230,6 @@ div#contactus.container-fluid.anchor_contact {
 }
 
 footer {
-//   background-color: #005082;    // #404040; #F1F5F6  #404040
-//   color: white; //#FF9933;
-//   font-size: 22px;
-}
-
-footer {
   clear: both;
   width:100%;
   max-width: 100%;
@@ -241,6 +239,7 @@ footer {
   height:125px;
   font-size: 22px;
 }
+
 footer {
 	margin-top: 30px;
 }
@@ -255,27 +254,20 @@ ul.social-links {
 // Rules for lesson 5.3 - Sending emails
 
 .name_ContactUs_Form {
-
-}
-
-.email_ContactUs_Form {
-
-}
-
-.fieldgroup_ContactUs_Form {
-
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
 }
 
 .message_ContactUs_Form {
-
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
 }
-
-
 
 // ******************************************************
 // *  Landing page styling                              *
 // ******************************************************
-// Rules in lesson 4.5 - Caroussel image and other work
 
 h1.h1Products {
 	width: 90%;
@@ -285,15 +277,15 @@ h1.h1Products {
 	margin-right: auto;
 }
 
-h2.featured_product, h2.mainOrders {
-  margin-top: 2.5em; //100px;
-  padding-top: 10px;
-  padding-left: 15px;
-}
+//h2.featured_product, h2.mainOrders {
+  //margin-top: 2.5em; //100px;
+  //padding-top: 10px;
+  //padding-left: 15px;
+//}
 
-.item { height:.88888888888889%; }
+//.item { height:.88888888888889%; }
 
-.bagCaroussel {
+.bag-caroussel {
 width: 26.59574468%;   //375px; base is 1410px
 height: 28.92857143em; //405px; base is 16px
 margin-left: auto;
@@ -301,7 +293,7 @@ margin-right: auto;
 }
 
 .product_textBox {
-	margin-top: 2em; //base is 10px;
+	margin-top: 0em; //base is 10px;
 }
 
 .landPageProductDescription {
@@ -318,13 +310,14 @@ margin-right: auto;
 }
 
 div#product.container-fluid.anchor_landingPageProducts {
-  height: 700px;
+  height: 1700px;
+  //height: auto;
   max-width: 100%;
   max-height: 100%;
 	}
 
 .anchor_landingPageProducts {
-  padding-top: 8em; //90px; base at 10px
+  padding-top: 5em; //90px; base at 10px
   padding-left: 15px;
 	}
 
@@ -335,11 +328,18 @@ h3.landPageProductName {
 }
 
 .carousel-caption {
-  top: 35em; //350px; base at 10px
+ //  old stuff
+ // top: 21.875em; //35em; //350px; base at 10px
+position: relative;
+right: 0;
+left: 0;
+margin-left: auto;
+margin-right: auto;
+width: 80%;
 }
 
 div.carousel-inner {
-	height: 66em; //660px; base at 10px
+	height: 41.25em; //66em; //660px; base at 10px
 }
 
 .alert {
@@ -376,7 +376,7 @@ h1,h2 {
 }
 
 p {
-	font-size: 14px;
+	//font-size: 14px;
 }
 
 .email_bold {
@@ -397,13 +397,13 @@ footer {
 }
 
 .productDetails {
-  font-size: 2em;
+  font-size: 1em;
   color: #1e62bc;
 }
 
 .landPageProductPrice {
   color: #1e62bc;
-  font-size: 1.6em;
+  font-size: 1.25em;
 }
 
 ol.carousel-indicators li,
@@ -418,6 +418,12 @@ ol.carousel-indicators li,
 
 h3.landPageProductName {
 	font-weight: 900;
+  font-size: 1.50em;
+}
+
+h4.landPageProductDescription {
+  width: 95.74468085%;
+  font-size: 1.17em;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -435,18 +441,150 @@ a.left.carousel-control  {
 	font-size: 1.8em;
 }
 
-//th {
-//	padding-right: 5px;
-//	padding-bottom: 17px;
-//	font-size: 24px;
-//	color: #5535D2;
-//	clear: both;
-//}
-
 .alert {
   font-size: 20px;
   font-weight: 900;
   color: red;
+}
+
+
+/*****************************************************/
+/*  Min-width = 1400px                               */
+/*****************************************************/
+@media (min-width: 768px) and (max-width: 1400px) {
+   .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+
+   div.projectName.navbar-brand {
+      padding-top: 5px !important;
+      padding-bottom: 10px;
+     //margin-bottom: 5px;
+    }
+}
+
+/*****************************************************/
+/*  Max-width = 1200px (.76 factor)                  */
+/*****************************************************/
+@media (max-width: 1200px) {
+
+  .bag-caroussel {
+    width: 26.59574468%;   //375px; base is 1410px
+    height: auto;
+  }
+
+  div.carousel-inner {
+    height: auto; //41.25em; //66em; //660px; base at 10px
+  }
+
+  h1.h1Products {
+    width: 90%;
+    font-size: 1.666666667em; // 2em;
+  }
+
+  h3.landPageProductName {
+    width: 35%;
+    font-size: 1.25em; // 1.17em;
+  }
+
+  h4.landPageProductDescription {
+    width: 95%;
+    font-size: 1.041666667em; // 1.17em;
+  }
+
+  h3.landPageProductPrice {
+    width: 95%;
+    font-size: 1.25em; // 1.5em;
+  }
+
+  h3.landPageSpecialPrice {
+    font-size: 1.666666667em; // 2em;
+  }
+
+
+  .carousel-caption {
+  width: 80%;
+  }
+
+}
+
+/*****************************************************/
+/*  Max-width = 979px                                */
+/*****************************************************/
+@media (max-width: 979px) {
+
+  h1.h1Products {
+    width: 90%;
+    font-size: 1.359722222em; // 1.666666667em;
+  }
+
+  h3.landPageProductName {
+    width: 35%;
+    font-size: 1.019791667em; // 1.25em;
+  }
+
+  h4.landPageProductDescription {
+    width: 95%;
+    font-size: 0.849826389em; // 1.041666667em;
+  }
+
+  h3.landPageProductPrice {
+    width: 95%;
+    font-size: 1.019791667em; // 1.25em;
+  }
+
+  h3.landPageSpecialPrice {
+    font-size: 1.359722222em; // 1.666666667em;
+  }
+
+  .carousel-caption {
+  width: 80%;
+  }
+
+}
+
+/*****************************************************/
+/*  Min-width = 767px                                */
+/*****************************************************/
+@media (max-width: 767px) {
+
+  h1.h1Products {
+    width: 70%;
+    font-size: 1.066666667em; // 1.359722222em;
+  }
+
+  h3.landPageProductName {
+    width: 35%;
+    font-size: 0.8em; // 1.019791667em;
+  }
+
+  h4.landPageProductDescription {
+    width: 95%;
+    font-size: 0.666666667em; // 0.849826389em;
+  }
+
+  h3.landPageProductPrice {
+    width: 95%;
+    font-size: 0.8em; // 1.019791667em;
+  }
+
+  h3.landPageSpecialPrice {
+    font-size: 1.066666667em; // 1.359722222em;
+  }
+
+  .carousel-caption {
+  width: 80%;
+  }
+
 }
 
 /*****************************************************/
@@ -458,41 +596,95 @@ a.left.carousel-control  {
 	}
 
 }
+/*****************************************************/
+/*  Max-width = 630px                                */
+/*****************************************************/
+@media (max-width: 630px) {
+}
+
+
+/*****************************************************/
+/*  Max-width = 550px                                */
+/*****************************************************/
+@media (max-width: 550px) {
+}
 
 /*****************************************************/
 /*  Max-width = 480px                                */
 /*****************************************************/
 @media (max-width: 480px) {
 	div#index.container-fluid.anchor_index {
-	max-width: 100%;
+	//max-width: 100%;
 	}
-
-	h3 {
-//    font-size: 1em;
-  }
 
   div#index.container-fluid.anchor_index {
 //	  height: 820px;
   	padding-top: 50px;
-	  max-width: 100%;
-	  max-height: 100%;
+//	  max-width: 100%;
+//	  max-height: 100%;
 	}
 
 	div#about.container-fluid.work.anchor_about {
 //  height: 690px;
   	padding-top: 50px;
-  	max-width: 100%;
-  	max-height: 100%;
+//  	max-width: 100%;
+//  	max-height: 100%;
 	}
 
 	div#contactus.container-fluid.anchor_contact {
 //  	height: 700px;
   	padding-top: 50px;
-	  max-width: 100%;
-  	max-height: 100%;
+//	  max-width: 100%;
+//  	max-height: 100%;
 	}
 
 }
+
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (max-width: 467px) {
+
+  h1.h1Products {
+    width: 70%;
+    font-size: 1.066666667em; // 1.359722222em;
+  }
+
+  h3.landPageProductName {
+    width: 35%;
+    font-size: 0.8em; // 1.019791667em;
+  }
+
+  h4.landPageProductDescription {
+    width: 95%;
+    font-size: 0.666666667em; // 0.849826389em;
+  }
+
+  h3.landPageProductPrice {
+    width: 95%;
+    font-size: 0.8em; // 1.019791667em;
+  }
+
+  h3.landPageSpecialPrice {
+    font-size: 1.066666667em; // 1.359722222em;
+  }
+
+  .carousel-caption {
+  width: 80%;
+  }
+
+}
+
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (min-width: 320px) and (max-width: 466px) {
+
+}
+
+/*****************************************************/
+/*  END OF MEDIA RULES                               */
+/*****************************************************/
 
 //  My logos colors:
 // #254553 or #254451

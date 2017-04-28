@@ -3,8 +3,6 @@ class UsersController < ApplicationController
 
   # Make sure user authentication rules are applied
   before_filter :authenticate_user!
-  #people can see all the users of your app without signing in. You create an exception like this:
-  #before_action :authenticate_user!, :except => [:show, :index]
 
   # Load authorizaton rules for users
   load_and_authorize_resource
@@ -36,7 +34,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user,
+          notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -64,12 +63,13 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url,
+        notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
-  #  Capturing cancan exception and sisplaying a flash error message
+  #  Capturing cancan exception and displaying a flash error message
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_url, :alert => exception.message
   end
@@ -80,8 +80,11 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet,
+    #  only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email_address)
+      params.require(:user).permit(:first_name,
+                                    :last_name,
+                                    :email_address)
     end
 end

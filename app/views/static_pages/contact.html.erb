@@ -1,4 +1,4 @@
-<!-- CONTACT PAGE                                                     *******-->
+<!-- **********************************************************************  -->
 <div class="container-fluid contactc anchor_contact" id="contactus">
   <div class="row" id="work">
     <div class="col-xs-12 col-sm-6 col-md-6">
@@ -8,34 +8,43 @@
 				<h2>My name is : Yves the Bird</h2>
 				<div class="contact_email">
 					<h3>You can reach me at this email address:
-						<span class="email_bold rwd-line"><strong>loiseau.y@gmail.com</strong>
+						<span class="email_bold rwd-line">
+            <strong>loiseau.y@gmail.com</strong>
 						</span>
 					</h3>
 				</div>
 			</div>
 
 			<div class="contact_Email">
-				<h3>Or by phone at: <span class="email_bold rwd-line"><strong>+1(514) 999-9999</strong></span></h3>
+				<h3>Or by phone at: <span class="email_bold rwd-line">
+        <strong>+1(514) 999-9999</strong></span></h3>
 			</div>
 
 
 			<div class="myBackground">
 				<h3>My background</h3>
 					<div class="contact_page_indent">
-						<p>I'm an IT professional working in the Information Technology domain for over 35 years.</p>
-						<p>Worked my way up in the IT world, started as a programmer and now acting as Project Manager for more than 10 years.</p>
-						<p>I'm now coming back to my roots and re-exploring the more creative aspect of the IT business and Web design and development is the perfect match for me.</p>
+						<p>I'm an IT professional working in the Information Technology
+            domain for over 35 years.</p>
+						<p>Worked my way up in the IT world, started as a programmer and now
+            acting as Project Manager for more than 10 years.</p>
+						<p>I'm now coming back to my roots and re-exploring the more creative
+            aspect of the IT business and Web design and development
+            is the perfect match for me.</p>
 					</div>
 
-				<h3 class="email_bold"><strong>Now serving all of your web development needs</strong></h3>
+				<h3 class="email_bold">
+        <strong>Now serving all of your web development needs</strong></h3>
 			</div>
 
 			<div class="moreInfo">
 				<h3>More about me:</h3>
 				<div class="contact_Page_Indent">
 					<p>You can find more about me visiting thise website:</p>
-					<p>This is a work in progress wevsite that I'm building through this course</p>
-					<p><strong>http://freight-forwarder-surprises-42305.bitballoon.com/</strong></p>
+					<p>Please take a look at my work in progress at:</p>
+					<p><strong>http://freight-forwarder-surprises-42305.bitballoon.com/
+          </strong>
+          </p>
 					<p>Thanks you and have a nice day</p>
 				</div>
 			</div>
@@ -49,15 +58,19 @@
     	<%= form_tag("/static_pages/thank_you") do %>
     	<div class="fieldgroupContactUsForm">
     		<%= label_tag :name %>
-    		<%= text_field_tag(:name, nil, class: "name_ContactUs_Form", placeholder: "Enter Your Name", size: 30) %>
+    		<%= text_field_tag(:name, nil, class: "name_ContactUs_Form",
+        placeholder: "Enter Your Name", style: 'width:50%;') %>
 			</div>
     	<div class="fieldgroupContactUsForm">
     		<%= label_tag :email %>
-    		<%= text_field_tag :email, nil, class: "name_ContactUs_Form", placeholder: "Enter Your email", size: 40 %>
+    		<%= email_field_tag :email, nil, class: "name_ContactUs_Form",
+        placeholder: "Enter Your email", style: 'width:60%;' %>
 			</div>
     	<div class="fieldgroupContactUsForm">
 	      <%= label_tag :message %>
-  	    <%= text_area_tag :message, nil, class: "message_ContactUs_Form", placeholder: "Enter Your Message", cols: 60, rows: 25 %>
+  	    <%= text_area_tag :message, nil,
+        class: "message_ContactUs_Form", placeholder: "Enter Your Message",
+          style: 'width:60%;', rows: 20 %>
       </div>
 
       <%= submit_tag "Send", class: "contactSubmit btn btn-primary btn-sm" %>

@@ -1,5 +1,5 @@
 <!-- *********************************************************************** -->
-<div class="container-fluid anchor_product" id="product">
+<div class="container-fluid anchor-product" id="product">
   <h1 class="h1Products">Golf bags</h1>
 
   <p id="notice"><%= notice %></p>
@@ -17,14 +17,17 @@
   <div class="productIndexButtons">
   <% if signed_in? && current_user.admin? %>
     <!-- Create a new product -->
-    <%= button_to "New product", new_product_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+    <%= button_to "New product", new_product_path,
+    class: 'btn btn-primary btn-sm inline', :method => :get %>
 
     <!-- Edit first product on the page -->
-    <%= button_to "Edit first", edit_product_path(@first_product_id), class: 'btn btn-primary btn-sm inline', :method => :get %>
+    <%= button_to "Edit first", edit_product_path(@first_product_id),
+    class: 'btn btn-primary btn-sm inline', :method => :get %>
     <% end %>
 
   <!-- Go back -->
-  <%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline', :method => :get %>
+  <%= button_to "Home", root_path,
+  class: 'btn btn-primary btn-sm inline', :method => :get %>
 </div>
 
 

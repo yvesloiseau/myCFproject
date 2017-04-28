@@ -1,34 +1,39 @@
-<!-- PRODUCT PARTIAL PAGE                                             *******-->
+<!-- *********************************************************************** -->
+<div class="col-md-3 col-xs-6 product-row">
+  <h3 class="product-name"><%= product.name %></h3>
 
-<!-- Show 4 products per line -->
-<div class="col-md-3 col-xs-6 productRow"> <!-- col-md-4 col-xs-8 -->
-  <h3 class="productName"><%= product.name %></h3>
+  <div class="thumbnails product-details">
+    <p>
+      <%= link_to product do %>
+        <%= image_tag(product.image_url, alt: "Edit Entry",
+        class: "bag-image img-responsive")%>    <% end %>
+    </p>
 
-  <div class="thumbnails productDetails">
-    <p><%= image_tag(product.image_url, alt: "Edit Entry", class: "bagImage img-responsive")%></p>
-
-    <div class="textBox">
+    <div class="text-box">
       <p><%= product.description %></p>
       <% if @number_of_products == 0 %>
         <% @first_product_id = product.id %>
       <% end %>
     </div>
 
-    <h2 class="productPrice"><%= number_to_currency(product.price) %></h2>
+    <h2 class="product-price"><%= number_to_currency(product.price) %></h2>
     <br>
 
-    <p class="productLinkButton">
+    <p class="product-link-button">
       <%= link_to product, class: "btn btn-default btn-circle" do %>
         <span class="glyphicon glyphicon-ok"></span>
       <% end %>
 
       <% if signed_in? && current_user.admin? %>
 
-        <%= link_to edit_product_path(product), class: "btn btn-default btn-circle" do %>
+        <%= link_to edit_product_path(product),
+        class: "btn btn-default btn-circle" do %>
           <span class="glyphicon glyphicon-edit"></span>
         <% end %>
 
-        <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-circle" do %>   <span class="glyphicon glyphicon-remove"></span>
+        <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' },
+        class: "btn btn-default btn-circle" do %>
+        <span class="glyphicon glyphicon-remove"></span>
         <% end %>
       <% end %>
     </p>

@@ -42,7 +42,7 @@ div#new.container-fluid.password_new
   //height: 500px;
   height: auto;
   margin-left: 27.77777778%; // 400px;
-  width: 350px;
+  width: 24.3055556%; // 350px;
   max-height: 100%;
   border-style: solid;
   border-width: 1px;
@@ -95,3 +95,125 @@ div#new.container-fluid.password_new {
   padding-left: 10px;
   color: white;
 }
+
+.user-registration-info {
+  font-size: .85em;
+}
+
+/****************************************************************************************************/
+/* Breakpoints                                                                                      */
+/****************************************************************************************************/
+
+/*****************************************************/
+/*  Min-width = 1400    (.83 factor)   */
+/*****************************************************/
+@media (min-width: 1400px) {
+
+}
+
+/*****************************************************/
+/*  Max-width = 1200px                               */
+/*****************************************************/
+@media (max-width: 1200px) {
+
+div#new.container-fluid.authenticat_new,
+div#edit.container-fluid.authenticat_edit,
+div#new.container-fluid.password_new
+ {
+  width: 35.3055556%; // 350px;
+  }
+
+.editAuthenticat {
+  width: 50%;
+  }
+
+.userLinkButtons {
+  width: 50%;
+  margin-left: 10%;
+}
+}
+
+/*****************************************************/
+/*  Max-width = 990px                                */
+/*****************************************************/
+@media (max-width: 990px) {
+
+div#new.container-fluid.authenticat_new,
+div#edit.container-fluid.authenticat_edit,
+div#new.container-fluid.password_new
+ {
+  width: 50%; // 350px;
+  }
+
+
+}
+
+/*****************************************************/
+/*  Min-width = 768px                                */
+/*****************************************************/
+@media (max-width: 768px) {
+
+div#new.container-fluid.authenticat_new,
+div#edit.container-fluid.authenticat_edit,
+div#new.container-fluid.password_new
+ {
+  width: 60%; // 350px;
+  margin-left: 10%;
+  margin-right: 10%;
+  }
+
+.editAuthenticat {
+  width: 50%;
+  margin-left: 10%;
+  }
+
+input {
+  font-size: 1em;
+}
+
+}
+
+/*****************************************************/
+/*  Max-width = 630px                                */
+/*****************************************************/
+@media (max-width: 630px) {
+
+div#new.container-fluid.authenticat_new,
+div#edit.container-fluid.authenticat_edit,
+div#new.container-fluid.password_new
+ {
+  width: 75%; // 350px;
+  margin-left: 10%;
+  margin-right: 10%;
+  }
+
+input {
+  font-size: .95em;
+}
+
+}
+
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (min-width: 320px) and (max-width: 466px) {
+
+div#new.container-fluid.authenticat_new,
+div#edit.container-fluid.authenticat_edit,
+div#new.container-fluid.password_new
+ {
+  width: 75%; // 350px;
+  margin-left: 10%;
+  margin-right: 10%;
+  }
+
+input {
+  font-size: .90em;
+}
+
+}
+
+/******************************************************************************/
+/*  END OF MEDIA RULES                                                        */
+/******************************************************************************/
+

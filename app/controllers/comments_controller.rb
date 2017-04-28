@@ -15,12 +15,15 @@ load_and_authorize_resource
     respond_to do |format|
 
       if @comment.save
-        format.html { redirect_to product_path(@product), notice: 'Review was created successfully.' }
+        format.html { redirect_to product_path(@product),
+          notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
         #redirect_to product_path(@product)
       else
-        format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.html { redirect_to @product,
+          alert: 'Review was not saved successfully.' }
+        format.json { render json: @comment.errors,
+          status: :unprocessable_entity }
       end
     end
   end
@@ -30,7 +33,8 @@ load_and_authorize_resource
     product = @comment.product
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to products_url, notice: 'The comment was successfully destroyed.' }
+      format.html { redirect_to products_url,
+        notice: 'The comment was successfully destroyed.' }
       format.json { head :no_content }
       #redirect_to product
     end

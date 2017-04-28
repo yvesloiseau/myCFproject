@@ -2,7 +2,11 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
 
-  before_action :save_my_previous_url, only: [:show, :index, :edit, :update, :destroy]
+  before_action :save_my_previous_url, only: [:show,
+                                              :index,
+                                              :edit,
+                                              :update,
+                                              :destroy]
 
   def index
   end
@@ -23,7 +27,8 @@ class OrdersController < ApplicationController
   private
 
   def save_my_previous_url
-    # This is a commented line session[:previous_url] is a Rails built-in variable to save last url.
+    # This is a commented line session[:previous_url] is a Rails
+    #  built-in variable to save last url.
     session[:my_previous_url] = URI(request.referer || '').path
     #  session[:my_previous_url] = request_url
     @back_url = session[:my_previous_url]

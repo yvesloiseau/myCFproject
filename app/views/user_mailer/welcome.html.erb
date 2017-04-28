@@ -1,0 +1,170 @@
+<!-- Header of email -->
+ <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+   <td>
+    <!-- Header of the email (contaiing an image and later a title) -->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600"
+    style="border-collapse: collapse;">
+      <tr>
+        <td style="color: #153643; font-family: Arial, sans-serif;
+        font-size: 24px; padding-left:85px; padding-right: 85px;">
+        <b>Welcome to Birdy's golf store!</b>
+      </td>
+      <tr>
+        <td><p>Thank you for signing up with <%= @appname %>!</p></td>
+      </tr>
+      <tr>
+        <td><p><strong>Your <%= @appname %> Team!</strong></p></td>
+      </tr>
+
+      <tr>
+        <td align="center" bgcolor="white" style="padding: 40px 0 30px 0;">
+          <%= image_tag("Birdy_Golf_Store_TJ.jpg", size: "500x375",
+          alt: "Edit Entry", class: "imgTwo img-responsive",
+          style: "display: block;")%>
+        </td>
+      </tr>
+
+  <!-- Email body (3 sections - Title, main comments,
+        bottom (divided in two sections separated by some spacing) -->
+      <tr>
+        <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+      <td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
+       <b>Lorem ipsum dolor sit amet!</b>
+      </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 20px 0 30px 0;">
+           <%= @message %>
+        </td>
+      </tr>
+
+<!-- Insert here some of the featuresd product on sales this week -->
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tr>
+            <td width="260" valign="top">
+             <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td>
+                  <a class="logoimg"
+                  href="https://interfacedesignblog.herokuapp.com/articles/1"
+                  target="_blank">
+                    <%= image_tag("Golf_bag_Cart_Taylormade_SuperV_TJ.jpg",
+                      alt: "Golf Bag",
+                    style: "display: block; margin: auto;
+                    width: 249px; height: 249px;") %>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+               <td style="padding: 25px 0 5px 5px;">
+                The featured products of this are all Taylor Made bags.
+                Featured on this email is the "Bag_Cart_TM_SuperV" bag.
+                On secial this week at : $214.28 ($299.99 reglar price.
+                Check-out are site for more details on this bag.
+                Please also consult the rest of our site for more products
+                on sales.
+                We carry most of the popular brands at affordable prices.
+                Do not forget our weeekly birdy's special!!.
+                </td>
+            </tr>
+          </table>
+        </td>
+        <td style="font-size: 0; line-height: 0;" width="20">
+          &nbsp;
+        </td>
+        <td width="260" valign="top">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td>
+                <a class="logoimg"
+                href="https://interfacedesignblog.herokuapp.com/my_blog/contact"
+                target="_blank">
+                  <%= image_tag("Diablo Tour golf balls.png", alt: "Golf balls",
+                  style: "display: block; margin: auto;
+                  width: 280px; height: 220px;")%>
+                  </a>40.
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 25px 0 5px 5px;">
+                Looking for balls ?
+              </td>
+              <td style="padding: 25px 0 5px 5px;">
+              We have a great selection of golf balls at all prices and for
+              every golfers.</td>
+              <td></td>
+              <td style="padding: 25px 0 5px 5px;">
+              This week, we have the Callaway Diablo Tour balls on special
+              at 2 dozens for $40.00
+              We can also personalize your balls. Print your company logo,
+              your name or anything else on your golf balls.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+  </table>
+
+  </td>
+  </tr>
+
+</table>
+</td>
+</tr>
+
+<!-- Email footer section -->
+ <tr>
+  <td bgcolor="#9d9d9d" style="padding: 30px 30px 30px 30px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td style="color: #ffffff; font-family: Arial, sans-serif;
+        font-size: 14px;width="75%";">
+        &copy; 2017 Interface Design Web<br/><br>
+         <a href="#" style="color: #ffffff;">
+          <font color="#ffffff">Unsubscribe</font>
+         </a> to this newsletter instantly
+        </td>
+
+     </td>
+    <td align="right">
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+            <a href="https://twitter.com/interface_y" target="_blank">
+              <%= image_tag("social-twitter_v1.png",
+              alt: "Twitter", styling: "width:25px; height:25px;
+              color:white;")%>
+            </a>
+          </td>
+          <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+            <td>
+              <a href="https://www.facebook.com/InterfaceDesignweb"target="_blank">
+                <%= image_tag("Facebook.png", alt: "Facebook",
+                style: "width:25px; height:25px; color:white;")%>
+              </a>
+            </td>
+            <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+              <td>
+                <a href="http://linkedin.com/in/yves-loiseau-66980312"
+                target="_blank">
+                  <%= image_tag("LinkedIn.png", alt: "Linnked",
+                  style: "width:25px; height:25px; color:white;")%>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+ </tr>
+</table>
+</td>
+</tr>
+</table>

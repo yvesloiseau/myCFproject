@@ -1,11 +1,22 @@
-<div id="reviews" class="<%= signed_in? ? 'show-div good newComment' : 'bad hide-div' %>">
-<!-- <div class="newComment"> -->
+<div id="reviews"
+  class="<%= signed_in? ? 'show-div good newComment' : 'bad hide-div' %>">
   <% if signed_in? %>
 
     <h3 class="reviewHeaders">Add a review:</h3>
 
     <%= form_for([@product, @product.comments.build]) do |f| %>
 
+    <% if @product.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@product.errors.count, "error") %>
+          prohibited this product from being saved:</h2>
+        <ul>
+        <% @product.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
       <div class="field">
         <p>
           <%= f.label :text, "Comments", :class => 'formText'  %><br>
@@ -28,6 +39,7 @@
     <% end %>
   <% end %>
   </div>
-<div id="reviews" class="<%= signed_in? ? 'bad hide-div newComment' : 'show-div good newComment'  %>">
+<div id="reviews"
+  class="<%= signed_in? ? 'bad hide-div newComment' : 'show-div good newComment'  %>">
     <h3 class="reviewHeaders">Sign-in to review this product</h3>
 </div>
