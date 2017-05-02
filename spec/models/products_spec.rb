@@ -1,22 +1,28 @@
 require 'rails_helper'
+
 # describe block
 describe Product do
-
   context "when the product has comments" do
     before do
-      #here you put your code to generate test content
       @product = Product.create!(name: "Sun Mountain cart bag SM-100",
                                   description: "This is a product for testing",
                                   product_type: "bag",
                                   brand: "Sun Mountain",
                                   price: 89.99)
+
       @user = User.create!( email: "yves.loiseau@videotron.ca",
                             password: "Guy05Laine",
                             first_name: "Yves",
                             last_name: "Loiseau")
-      @product.comments.create!(rating: 1, user: @user, text: "Awful bag!")
-      @product.comments.create!(rating: 3, user: @user, text: "I like this bag!")
-      @product.comments.create!(rating: 5, user: @user, text: "This bag is very practical")
+
+      @product.comments.create!(rating: 1,
+        user: @user, text: "Awful bag!")
+
+      @product.comments.create!(rating: 3,
+        user: @user, text: "I like this bag!")
+
+      @product.comments.create!(rating: 5,
+        user: @user, text: "This bag is very practical")
     end
 
     it "returns the average rating of all comments" do
@@ -35,6 +41,7 @@ describe Product do
       # validtion of description presence
       expect(@product.description).not_to eq ""
     end
+  end
 
   context "search products is working" do
     before do
@@ -60,12 +67,12 @@ describe Product do
       Rails.env = "development"
     end
     it "validate product name from search method" do
-      expect(Product.search(@search_term)[0].name).to eq "Sun Mountain cart bag SM-100"
+      expect(Product.search(@search_term)[0].name).to \
+        eq "Sun Mountain cart bag SM-100"
     end
   end
 
   context "validation of product fields to be mandotary" do
-
     it "product not valid wihout a name" do
       expect(Product.new(description:
         "This is a product for testing")).not_to be_valid
@@ -101,5 +108,4 @@ describe Product do
 
   end
 
-  end
 end

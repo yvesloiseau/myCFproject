@@ -38,8 +38,11 @@ class Ability
       can :manage, :all
     else
       can :manage, User, id: user.id
+      can :read, User, id: user.id
       can :create, Comment
-      can :read, :all
+      can :read, Product
+      can :read, Order
+#      can :read, :all
     end
 
   end

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # Make sure user authentication rules are applied
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   # Load authorizaton rules for users
   load_and_authorize_resource
