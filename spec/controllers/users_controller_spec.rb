@@ -2,15 +2,9 @@ require 'rails_helper'
 
 describe UsersController, :type => :controller do
   context 'Validate sign in page' do
-    # Create users
-    let(:user)  { User.create!(email: "interface_yves@hotmail.com",
-                               password: "guylou1",
-                               first_name: "Yves",
-                               last_name: "Loiseau") }
-    let(:user2)  { User.create!(email: "glefebvre17@yahoo.com",
-                               password: "guylou1",
-                               first_name: "Guylaine",
-                               last_name: "Lefebvre") }
+    let(:user) { FactoryGirl.create(:user)}
+
+    let(:user2) { FactoryGirl.create(:user)}
 
     describe 'Get #show' do
       context 'user is looged in' do
@@ -39,6 +33,18 @@ describe UsersController, :type => :controller do
         it "re-directs to root page" do
           get :edit, params: { id: user.id }
           expect(response).to redirect_to(root_path)
+        end
+      end
+
+      context 'admin trying to edit another user' do
+        before do
+          @user3 = FactoryGirl.create(:admin)
+          sign_in @user3
+        end
+        it "shows the edit page" do
+          get :edit, params: { id: user.id }
+          expect(response).to render_template('edit')
+          #expect(response).to redirect_to(edit_user_path)
         end
       end
 

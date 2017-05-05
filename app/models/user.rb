@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :comments
 
   # Validations
-  validates :first_name, presence: true, length: {in: 2..30}
-  validates :last_name, presence: true, length: {in: 2..30}
+  validates :first_name, presence: true, length: {in: 1..30}
+  validates :last_name, presence: true, length: {in: 1..30}
 
  end

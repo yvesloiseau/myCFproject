@@ -4,25 +4,19 @@ require 'rails_helper'
 describe Product do
   context "when the product has comments" do
     before do
-      @product = Product.create!(name: "Sun Mountain cart bag SM-100",
-                                  description: "This is a product for testing",
-                                  product_type: "bag",
-                                  brand: "Sun Mountain",
-                                  price: 89.99)
+      @product = FactoryGirl.create(:product)
 
-      @user = User.create!( email: "yves.loiseau@videotron.ca",
-                            password: "Guy05Laine",
-                            first_name: "Yves",
-                            last_name: "Loiseau")
+      @user = FactoryGirl.create(:admin)
 
-      @product.comments.create!(rating: 1,
+      FactoryGirl.create(:comment, rating: 1, product: @product,
         user: @user, text: "Awful bag!")
 
-      @product.comments.create!(rating: 3,
+      FactoryGirl.create(:comment, rating: 3, product: @product,
         user: @user, text: "I like this bag!")
 
-      @product.comments.create!(rating: 5,
-        user: @user, text: "This bag is very practical")
+      FactoryGirl.create(:comment, rating: 5, product: @product,
+        user: @user, text: "This bag is very practical!")
+
     end
 
     it "returns the average rating of all comments" do
@@ -47,23 +41,9 @@ describe Product do
     before do
       @search_term = "Sun Mountain cart bag SM-100"
 
-      Product.create!(name: "Sun Mountain cart bag SM-100",
-                                  description: "This is a product for testing",
-                                  product_type: "bag",
-                                  brand: "Sun Mountain",
-                                  price: 89.99)
-
-      Product.create!(name: "Taylor Made cart bag",
-                                  description: "This is a product for testing",
-                                  product_type: "bag",
-                                  brand: "Sun Mountain",
-                                  price: 89.99)
-
-      Product.create!(name: "Taylor Made carry bag",
-                                  description: "This is a product for testing",
-                                  product_type: "bag",
-                                  brand: "Sun Mountain",
-                                  price: 89.99)
+      FactoryGirl.create(:product, name: "Sun Mountain cart bag SM-100")
+      FactoryGirl.create(:product, name: "Taylor Made cart bag")
+      FactoryGirl.create(:product, name: "Taylor Made carry bag")
       Rails.env = "development"
     end
     it "validate product name from search method" do
