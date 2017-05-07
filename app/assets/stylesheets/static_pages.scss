@@ -16,26 +16,9 @@ body {
   margin: 0;
 }
 
-.container-fluid {
-//	padding-left: 7px;
-//	padding-right: 7px;
-}
-
 // ******************************************************
 // *  Nav bar styling rules                             *
 // ******************************************************
-
-//nav {
-
-//	div.navbar-collapse.collapse
-//	,
-//	nav.navbar.navbar-inverse.navbar-static-top.navbar-fixed-top
-//	,
-//	.navbar-inverse,
-//	.navbar-default
-//		{
-//		background-color: #264553;
-//		}
 
 	.navbar-nav>li>a {
 	    line-height: 20px;
@@ -47,22 +30,21 @@ body {
 	    padding-bottom: 20px;
 	}
 
-	div.projectName.navbar-brand {
+	div.project-name.navbar-brand {
    padding-top: 10px;
    padding-bottom: 25px;
    margin-bottom: 5px;
 	}
-//}
 
 a.language {
 	float: right;
 }
-// ******************************************************
 
 // ******************************************************
 // *  Static pages styling                              *
 // ******************************************************
-.golf_Store_header {
+
+.golf-store-header {
 	width: 24.30555556%; // 350px;
 	height: 2.857142857em; // 40px;
 	height: auto;
@@ -70,7 +52,7 @@ a.language {
   margin-right: auto;
 }
 
-.golf_Store_footer {
+.golf-store-footer {
 	width: 60%; //24.30555556%; // 350px;
 	height: 2.857142857em; // 40px;
 	height: auto;
@@ -78,75 +60,67 @@ a.language {
   margin-right: auto;
 }
 
-h3.golf_Store_text {
+h3.golf-store-text {
 	width: 350px;
 	height: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.imgTwo {
+.img-two {
   margin-left: auto;
   margin-right: auto;
 }
-
-//  Rules for the image in the About page: not in yet
-//.imgAbout {
-//  width: 300px;
-//  height: 350px;
-//  padding-left: 50px;
-//}
 
 .center {
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.aboutTools {
+.about-tools {
 	width: 90%;
 	height: auto;
 }
 
-.aboutRubyandRails {
+.about-ruby-and-rails {
 	width: 70%;
 	height: auto;
 }
 
-.moreInfoAbout {
+.more-info-about {
 	width: 70%;
 	height: auto;
 }
 
-.about_page_indent {
+.about-page-indent {
 	padding-left: 15px;
 	width: 50%;
 	height: auto;
-
 }
 
-.contact_Header  {
+.contact-header  {
 	display: inline-block;
 	width: 100%; // 55.55555556%;  // 800px;
 	height: auto;
 }
 
-.contact_Email  {
+.contact-email  {
 //	display: inline-block;
 	width: 100%; // 34.72222222%;  // 500px;
 	height: auto;
 }
 
-.myBackground  {
+.my-background  {
 	width: 90%;  // 55.55555556%;  // 800px;
 	height: auto;
 }
 
-.moreInfo  {
+.more-info  {
 	width: 100%; //34.72222222%;  // 500px;
 	height: auto;
 }
 
-.contact_Page_Indent {
+.contact-page-indent {
 	padding-left: 15px;
 }
 
@@ -161,42 +135,42 @@ p, ol, ul, td {
 // ******************************************************
 // *  Anchor tags and pages height                      *
 // ******************************************************
-.anchor_about {
+.anchor-about {
   padding-top: 80px;
   }
 
-.anchor_contact {
+.anchor-contact {
   padding-top: 80px;  //*30px;*/
   padding-left: 1em; //*12px;*/
   padding-right: 0px;
 	}
 
-.anchor_index {
+.anchor-index {
   padding-top: 80px;
 	}
 
-div#index.container-fluid.anchor_index {
+div#index.container-fluid.anchor-index {
   height: 820px;
   height: auto;
   //max-width: 100%;
   //max-height: 100%;
 	}
 
-div#about.container-fluid.work.anchor_about {
+div#about.container-fluid.work.anchor-about {
   height: 690px;
   height: auto;
 //  max-width: 100%;
 //  max-height: 100%;
 	}
 
-div#contactus.container-fluid.anchor_contact {
+div#contactus.container-fluid.anchor-contact {
   height: 700px;
   height: auto;
 //  max-width: 100%;
 //  max-height: 100%;
 	}
 
-.thankYouPopup {
+.thankyou-popup {
 	border-style: solid;
 	border-width: 2px;
 	border-color: grey;
@@ -213,7 +187,7 @@ div#contactus.container-fluid.anchor_contact {
 
 }
 
-.thankyouButton {
+.thankyou-button {
 	margin-left: 10px;
 }
 
@@ -253,13 +227,13 @@ ul.social-links {
 // ******************************************************
 // Rules for lesson 5.3 - Sending emails
 
-.name_ContactUs_Form {
+.name-contactUs-form {
   border-style: solid;
   border-width: 1px;
   border-color: grey;
 }
 
-.message_ContactUs_Form {
+.message-contactUs-form {
   border-style: solid;
   border-width: 1px;
   border-color: grey;
@@ -269,21 +243,13 @@ ul.social-links {
 // *  Landing page styling                              *
 // ******************************************************
 
-h1.h1Products {
+h1.h1-products {
 	width: 90%;
 	margin-top: 0.277777778em; //10px;
 	margin-bottom: 0.555555556em; // 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-//h2.featured_product, h2.mainOrders {
-  //margin-top: 2.5em; //100px;
-  //padding-top: 10px;
-  //padding-left: 15px;
-//}
-
-//.item { height:.88888888888889%; }
 
 .bag-caroussel {
 width: 26.59574468%;   //375px; base is 1410px
@@ -292,36 +258,36 @@ margin-left: auto;
 margin-right: auto;
 }
 
-.product_textBox {
+.product-text-box {
 	margin-top: 0em; //base is 10px;
 }
 
-.landPageProductDescription {
+.landpage-product-description {
   width: 95.74468085%; //800px; base is 1410px * 60%
   height: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
-.landPageProductPrice {
+.landpage-product-price {
 	width: 95%;  //base is 1410px
   margin-left: auto;
   margin-right: auto;
 }
 
-div#product.container-fluid.anchor_landingPageProducts {
+div#product.container-fluid.anchor-landingpage-products {
   height: 1700px;
   //height: auto;
   max-width: 100%;
   max-height: 100%;
 	}
 
-.anchor_landingPageProducts {
+.anchor-landingpage-products {
   padding-top: 5em; //90px; base at 10px
   padding-left: 15px;
 	}
 
-h3.landPageProductName {
+h3.landpage-product-name {
 	width: 35%;
   margin-left: auto;
   margin-right: auto;
@@ -357,7 +323,7 @@ div.carousel-inner {
   background-color: transparent;
 }
 
-.navbar_custom {
+.navbar-custom {
   background-color: #fff; //#9d9d9d; //#264553;
   color: white; //#ffffff;
   border-radius:0;
@@ -379,7 +345,7 @@ p {
 	//font-size: 14px;
 }
 
-.email_bold {
+.email-bold {
 	color: #5535D2;
 }
 
@@ -396,12 +362,12 @@ footer {
   background-color: #9d9d9d; //#264553; grey;  #101010; #809af3;
 }
 
-.productDetails {
+.product-details {
   font-size: 1em;
   color: #1e62bc;
 }
 
-.landPageProductPrice {
+.landpage-product-price {
   color: #1e62bc;
   font-size: 1.25em;
 }
@@ -411,17 +377,17 @@ ol.carousel-indicators li,
 	visibility: hidden;
 }
 
-.productBrand, landPageProductName {
+.product-brand, landpage-product-name {
 	color: #5535D2;
 	font-weight: bold;
 }
 
-h3.landPageProductName {
+h3.landpage-product-name {
 	font-weight: 900;
   font-size: 1.50em;
 }
 
-h4.landPageProductDescription {
+h4.landpage-product-description {
   width: 95.74468085%;
   font-size: 1.17em;
 }
@@ -436,7 +402,7 @@ a.left.carousel-control  {
 	background-color: transparent;
 }
 
-.landPageSpecialPrice {
+.landpage-special-price {
 	color: red;
 	font-size: 1.8em;
 }
@@ -452,20 +418,23 @@ a.left.carousel-control  {
 /*  Min-width = 1400px                               */
 /*****************************************************/
 @media (min-width: 768px) and (max-width: 1400px) {
-   .navbar-collapse.collapse {
+  .navbar-collapse.collapse {
         display: none !important;
-    }
+  }
+
     .navbar-collapse.collapse.in {
         display: block !important;
     }
+
     .navbar-header .collapse, .navbar-toggle {
         display:block !important;
     }
+
     .navbar-header {
         float:none;
     }
 
-   div.projectName.navbar-brand {
+   div.project_name.navbar-brand {
       padding-top: 5px !important;
       padding-bottom: 10px;
      //margin-bottom: 5px;
@@ -486,30 +455,29 @@ a.left.carousel-control  {
     height: auto; //41.25em; //66em; //660px; base at 10px
   }
 
-  h1.h1Products {
+  h1.h1-products {
     width: 90%;
     font-size: 1.666666667em; // 2em;
   }
 
-  h3.landPageProductName {
+  h3.landpage-product-name {
     width: 35%;
     font-size: 1.25em; // 1.17em;
   }
 
-  h4.landPageProductDescription {
+  h4.landpage-product-description {
     width: 95%;
     font-size: 1.041666667em; // 1.17em;
   }
 
-  h3.landPageProductPrice {
+  h3.landpage-product-price {
     width: 95%;
     font-size: 1.25em; // 1.5em;
   }
 
-  h3.landPageSpecialPrice {
+  h3.landpage-special-price {
     font-size: 1.666666667em; // 2em;
   }
-
 
   .carousel-caption {
   width: 80%;
@@ -522,34 +490,33 @@ a.left.carousel-control  {
 /*****************************************************/
 @media (max-width: 979px) {
 
-  h1.h1Products {
+  h1.h1-products {
     width: 90%;
     font-size: 1.359722222em; // 1.666666667em;
   }
 
-  h3.landPageProductName {
+  h3.landpage-product-name {
     width: 35%;
     font-size: 1.019791667em; // 1.25em;
   }
 
-  h4.landPageProductDescription {
+  h4.landpage-product-description {
     width: 95%;
     font-size: 0.849826389em; // 1.041666667em;
   }
 
-  h3.landPageProductPrice {
+  h3.landpage-product-price {
     width: 95%;
     font-size: 1.019791667em; // 1.25em;
   }
 
-  h3.landPageSpecialPrice {
+  h3.landpage-special-price {
     font-size: 1.359722222em; // 1.666666667em;
   }
 
   .carousel-caption {
   width: 80%;
   }
-
 }
 
 /*****************************************************/
@@ -557,34 +524,33 @@ a.left.carousel-control  {
 /*****************************************************/
 @media (max-width: 767px) {
 
-  h1.h1Products {
+  h1.h1-products {
     width: 70%;
     font-size: 1.066666667em; // 1.359722222em;
   }
 
-  h3.landPageProductName {
+  h3.landpage-product-name {
     width: 35%;
     font-size: 0.8em; // 1.019791667em;
   }
 
-  h4.landPageProductDescription {
+  h4.landpage-product-description {
     width: 95%;
     font-size: 0.666666667em; // 0.849826389em;
   }
 
-  h3.landPageProductPrice {
+  h3.landpage-product-price {
     width: 95%;
     font-size: 0.8em; // 1.019791667em;
   }
 
-  h3.landPageSpecialPrice {
+  h3.landpage-special-price {
     font-size: 1.066666667em; // 1.359722222em;
   }
 
   .carousel-caption {
   width: 80%;
   }
-
 }
 
 /*****************************************************/
@@ -594,50 +560,27 @@ a.left.carousel-control  {
 	.rwd-line {
 		display: inline;
 	}
-
-}
-/*****************************************************/
-/*  Max-width = 630px                                */
-/*****************************************************/
-@media (max-width: 630px) {
-}
-
-
-/*****************************************************/
-/*  Max-width = 550px                                */
-/*****************************************************/
-@media (max-width: 550px) {
 }
 
 /*****************************************************/
 /*  Max-width = 480px                                */
 /*****************************************************/
 @media (max-width: 480px) {
-	div#index.container-fluid.anchor_index {
-	//max-width: 100%;
-	}
 
-  div#index.container-fluid.anchor_index {
-//	  height: 820px;
+  div#index.container-fluid.anchor-index {
+  //	height: 820px;
   	padding-top: 50px;
-//	  max-width: 100%;
-//	  max-height: 100%;
 	}
 
-	div#about.container-fluid.work.anchor_about {
+	div#about.container-fluid.work.anchor-about {
 //  height: 690px;
   	padding-top: 50px;
-//  	max-width: 100%;
-//  	max-height: 100%;
 	}
 
-	div#contactus.container-fluid.anchor_contact {
+	div#contactus.container-fluid.anchor-contact {
 //  	height: 700px;
   	padding-top: 50px;
-//	  max-width: 100%;
-//  	max-height: 100%;
 	}
-
 }
 
 /*****************************************************/
@@ -645,41 +588,33 @@ a.left.carousel-control  {
 /*****************************************************/
 @media (max-width: 467px) {
 
-  h1.h1Products {
+  h1.h1-products {
     width: 70%;
     font-size: 1.066666667em; // 1.359722222em;
   }
 
-  h3.landPageProductName {
+  h3.landpage-product-name {
     width: 35%;
     font-size: 0.8em; // 1.019791667em;
   }
 
-  h4.landPageProductDescription {
+  h4.landpage-product-description {
     width: 95%;
     font-size: 0.666666667em; // 0.849826389em;
   }
 
-  h3.landPageProductPrice {
+  h3.landpage-product-price {
     width: 95%;
     font-size: 0.8em; // 1.019791667em;
   }
 
-  h3.landPageSpecialPrice {
+  h3.landpage-special-price {
     font-size: 1.066666667em; // 1.359722222em;
   }
 
   .carousel-caption {
   width: 80%;
   }
-
-}
-
-/*****************************************************/
-/*  Max-width = 467px                                */
-/*****************************************************/
-@media (min-width: 320px) and (max-width: 466px) {
-
 }
 
 /*****************************************************/

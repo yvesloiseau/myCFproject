@@ -1,8 +1,8 @@
-<div class="container-fluid anchor_landingPageProducts" id="landingPageProducts">
+<div class="container-fluid anchor-landingpage-products" id="landingpage-products">
 		<% count = 0 %>
 
-  <h1 class="h1Products">Featured products of this week:
-    <span class="productBrand"><%= @featuredBrand %> bags
+  <h1 class="h1-products">Featured products of this week:
+    <span class="product-brand"><%= @featuredBrand %> bags
     </span> up to 30% off!!
   </h1>
 
@@ -36,13 +36,13 @@
 	        <p><%= image_tag(featured.image_url,  alt: "Bag caroussel image",
           class: "bag-caroussel img-responsive")%></p>
 
-         <div class="carousel-caption product_textBox">
-            <div class="productDetails">
-              <h3 class="landPageProductName"><%= featured.name %></h3>
-              <h4 class="landPageProductDescription"><%= featured.description %></h4>
-              <h3 class="landPageProductPrice">Reg. price:
+         <div class="carousel-caption product-text-box">
+            <div class="product-details">
+              <h3 class="landpage-product-name"><%= featured.name %></h3>
+              <h4 class="landpage-product-description"><%= featured.description %></h4>
+              <h3 class="landpage-product-price">Reg. price:
                 <%= number_to_currency(featured.price) %> This week at:
-                <span class="landPageSpecialPrice">
+                <span class="landpage-special-price">
                 <%= number_to_currency((featured.price/1.40).round(2)) %>
                 </span>
               </h3>

@@ -24,7 +24,7 @@
 
   <body>
 
-	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top navbar_custom"
+	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top navbar-custom"
 	role="navigation">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -35,7 +35,7 @@
 	      <span class="icon-bar"></span>
 	      <span class="icon-bar"></span>
 	      </button>
-	      <div class="projectName navbar-brand">
+	      <div class="project-name navbar-brand">
 				<%= link_to root_path do %>
 	        <%= image_tag("Logo_Interface_design_seul.png", size: "50x50",
 	        alt: "Edit Entry", class: "logoimg")%>
@@ -54,7 +54,7 @@
 	        <li><%= link_to "Orders", orders_path %> </li>
 
 	        <li><a><%= form_tag("/products", method: "get") do %>
-  						<%= text_field_tag(:q, "",class: "searchField")  %>
+  						<%= text_field_tag(:q, "",class: "search-field")  %>
   						<%= submit_tag("Find product",
   						 class: "searchSubmit btn btn-primary btn-sm inline") %>
 							<% end %>
@@ -62,10 +62,10 @@
 					</li>
 	      </ul>
 
-	      <ul class="nav navbar-nav menu pull-right userNavLinks">
+	      <ul class="nav navbar-nav menu pull-right user-nav-links">
 					<% if user_signed_in? %>
-						<li class="userFirstName"><%= current_user.first_name %></li>
-			      <li class="userNavLinks"><%= link_to "Profile",
+						<li class="user-first-name"><%= current_user.first_name %></li>
+			      <li class="user-nav-links"><%= link_to "Profile",
 			       edit_user_path(current_user) %>
 			      </li>
 	        <% end %>
@@ -73,12 +73,12 @@
 					<% if user_signed_in? %>
 						<li><%= link_to("Logout", destroy_user_session_path,
 						:method => :delete, class: "inline") %></li>
-						<li class="userFirstName"> / </li>
+						<li class="user-first-name"> / </li>
 						<li><%= link_to "Change pwd", edit_user_registration_path,
 						 class: "inline" %></li>
 					<% else %>
 						<li><%= link_to("Login", new_user_session_path) %></li>
-						<li class="userFirstName"> / </li>
+						<li class="user-first-name"> / </li>
 						<li><%= link_to("Sign-up", new_user_registration_path) %></li>
 					<% end %>
 					<!-- </li> -->
@@ -107,8 +107,8 @@
 
 	<footer>
   &copy; 2017 Interface Design Web
-	<div class="container-fluid footerclass anchorfooter" id="footer">
-	  <div class="row" id="footerpage">
+	<div class="container-fluid footer-class anchor-footer" id="footer">
+	  <div class="row" id="footer-page">
 	    <div class="col-xs-12 col-sm-6 col-md-4">
 	    <!-- <div class="col-md-4 col-xs-8"> -->
 	      <h3>My social links</h3>

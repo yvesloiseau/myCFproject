@@ -8,3 +8,6 @@ $(document).on "turbolinks:load", ->
 
 $(document).on "turbolinks:load", ->
  $('.alert-success').delay(4000).fadeOut(4000)
+
+$(document).on "turbolinks:load", ->
+ $('#notice').delay(4000).fadeOut(4000)

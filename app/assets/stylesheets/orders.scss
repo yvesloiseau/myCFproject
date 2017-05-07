@@ -1,0 +1,32 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//  Order rules saved
+
+.anchor-order {
+  padding-top: 80px;
+}
+
+div#order.container-fluid.anchor-order {
+  height: 670px;
+  //height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/****************************************************************************************************/
+/* Breakpoints                                                                                      */
+/****************************************************************************************************/
+
+/*****************************************************/
+/*  Max-width = 1050px  up to 1400    (.83 factor)   */
+/*****************************************************/
+@media (max-width: 1400px) {
+
+.anchor-order {
+  }
+
+  div#order.container-fluid.anchor-order {
+    height: auto;
+  }
+}

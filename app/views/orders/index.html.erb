@@ -1,14 +1,20 @@
-<h2 class="mainOrders">Orders main page</h2>
+<!-- *********************************************************************** -->
+<div class="container-fluid anchor-order" id="order">
+  <h1 class="h1-orders">All orders</h1>
 
-<!-- Edit current product -->
-<%= button_to "Show products", products_path,
- class: 'btn btn-primary btn-sm', :method => :get %>
+  <p id="notice"><%= notice %></p>
+  <h2 class="mainOrders">Orders main page</h2>
 
-<!-- Re-direct the user from where he came from -->
-<%= button_to "Previous", session[:previous_url],
- class: 'btn btn-primary btn-sm inline', :method => :get  %>
+  <!-- Edit current product -->
+  <%= button_to "Show products", products_path,
+   class: 'btn btn-primary btn-sm', :method => :get %>
 
-<!-- Re-direct the user from where he came from -->
-<%= button_to "Back", :back, class: 'btn btn-primary btn-sm inline',
- :method => :get  %>
+  <!-- Re-direct the user from where he came from -->
+  <%= button_to "Previous", session[:previous_url],
+   class: 'btn btn-primary btn-sm inline', :method => :get  %>
 
+  <!-- Re-direct the user from where he came from -->
+  <%= button_to "Back", :back, class: 'btn btn-primary btn-sm inline',
+   :method => :get  %>
+
+</div>

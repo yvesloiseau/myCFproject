@@ -5,11 +5,11 @@
   margin-top: 10px;
 }
 
-.formField {
+.form_field {
   margin: 0;
 }
 
-.bestReviews {
+.best-reviews {
   border-style: solid;
   border-width: 1px;
   border-color: blue;
@@ -22,7 +22,7 @@
   width: auto;
 }
 
-.newComment {
+.new-comment {
   border-style: solid;
   border-width: 1px;
   border-color: blue;
@@ -42,7 +42,7 @@
   height: auto;
 }
 
-.reviewHeaders, .ratings {
+.review-headers, .ratings {
   color: #3366cc;
   width: auto;
 }
@@ -59,12 +59,12 @@
 
 }
 
-.reviewUserText {
+.review-user-text {
   width: 75px;
   display: inline;
 }
 
-.reviewText, .reviewUserText {
+.review-text, .review-user-text {
   color: #3399ff;
 }
 
@@ -78,7 +78,7 @@
   //display: block;
 }
 
-.ratingField {
+.rating-field {
   font-size: 2em;
   font-weight: 900;
 }

@@ -8,7 +8,8 @@ $(document).on('turbolinks:load', function(){
     });
 });
 
-// Need to change the following code to hide and show some of the content of my pages based on some conditions
+// Need to change the following code to hide and show some of the content
+//  of my pages based on some conditions
 $(function() {
 
   $('#success').hide();

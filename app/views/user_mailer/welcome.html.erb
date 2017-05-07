@@ -1,52 +1,55 @@
 <!-- Header of email -->
- <table border="0" cellpadding="0" cellspacing="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
    <td>
-    <!-- Header of the email (contaiing an image and later a title) -->
+    <!-- Header of the email (containing an image and later a title) -->
     <table align="center" border="0" cellpadding="0" cellspacing="0" width="600"
-    style="border-collapse: collapse;">
+           style="border-collapse: collapse;">
       <tr>
         <td style="color: #153643; font-family: Arial, sans-serif;
-        font-size: 24px; padding-left:85px; padding-right: 85px;">
+            font-size: 24px; padding-left:85px; padding-right: 85px;">
         <b>Welcome to Birdy's golf store!</b>
       </td>
       <tr>
-        <td><p>Thank you for signing up with <%= @appname %>!</p></td>
+        <td>
+          <p>Thank you for signing up with <%= @appname %>!</p>
+        </td>
       </tr>
       <tr>
-        <td><p><strong>Your <%= @appname %> Team!</strong></p></td>
+        <td>
+          <p><strong>Your <%= @appname %> Team!</strong></p>
+        </td>
       </tr>
-
       <tr>
         <td align="center" bgcolor="white" style="padding: 40px 0 30px 0;">
                   <a class="logoimg"
                   href="https://mycfproject.herokuapp.com/"
                   target="_blank">
           <%= image_tag("Birdy_Golf_Store_TJ.jpg", size: "500x375",
-          alt: "Edit Entry", class: "imgTwo img-responsive",
-          style: "display: block;")%>
+                        alt: "Edit Entry", class: "img-two img-responsive",
+                        style: "display: block;")%>
           </a>
         </td>
       </tr>
 
-  <!-- Email body (3 sections - Title, main comments,
+      <!-- Email body (3 sections - Title, main comments,
         bottom (divided in two sections separated by some spacing) -->
       <tr>
         <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-      <td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
+      <td style="color: #153643; font-family: Arial, sans-serif;
+                font-size: 24px;">
        <b>Lorem ipsum dolor sit amet!</b>
       </td>
       </tr>
-
       <tr>
         <td style="padding: 20px 0 30px 0;">
            <%= @message %>
         </td>
       </tr>
 
-<!-- Insert here some of the featuresd product on sales this week -->
+      <!-- Insert here some of the featuresd product on sales this week -->
       <tr>
         <td>
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -59,9 +62,9 @@
                   href="https://mycfproject.herokuapp.com/products/7"
                   target="_blank">
                     <%= image_tag("Golf_bag_Cart_Taylormade_SuperV_TJ.jpg",
-                      alt: "Golf Bag",
-                    style: "display: block; margin: auto;
-                    width: 249px; height: 249px;") %>
+                                  alt: "Golf Bag",
+                                  style: "display: block; margin: auto;
+                                  width: 249px; height: 249px;") %>
                   </a>
                 </td>
               </tr>
@@ -90,8 +93,8 @@
                 href="https://mycfproject.herokuapp.com/products/19"
                 target="_blank">
                   <%= image_tag("Diablo Tour golf balls.png", alt: "Golf balls",
-                  style: "display: block; margin: auto;
-                  width: 280px; height: 249px;")%>
+                                style: "display: block; margin: auto;
+                                width: 280px; height: 249px;")%>
                   </a>
               </td>
             </tr>
@@ -119,10 +122,9 @@
           </table>
         </td>
       </tr>
-  </table>
-
+    </table>
   </td>
-  </tr>
+</tr>
 
 </table>
 </td>
@@ -148,23 +150,25 @@
           <td>
             <a href="https://twitter.com/interface_y" target="_blank">
               <%= image_tag("social-twitter_v1.png",
-              alt: "Twitter", styling: "width:25px; height:25px;
-              color:white;")%>
+                            alt: "Twitter", styling: "width:25px; height:25px;
+                            color:white;")%>
             </a>
           </td>
           <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
             <td>
-              <a href="https://www.facebook.com/InterfaceDesignweb"target="_blank">
+              <a href="https://www.facebook.com/InterfaceDesignweb"
+                  target="_blank">
                 <%= image_tag("Facebook.png", alt: "Facebook",
-                style: "width:25px; height:25px; color:white;")%>
+                              style: "width:25px; height:25px; color:white;")%>
               </a>
             </td>
             <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
               <td>
                 <a href="http://linkedin.com/in/yves-loiseau-66980312"
-                target="_blank">
+                   target="_blank">
                   <%= image_tag("LinkedIn.png", alt: "Linnked",
-                  style: "width:25px; height:25px; color:white;")%>
+                                style: "width:25px; height:25px;
+                                color:white;")%>
                 </a>
               </td>
             </tr>

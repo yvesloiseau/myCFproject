@@ -1,29 +1,29 @@
 <!-- **********************************************************************  -->
-<div class="container-fluid contactc anchor_contact" id="contactus">
+<div class="container-fluid contactc anchor-contact" id="contactus">
   <div class="row" id="work">
     <div class="col-xs-12 col-sm-6 col-md-6">
 
-    	<div class="contact_Header">
+    	<div class="contact-header">
 				<!-- <h1>Contact Page</h1> -->
 				<h2>My name is : Yves the Bird</h2>
-				<div class="contact_email">
+				<div class="contact-email">
 					<h3>You can reach me at this email address:
-						<span class="email_bold rwd-line">
+						<span class="email-bold rwd-line">
             <strong>loiseau.y@gmail.com</strong>
 						</span>
 					</h3>
 				</div>
 			</div>
 
-			<div class="contact_Email">
-				<h3>Or by phone at: <span class="email_bold rwd-line">
+			<div class="contact-email">
+				<h3>Or by phone at: <span class="email-bold rwd-line">
         <strong>+1(514) 999-9999</strong></span></h3>
 			</div>
 
 
-			<div class="myBackground">
+			<div class="my-background">
 				<h3>My background</h3>
-					<div class="contact_page_indent">
+					<div class="contact-page-indent">
 						<p>I'm an IT professional working in the Information Technology
             domain for over 35 years.</p>
 						<p>Worked my way up in the IT world, started as a programmer and now
@@ -33,13 +33,13 @@
             is the perfect match for me.</p>
 					</div>
 
-				<h3 class="email_bold">
+				<h3 class="email-bold">
         <strong>Now serving all of your web development needs</strong></h3>
 			</div>
 
-			<div class="moreInfo">
+			<div class="more-info">
 				<h3>More about me:</h3>
-				<div class="contact_Page_Indent">
+				<div class="contact-page-indent">
 					<p>You can find more about me visiting thise website:</p>
 					<p>Please take a look at my work in progress at:</p>
 					<p><strong>http://freight-forwarder-surprises-42305.bitballoon.com/
@@ -56,24 +56,24 @@
     	<%= flash[:notice] %>
 
     	<%= form_tag("/static_pages/thank_you") do %>
-    	<div class="fieldgroupContactUsForm">
+    	<div class="field-group-contactUs-form">
     		<%= label_tag :name %>
     		<%= text_field_tag(:name, nil, class: "name_ContactUs_Form",
         placeholder: "Enter Your Name", style: 'width:50%;') %>
 			</div>
-    	<div class="fieldgroupContactUsForm">
+    	<div class="field-group-contactUs-form">
     		<%= label_tag :email %>
     		<%= email_field_tag :email, nil, class: "name_ContactUs_Form",
         placeholder: "Enter Your email", style: 'width:60%;' %>
 			</div>
-    	<div class="fieldgroupContactUsForm">
+    	<div class="field-group-contactUs-form">
 	      <%= label_tag :message %>
   	    <%= text_area_tag :message, nil,
         class: "message_ContactUs_Form", placeholder: "Enter Your Message",
           style: 'width:60%;', rows: 20 %>
       </div>
 
-      <%= submit_tag "Send", class: "contactSubmit btn btn-primary btn-sm" %>
+      <%= submit_tag "Send", class: "contact-submit btn btn-primary btn-sm" %>
 			<% end %>
     </div>
 

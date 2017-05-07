@@ -20,8 +20,13 @@
     <br>
 
     <p class="product-link-button">
-      <%= link_to product, class: "btn btn-default btn-circle" do %>
-        <span class="glyphicon glyphicon-ok"></span>
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to product, class: "btn btn-default btn-circle" do %>
+          <span class="glyphicon glyphicon-ok"></span>
+        <% end %>
+      <% else %>
+        <%= button_to "Details", product,
+            class: 'btn btn-primary btn-sm inline', :method => :get %>
       <% end %>
 
       <% if signed_in? && current_user.admin? %>

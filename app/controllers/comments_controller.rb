@@ -11,9 +11,7 @@ load_and_authorize_resource
     @comment.user = current_user
     @comment.save
 
-    # Validations  (Need to add validations for individual fields on the profile)
     respond_to do |format|
-
       if @comment.save
         format.html { redirect_to product_path(@product),
           notice: 'Review was created successfully.' }

@@ -2,7 +2,7 @@
   class="<%= signed_in? ? 'show-div good newComment' : 'bad hide-div' %>">
   <% if signed_in? %>
 
-    <h3 class="reviewHeaders">Add a review:</h3>
+    <h3 class="review-headers">Add a review:</h3>
 
     <%= form_for([@product, @product.comments.build]) do |f| %>
 
@@ -20,12 +20,12 @@
       <div class="field">
         <p>
           <%= f.label :text, "Comments", :class => 'formText'  %><br>
-          <%= f.text_area :text,cols: 25, rows: 10, class: 'form_control' %>
+          <%= f.text_area :text,cols: 25, rows: 10, class: 'form-control' %>
         </p>
       </div>
 
       <!-- <div class="field"> -->
-        <p class="ratingField">Rating:
+        <p class="rating-field">Rating:
           <div class="rating"></div>
         </p>
       <!-- </div> -->
@@ -41,5 +41,5 @@
   </div>
 <div id="reviews"
   class="<%= signed_in? ? 'bad hide-div newComment' : 'show-div good newComment'  %>">
-    <h3 class="reviewHeaders">Sign-in to review this product</h3>
+    <h3 class="review-headers">Sign-in to review this product</h3>
 </div>

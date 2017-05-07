@@ -1,6 +1,6 @@
 <!-- *********************************************************************** -->
 <div class="container-fluid anchor-product" id="product">
-  <h1 class="h1Products">Golf bags</h1>
+  <h1 class="h1-products">Golf bags</h1>
 
   <p id="notice"><%= notice %></p>
 
@@ -14,7 +14,7 @@
     <%= will_paginate @products, :class => 'flickr_pagination' %>
 </div>
 
-  <div class="productIndexButtons">
+  <div class="product-index-buttons">
   <% if signed_in? && current_user.admin? %>
     <!-- Create a new product -->
     <%= button_to "New product", new_product_path,

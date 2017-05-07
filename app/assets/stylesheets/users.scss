@@ -1,43 +1,43 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.userNavLinks {
+.user-nav-links {
   font-size: 8px;
   color: #3366CC; //blue;
 }
 
-.userFirstName {
+.user-first-name {
   padding-top: 30px;
   padding-right: 5px;
   font-size: 10px;
   font-weight: 900;
 }
 
-.deviseLinks {
+.devise-links {
   display: inline;
   margin-bottom: 5px;
 }
 
-.authenticat_new,
- .password_new,
- .authenticat_edit {
+.authenticat-new,
+ .password-new,
+ .authenticat-edit {
   margin-top: 90px;
   }
 
-.anchor_userProfile {
+.anchor-user-profile {
   padding-top: 80px;
   }
 
-div#edit.container-fluid.anchor_userProfile {
+div#edit.container-fluid.anchor-use-profile {
   height: 675px;
 //  height: auto;
   max-width: 100%;
   max-height: 100%;
   }
 
-div#new.container-fluid.authenticat_new,
-div#edit.container-fluid.authenticat_edit,
-div#new.container-fluid.password_new
+div#new.container-fluid.authenticat-new,
+div#edit.container-fluid.authenticat-edit,
+div#new.container-fluid.password-new
  {
   //height: 500px;
   height: auto;
@@ -50,11 +50,11 @@ div#new.container-fluid.password_new
   background-color: #EEEEEE;
   }
 
-div#new.container-fluid.password_new {
+div#new.container-fluid.password-new {
   width: 375px;
 }
 
-.editAuthenticat {
+.edit-authenticat {
   width: 300px;
   //width: auto;
   height: auto;
@@ -64,7 +64,7 @@ div#new.container-fluid.password_new {
   padding-left: 10px;
   }
 
-.backRight {
+.back-right {
   float: right;
 }
 
@@ -72,12 +72,12 @@ div#new.container-fluid.password_new {
   display: inline;
 }
 
-.editUserProfile {
+.edit-user-profile {
   width: 300px;
   margin-left: 27.77777778%; // 400px;
 }
 
-.userProfileForm {
+.user-profile-form {
   height: auto;
   margin-left: 27.77777778%; // 400px;
   width: 350px;
@@ -88,7 +88,7 @@ div#new.container-fluid.password_new {
   background-color: #EEEEEE;
 }
 
-.userLinkButtons {
+.user-link-buttons {
   margin-left: 27.77777778%; // 400px;
   margin-top: 25px;
   height:auto;
@@ -105,10 +105,14 @@ div#new.container-fluid.password_new {
 /****************************************************************************************************/
 
 /*****************************************************/
-/*  Min-width = 1400    (.83 factor)   */
+/*  Max-width = 1400    (.83 factor)   */
 /*****************************************************/
-@media (min-width: 1400px) {
-
+@media (max-width: 1400px) {
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 35.3055556%; // 350px;
+    }
 }
 
 /*****************************************************/
@@ -116,21 +120,20 @@ div#new.container-fluid.password_new {
 /*****************************************************/
 @media (max-width: 1200px) {
 
-div#new.container-fluid.authenticat_new,
-div#edit.container-fluid.authenticat_edit,
-div#new.container-fluid.password_new
- {
-  width: 35.3055556%; // 350px;
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 35.3055556%; // 350px;
   }
 
-.editAuthenticat {
-  width: 50%;
+  .edit-authenticat {
+    width: 50%;
   }
 
-.userLinkButtons {
-  width: 50%;
-  margin-left: 10%;
-}
+  .user-link-buttons {
+    width: 50%;
+    margin-left: 10%;
+  }
 }
 
 /*****************************************************/
@@ -138,13 +141,11 @@ div#new.container-fluid.password_new
 /*****************************************************/
 @media (max-width: 990px) {
 
-div#new.container-fluid.authenticat_new,
-div#edit.container-fluid.authenticat_edit,
-div#new.container-fluid.password_new
- {
-  width: 50%; // 350px;
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 50%; // 350px;
   }
-
 
 }
 
@@ -153,23 +154,22 @@ div#new.container-fluid.password_new
 /*****************************************************/
 @media (max-width: 768px) {
 
-div#new.container-fluid.authenticat_new,
-div#edit.container-fluid.authenticat_edit,
-div#new.container-fluid.password_new
- {
-  width: 60%; // 350px;
-  margin-left: 10%;
-  margin-right: 10%;
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 60%; // 350px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
-.editAuthenticat {
-  width: 50%;
-  margin-left: 10%;
+  .edit-authenticat {
+    width: 50%;
+    margin-left: 10%;
   }
 
-input {
-  font-size: 1em;
-}
+  input {
+    font-size: 1em;
+  }
 
 }
 
@@ -178,18 +178,17 @@ input {
 /*****************************************************/
 @media (max-width: 630px) {
 
-div#new.container-fluid.authenticat_new,
-div#edit.container-fluid.authenticat_edit,
-div#new.container-fluid.password_new
- {
-  width: 75%; // 350px;
-  margin-left: 10%;
-  margin-right: 10%;
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 75%; // 350px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
-input {
-  font-size: .95em;
-}
+  input {
+    font-size: .95em;
+  }
 
 }
 
@@ -198,22 +197,20 @@ input {
 /*****************************************************/
 @media (min-width: 320px) and (max-width: 466px) {
 
-div#new.container-fluid.authenticat_new,
-div#edit.container-fluid.authenticat_edit,
-div#new.container-fluid.password_new
- {
-  width: 75%; // 350px;
-  margin-left: 10%;
-  margin-right: 10%;
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 75%; // 350px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
-input {
-  font-size: .90em;
-}
+  input {
+    font-size: .90em;
+  }
 
 }
 
 /******************************************************************************/
 /*  END OF MEDIA RULES                                                        */
 /******************************************************************************/
-
