@@ -54,12 +54,16 @@
           <%= @product.number_of_pockets %>
         </p>
 
-        <% @buying_product_name = @product.name %>
-        <% @buying_product_price = @product.price %>
+        <!-- Show payment form only if user is signed in -->
+        <% if signed_in? %>
+          <% @buying_product_name = @product.name %>
+          <% @buying_product_price = @product.price %>
 
-        <%= form_tag "/payments/create" do %>
-          <%= render partial: "shared/stripe_checkout_button" %>
+          <%= form_tag "/payments/create" do %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+          <% end %>
         <% end %>
+
         <!-- Determine if reviews exist for this product and
           set an instance variable true or false -->
         <% if @reviews == nil %>
