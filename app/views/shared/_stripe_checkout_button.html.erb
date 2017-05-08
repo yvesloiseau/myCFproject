@@ -1,0 +1,8 @@
+<script
+  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-image="../assets/Logo_Interface_design_seul.png"
+  data-name="Birdy's golf store"
+  data-description="<%= @buying_product_name %>"
+  data-amount="<%= @buying_product_price*100 %>">
+</script>

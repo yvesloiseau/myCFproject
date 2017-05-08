@@ -1,0 +1,1908 @@
+/*
+
+ */
+@import url(jquery.raty.css);
+/* line 1, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+/* line 11, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 41, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-left: 5px;
+}
+
+/* line 53, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 57, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 63, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 71, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 82, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  list-style: square;
+}
+
+/* line 88, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+
+/* line 8, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+html, body {
+  font-size: 16px;
+}
+
+/* line 12, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+body {
+  font: 100% "Helvetica Neue";
+  color: #333;
+  width: 100%;
+  margin: 0;
+}
+
+/* line 23, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.navbar-nav > li > a {
+  line-height: 20px;
+  font-size: 1.75em;
+}
+
+/* line 28, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.navbar-nav > li > a {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* line 33, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+div.project-name.navbar-brand {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  margin-bottom: 5px;
+}
+
+/* line 39, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+a.language {
+  float: right;
+}
+
+/* line 47, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.golf-store-header {
+  width: 24.30555556%;
+  height: 2.857142857em;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 55, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.golf-store-footer {
+  width: 60%;
+  height: 2.857142857em;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 63, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+h3.golf-store-text {
+  width: 350px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 70, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.img-two {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 75, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 80, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.about-tools {
+  width: 90%;
+  height: auto;
+}
+
+/* line 85, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.about-ruby-and-rails {
+  width: 70%;
+  height: auto;
+}
+
+/* line 90, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.more-info-about {
+  width: 70%;
+  height: auto;
+}
+
+/* line 95, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.about-page-indent {
+  padding-left: 15px;
+  width: 50%;
+  height: auto;
+}
+
+/* line 101, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.contact-header {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 107, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.contact-email {
+  width: 100%;
+  height: auto;
+}
+
+/* line 113, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.my-background {
+  width: 90%;
+  height: auto;
+}
+
+/* line 118, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.more-info {
+  width: 100%;
+  height: auto;
+}
+
+/* line 123, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.contact-page-indent {
+  padding-left: 15px;
+}
+
+/* line 127, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.rwd-line {
+  display: block;
+}
+
+/* line 131, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+p, ol, ul, td {
+  margin: 0;
+}
+
+/* line 138, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.anchor-about {
+  padding-top: 80px;
+}
+
+/* line 142, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.anchor-contact {
+  padding-top: 80px;
+  padding-left: 1em;
+  padding-right: 0px;
+}
+
+/* line 148, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.anchor-index {
+  padding-top: 80px;
+}
+
+/* line 152, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+div#index.container-fluid.anchor-index {
+  height: 820px;
+  height: auto;
+}
+
+/* line 159, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+div#about.container-fluid.work.anchor-about {
+  height: 690px;
+  height: auto;
+}
+
+/* line 166, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+div#contactus.container-fluid.anchor-contact {
+  height: 700px;
+  height: auto;
+}
+
+/* line 173, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.thankyou-popup {
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+  padding-top: 5px;
+  padding-left: 1em;
+  padding-bottom: 10px;
+  margin-top: 120px;
+  margin-left: 100px;
+  height: 300px;
+  height: auto;
+  max-width: 40%;
+}
+
+/* line 190, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.thankyou-button {
+  margin-left: 10px;
+}
+
+/* line 198, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.social-links li {
+  margin-right: 10px;
+  font-size: 20px;
+  list-style-type: none;
+  text-align: center;
+  display: inline;
+}
+
+/* line 206, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+footer {
+  clear: both;
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 8px;
+  height: 125px;
+  font-size: 22px;
+}
+
+/* line 217, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+footer {
+  margin-top: 30px;
+}
+
+/* line 221, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+ul.social-links {
+  padding: 0;
+}
+
+/* line 230, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.name-contactUs-form {
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+/* line 236, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.message-contactUs-form {
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+/* line 246, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+h1.h1-products {
+  width: 90%;
+  margin-top: 0.277777778em;
+  margin-bottom: 0.555555556em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 254, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.bag-caroussel {
+  width: 26.59574468%;
+  height: 28.92857143em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 261, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.product-text-box {
+  margin-top: 0em;
+}
+
+/* line 265, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.landpage-product-description {
+  width: 95.74468085%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 272, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.landpage-product-price {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 278, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+div#product.container-fluid.anchor-landingpage-products {
+  height: 1700px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 285, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.anchor-landingpage-products {
+  padding-top: 5em;
+  padding-left: 15px;
+}
+
+/* line 290, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+h3.landpage-product-name {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 296, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.carousel-caption {
+  position: relative;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+/* line 307, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+div.carousel-inner {
+  height: 41.25em;
+}
+
+/* line 311, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.alert {
+  margin-top: 80px;
+  margin-bottom: 5px;
+}
+
+/* line 321, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+  color: #b2d235;
+  background-color: transparent;
+}
+
+/* line 326, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.navbar-custom {
+  background-color: #fff;
+  color: white;
+  border-radius: 0;
+}
+
+/* line 332, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: #264553;
+}
+
+/* line 336, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+/* line 340, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+h1, h2 {
+  color: #5535D2;
+}
+
+/* line 348, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.email-bold {
+  color: #5535D2;
+}
+
+/* line 352, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+footer,
+footer h3 {
+  color: #254451;
+}
+
+/* line 357, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+footer a {
+  color: #264553;
+}
+
+/* line 361, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+footer {
+  background-color: #9d9d9d;
+}
+
+/* line 365, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.product-details {
+  font-size: 1em;
+  color: #1e62bc;
+}
+
+/* line 370, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.landpage-product-price {
+  color: #1e62bc;
+  font-size: 1.25em;
+}
+
+/* line 375, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+ol.carousel-indicators li,
+.carousel-indicators li {
+  visibility: hidden;
+}
+
+/* line 380, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.product-brand, landpage-product-name {
+  color: #5535D2;
+  font-weight: bold;
+}
+
+/* line 385, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+h3.landpage-product-name {
+  font-weight: 900;
+  font-size: 1.50em;
+}
+
+/* line 390, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+h4.landpage-product-description {
+  width: 95.74468085%;
+  font-size: 1.17em;
+}
+
+/* line 395, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.carousel-control.left, .carousel-control.right {
+  background-image: none !important;
+  filter: none !important;
+}
+
+/* line 400, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+a.right.carousel-control,
+a.left.carousel-control {
+  background-color: transparent;
+}
+
+/* line 405, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.landpage-special-price {
+  color: red;
+  font-size: 1.8em;
+}
+
+/* line 410, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+.alert {
+  font-size: 20px;
+  font-weight: 900;
+  color: red;
+}
+
+/*****************************************************/
+/*  Min-width = 1400px                               */
+/*****************************************************/
+@media (min-width: 768px) and (max-width: 1400px) {
+  /* line 421, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  /* line 425, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  /* line 429, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+
+  /* line 433, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .navbar-header {
+    float: none;
+  }
+
+  /* line 437, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  div.project_name.navbar-brand {
+    padding-top: 5px !important;
+    padding-bottom: 10px;
+  }
+}
+/*****************************************************/
+/*  Max-width = 1200px (.76 factor)                  */
+/*****************************************************/
+@media (max-width: 1200px) {
+  /* line 449, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .bag-caroussel {
+    width: 26.59574468%;
+    height: auto;
+  }
+
+  /* line 454, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  div.carousel-inner {
+    height: auto;
+  }
+
+  /* line 458, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h1.h1-products {
+    width: 90%;
+    font-size: 1.666666667em;
+  }
+
+  /* line 463, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-name {
+    width: 35%;
+    font-size: 1.25em;
+  }
+
+  /* line 468, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h4.landpage-product-description {
+    width: 95%;
+    font-size: 1.041666667em;
+  }
+
+  /* line 473, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-price {
+    width: 95%;
+    font-size: 1.25em;
+  }
+
+  /* line 478, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-special-price {
+    font-size: 1.666666667em;
+  }
+
+  /* line 482, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .carousel-caption {
+    width: 80%;
+  }
+}
+/*****************************************************/
+/*  Max-width = 979px                                */
+/*****************************************************/
+@media (max-width: 979px) {
+  /* line 493, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h1.h1-products {
+    width: 90%;
+    font-size: 1.359722222em;
+  }
+
+  /* line 498, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-name {
+    width: 35%;
+    font-size: 1.019791667em;
+  }
+
+  /* line 503, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h4.landpage-product-description {
+    width: 95%;
+    font-size: 0.849826389em;
+  }
+
+  /* line 508, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-price {
+    width: 95%;
+    font-size: 1.019791667em;
+  }
+
+  /* line 513, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-special-price {
+    font-size: 1.359722222em;
+  }
+
+  /* line 517, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .carousel-caption {
+    width: 80%;
+  }
+}
+/*****************************************************/
+/*  Min-width = 767px                                */
+/*****************************************************/
+@media (max-width: 767px) {
+  /* line 527, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h1.h1-products {
+    width: 70%;
+    font-size: 1.066666667em;
+  }
+
+  /* line 532, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-name {
+    width: 35%;
+    font-size: 0.8em;
+  }
+
+  /* line 537, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h4.landpage-product-description {
+    width: 95%;
+    font-size: 0.666666667em;
+  }
+
+  /* line 542, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-price {
+    width: 95%;
+    font-size: 0.8em;
+  }
+
+  /* line 547, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-special-price {
+    font-size: 1.066666667em;
+  }
+
+  /* line 551, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .carousel-caption {
+    width: 80%;
+  }
+}
+/*****************************************************/
+/*  Min-width = 700px                               */
+/*****************************************************/
+@media (min-width: 700px) {
+  /* line 560, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .rwd-line {
+    display: inline;
+  }
+}
+/*****************************************************/
+/*  Max-width = 480px                                */
+/*****************************************************/
+@media (max-width: 480px) {
+  /* line 570, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  div#index.container-fluid.anchor-index {
+    padding-top: 50px;
+  }
+
+  /* line 575, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  div#about.container-fluid.work.anchor-about {
+    padding-top: 50px;
+  }
+
+  /* line 580, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  div#contactus.container-fluid.anchor-contact {
+    padding-top: 50px;
+  }
+}
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (max-width: 467px) {
+  /* line 591, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h1.h1-products {
+    width: 70%;
+    font-size: 1.066666667em;
+  }
+
+  /* line 596, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-name {
+    width: 35%;
+    font-size: 0.8em;
+  }
+
+  /* line 601, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h4.landpage-product-description {
+    width: 95%;
+    font-size: 0.666666667em;
+  }
+
+  /* line 606, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-product-price {
+    width: 95%;
+    font-size: 0.8em;
+  }
+
+  /* line 611, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  h3.landpage-special-price {
+    font-size: 1.066666667em;
+  }
+
+  /* line 615, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/static_pages.scss */
+  .carousel-caption {
+    width: 80%;
+  }
+}
+/*****************************************************/
+/*  END OF MEDIA RULES                               */
+/*****************************************************/
+/* line 7, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.anchor-product,
+.anchor-show,
+.anchor_edit,
+.anchor_new,
+.anchorShow {
+  padding-top: 80px;
+}
+
+/* line 15, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div#product.container-fluid.anchor-product {
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 22, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div#show.container-fluid.anchor-show {
+  height: 675px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 30, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div#Show.container-fluid.anchorShow {
+  height: 575px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 38, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div#edit.container-fluid.anchor-edit {
+  height: 675px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 45, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div#new.container-fluid.anchor-new {
+  height: 800px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 53, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.full-bag-image {
+  width: 75%;
+  height: 32.14285714em;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 61, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.full-product-name {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 67, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div.edit-product {
+  padding-left: 50px;
+}
+
+/* line 71, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div.new-product {
+  padding-left: 25px;
+}
+
+/* line 75, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div.product-fields {
+  margin-top: 20px;
+}
+
+/* line 79, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.product-row {
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  padding: 0;
+}
+
+/* line 86, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.product-name {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  #overflow: scroll;
+}
+
+/* line 95, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div.product-details {
+  height: 25%;
+  width: 100%;
+  padding: 5px;
+}
+
+/* line 101, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div.text-box {
+  height: 10.71428571em;
+  width: auto;
+  margin-top: 10px;
+  font-size: 12px;
+  overflow: scroll;
+}
+
+/* line 110, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.bag-image {
+  width: 100%;
+  height: 25em;
+}
+
+/* line 123, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.product-price {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+/* line 130, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.product-link-button {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 136, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+#product_name, #product_description, #product_product_type, #product_brand,
+#product_price, #product_color, #product_image_url, #product_top_size,
+#product_other_features, #product_number_of_pockets, #product_gender {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #5535D2;
+}
+
+/* line 144, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+label {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+/* line 149, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+p.link_to, form.button_to, .inline {
+  display: inline;
+}
+
+/* line 157, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+}
+
+/* line 167, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.glyphicon:hover {
+  color: white;
+}
+
+/* line 168, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.glyphicon {
+  color: blue;
+}
+
+/* line 170, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+textarea#product_description {
+  width: 133%;
+  height: 8em;
+}
+
+/* line 176, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+text_field, textarea, input {
+  color: #264553;
+  font-size: 1.25em;
+  padding-left: 5px;
+}
+
+/* line 182, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.actions {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+  background: none;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* line 201, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.product-index-buttons {
+  clear: both;
+  margin-top: 25px;
+  padding-left: 10px;
+}
+
+/* line 207, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.edit-button {
+  margin-left: 70px;
+}
+
+/* line 211, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.new-button {
+  margin-left: 40px;
+}
+
+/* line 218, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+th {
+  padding-right: 5px;
+  font-size: 24px;
+  color: #5535D2;
+  clear: both;
+}
+
+/* line 227, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+td.product-borders {
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+}
+
+/* line 232, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+th.padding-vertical {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 237, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+th.product-actions {
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  padding-bottom: 31px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 9px;
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+/* line 248, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+th.product-actions-remove {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 33px;
+}
+
+/* line 255, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.search-field {
+  color: #b2d235;
+  width: 175px;
+  line-height: 10px;
+  font-size: .75em;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #264553;
+}
+
+/* line 266, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.search-submit {
+  background-color: #264553;
+  color: #b2d235;
+  margin-left: 5px;
+}
+
+/* line 272, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.no-reviews {
+  width: 150px;
+  display: inline;
+}
+
+/* line 282, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.h1-products {
+  color: red;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+/* line 288, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.actions {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: normal;
+  background-color: #337ab7;
+  color: #fff;
+  border-color: #2e6da4;
+}
+
+/* line 299, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div.actions input {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+}
+
+/* line 306, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+label {
+  font-weight: 900;
+}
+
+/* line 311, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+textarea, input {
+  color: #264553;
+  font-size: 1.25em;
+}
+
+/* line 316, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.actions:hover, div.actions input:hover {
+  background-color: #286090;
+}
+
+/* line 320, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+div.text-box {
+  font-size: .875em;
+}
+
+/* line 324, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+h2.full-product-name {
+  font-size: 1.875em;
+}
+
+/* line 328, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+h3.product-name {
+  font-size: 1.5em;
+}
+
+/******************************************************************************/
+/* Pagination styling                                                         */
+/******************************************************************************/
+/* line 335, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination {
+  text-align: left;
+  padding: 0.3em;
+  cursor: default;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+/* line 343, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+  padding: 0.2em 0.5em;
+}
+
+/* line 346, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 349, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #337ab7;
+}
+
+/* line 355, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination a {
+  border: 1px solid #337AB8;
+  color: #0063dc;
+  text-decoration: none;
+}
+
+/* line 361, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination a:hover, .flickr_pagination a:focus {
+  border-color: #336699;
+  background: #0063dc;
+  color: white;
+}
+
+/* line 367, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination .page_info {
+  color: #aaaaaa;
+  padding-top: 0.8em;
+}
+
+/* line 371, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination .previous_page, .flickr_pagination .next_page {
+  border-width: 2px;
+}
+
+/* line 374, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination .previous_page {
+  margin-right: 1em;
+}
+
+/* line 377, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.flickr_pagination .next_page {
+  margin-left: 1em;
+}
+
+/****************************************************************************************************/
+/* Rules from users.scss addded here                                                                */
+/****************************************************************************************************/
+/* line 388, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+.data-description {
+  color: red;
+}
+
+/****************************************************************************************************/
+/* Breakpoints                                                                                      */
+/****************************************************************************************************/
+/*****************************************************/
+/*  Max-width = 1050px  up to 1400    (.83 factor)   */
+/*****************************************************/
+@media (max-width: 1400px) {
+  /* line 403, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#product.container-fluid.anchor-product {
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 410, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .full-bag-image {
+    width: 80%;
+    height: 31em;
+  }
+
+  /* line 415, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .bag-image {
+    width: 90%;
+    height: auto;
+  }
+
+  /* line 425, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1.25em;
+  }
+
+  /* line 429, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: 12px;
+  }
+}
+/*****************************************************/
+/*  Max-width = 1105px (.76 factor)                  */
+/*****************************************************/
+@media (max-width: 1105px) {
+  /* line 440, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .full-bag-image {
+    width: 80%;
+    height: auto;
+  }
+
+  /* line 446, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .bag-image {
+    height: auto;
+  }
+
+  /* line 452, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-name {
+    width: 92%;
+  }
+
+  /* line 456, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1.15em;
+  }
+
+  /* line 460, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 12.5em;
+  }
+
+  /* line 466, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .75em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 991px                                */
+/*****************************************************/
+@media (max-width: 991px) {
+  /* line 477, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#product.container-fluid.anchor-product {
+    height: auto;
+  }
+
+  /* line 484, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#show.container-fluid.anchor-show {
+    height: auto;
+  }
+
+  /* line 490, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#edit.container-fluid.anchor-edit {
+    height: auto;
+  }
+
+  /* line 496, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#new.container-fluid.anchor-new {
+    height: auto;
+  }
+
+  /* line 502, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .bag-image {
+    width: 85%;
+    height: auto;
+  }
+
+  /* line 508, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 9em;
+    margin-top: 10px;
+    overflow: scroll;
+  }
+
+  /* line 514, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1.5em;
+  }
+
+  /* line 518, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .85em;
+  }
+
+  /* line 522, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .full-product-name {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*****************************************************/
+/*  Min-width = 780px                                */
+/*****************************************************/
+@media (max-width: 780px) {
+  /* line 535, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#product.container-fluid.anchor-product {
+    height: 2775px;
+    height: auto;
+  }
+
+  /* line 540, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#show.container-fluid.anchor-show {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 545, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#edit.container-fluid.anchor-edit {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 550, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#new.container-fluid.anchor-new {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 555, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .bag-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 561, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 11em;
+    margin-top: 10px;
+  }
+
+  /* line 566, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .logoimg {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* line 571, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1.35em;
+  }
+
+  /* line 575, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .85em;
+  }
+
+  /* line 579, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .full-product-name {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 585, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h2.full-product-name,
+  .product-fields h2 {
+    font-size: 1.50em;
+  }
+
+  /* line 590, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-description {
+    width: 100%;
+  }
+
+  /* line 594, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-description p {
+    font-size: 1em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 630px                                */
+/*****************************************************/
+@media (max-width: 630px) {
+  /* line 604, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#product.container-fluid.anchor-product {
+    height: auto;
+  }
+
+  /* line 611, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#show.container-fluid.anchor-show {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 616, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#edit.container-fluid.anchor-edit {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 621, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#new.container-fluid.anchor-new {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 626, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .full-bag-image {
+    width: 90%;
+    height: auto;
+  }
+
+  /* line 631, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .bag-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 645, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 11em;
+    margin-top: 10px;
+  }
+
+  /* line 650, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .80em;
+  }
+
+  /* line 654, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-name {
+    width: 90%;
+  }
+
+  /* line 658, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1.20em;
+  }
+
+  /* line 662, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h2.full-product-name,
+  .product-fields h2 {
+    font-size: 1.35em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 550px                                */
+/*****************************************************/
+@media (max-width: 550px) {
+  /* line 674, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-name {
+    width: 90%;
+  }
+
+  /* line 678, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1.05em;
+  }
+
+  /* line 682, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 11.5em;
+    margin-top: 10px;
+  }
+
+  /* line 687, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .75em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 490px                                */
+/*****************************************************/
+@media (max-width: 490px) {
+  /* line 697, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#product.container-fluid.anchor-product {
+    height: auto;
+  }
+
+  /* line 702, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#show.container-fluid.anchor-show {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 707, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#edit.container-fluid.anchor-edit {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 712, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#new.container-fluid.anchor-new {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* line 717, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  footer {
+    max-height: 100%;
+  }
+
+  /* line 721, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .full-bag-image {
+    width: 92.5%;
+    height: 15em;
+  }
+
+  /* line 726, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .bag-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 732, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 11em;
+    margin-top: 10px;
+  }
+
+  /* line 737, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .625em;
+  }
+
+  /* line 741, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-name {
+    width: 90%;
+  }
+
+  /* line 745, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (max-width: 467px) {
+  /* line 756, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div#product.container-fluid.anchor-product {
+    height: 3125px;
+    height: auto;
+  }
+
+  /* line 761, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .full-bag-image {
+    width: 92.5%;
+    height: auto;
+  }
+
+  /* line 768, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .bag-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 774, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 11em;
+    margin-top: 10px;
+  }
+
+  /* line 779, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .625em;
+  }
+
+  /* line 783, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-name {
+    width: 85%;
+  }
+
+  /* line 787, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: 1em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (min-width: 320px) and (max-width: 466px) {
+  /* line 797, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-name {
+    width: 90%;
+  }
+
+  /* line 801, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  h3.product-name {
+    font-size: .95em;
+  }
+
+  /* line 805, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    height: 11em;
+    margin-top: 10px;
+  }
+
+  /* line 810, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  div.text-box {
+    font-size: .625em;
+  }
+
+  /* line 814, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-link-button {
+    width: 60%;
+  }
+
+  /* line 818, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/products.scss */
+  .product-price {
+    width: 55%;
+  }
+}
+/******************************************************************************************/
+/*  END OF MEDIA RULES */
+/******************************************************************************************/
+/* line 4, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.user-nav-links {
+  font-size: 8px;
+  color: #3366CC;
+}
+
+/* line 9, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.user-first-name {
+  padding-top: 30px;
+  padding-right: 5px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+/* line 16, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.devise-links {
+  display: inline;
+  margin-bottom: 5px;
+}
+
+/* line 21, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.authenticat-new,
+.password-new,
+.authenticat-edit {
+  margin-top: 90px;
+}
+
+/* line 27, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.anchor-user-profile {
+  padding-top: 80px;
+}
+
+/* line 31, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+div#edit.container-fluid.anchor-use-profile {
+  height: 675px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 38, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+div#new.container-fluid.authenticat-new,
+div#edit.container-fluid.authenticat-edit,
+div#new.container-fluid.password-new {
+  height: auto;
+  margin-left: 27.77777778%;
+  width: 24.3055556%;
+  max-height: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3399FF;
+  background-color: #EEEEEE;
+}
+
+/* line 53, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+div#new.container-fluid.password-new {
+  width: 375px;
+}
+
+/* line 57, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.edit-authenticat {
+  width: 300px;
+  height: auto;
+  margin-left: 27.77777778%;
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+/* line 67, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.back-right {
+  float: right;
+}
+
+/* line 71, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.inline {
+  display: inline;
+}
+
+/* line 75, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.edit-user-profile {
+  width: 300px;
+  margin-left: 27.77777778%;
+}
+
+/* line 80, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.user-profile-form {
+  height: auto;
+  margin-left: 27.77777778%;
+  width: 350px;
+  max-height: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3399FF;
+  background-color: #EEEEEE;
+}
+
+/* line 91, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.user-link-buttons {
+  margin-left: 27.77777778%;
+  margin-top: 25px;
+  height: auto;
+  padding-left: 10px;
+  color: white;
+}
+
+/* line 99, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+.user-registration-info {
+  font-size: .85em;
+}
+
+/****************************************************************************************************/
+/* Breakpoints                                                                                      */
+/****************************************************************************************************/
+/*****************************************************/
+/*  Max-width = 1400    (.83 factor)   */
+/*****************************************************/
+@media (max-width: 1400px) {
+  /* line 111, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 35.3055556%;
+  }
+}
+/*****************************************************/
+/*  Max-width = 1200px                               */
+/*****************************************************/
+@media (max-width: 1200px) {
+  /* line 123, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 35.3055556%;
+  }
+
+  /* line 129, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  .edit-authenticat {
+    width: 50%;
+  }
+
+  /* line 133, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  .user-link-buttons {
+    width: 50%;
+    margin-left: 10%;
+  }
+}
+/*****************************************************/
+/*  Max-width = 990px                                */
+/*****************************************************/
+@media (max-width: 990px) {
+  /* line 144, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 50%;
+  }
+}
+/*****************************************************/
+/*  Min-width = 768px                                */
+/*****************************************************/
+@media (max-width: 768px) {
+  /* line 157, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  /* line 165, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  .edit-authenticat {
+    width: 50%;
+    margin-left: 10%;
+  }
+
+  /* line 170, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  input {
+    font-size: 1em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 630px                                */
+/*****************************************************/
+@media (max-width: 630px) {
+  /* line 181, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  /* line 189, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  input {
+    font-size: .95em;
+  }
+}
+/*****************************************************/
+/*  Max-width = 467px                                */
+/*****************************************************/
+@media (min-width: 320px) and (max-width: 466px) {
+  /* line 200, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  div#new.container-fluid.authenticat-new,
+  div#edit.container-fluid.authenticat-edit,
+  div#new.container-fluid.password-new {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  /* line 208, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/users.scss */
+  input {
+    font-size: .90em;
+  }
+}
+/******************************************************************************/
+/*  END OF MEDIA RULES                                                        */
+/******************************************************************************/
+/* line 4, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.formText {
+  margin-top: 10px;
+}
+
+/* line 8, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.form_field {
+  margin: 0;
+}
+
+/* line 12, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.best-reviews {
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  padding: 0;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  height: 25em;
+  margin-top: 20px;
+  height: auto;
+  width: auto;
+}
+
+/* line 25, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.new-comment {
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+/* line 35, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.product-reviews {
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  padding: 0;
+  margin-top: 50px;
+  padding-left: 10px;
+  height: auto;
+}
+
+/* line 45, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.review-headers, .ratings {
+  color: #3366cc;
+  width: auto;
+}
+
+/* line 50, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.ratings {
+  font-weight: 900;
+}
+
+/* line 54, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.reviews {
+  padding-left: 10px;
+}
+
+/* line 62, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.review-user-text {
+  width: 75px;
+  display: inline;
+}
+
+/* line 67, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.review-text, .review-user-text {
+  color: #3399ff;
+}
+
+/* line 71, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.show-div {
+  display: block;
+}
+
+/* line 76, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.hide-div {
+  visibility: hidden;
+}
+
+/* line 81, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/comments.scss */
+.rating-field {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+/* line 6, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/orders.scss */
+.anchor-order {
+  padding-top: 80px;
+}
+
+/* line 10, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/orders.scss */
+div#order.container-fluid.anchor-order {
+  height: 670px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/****************************************************************************************************/
+/* Breakpoints                                                                                      */
+/****************************************************************************************************/
+/*****************************************************/
+/*  Max-width = 1050px  up to 1400    (.83 factor)   */
+/*****************************************************/
+@media (max-width: 1400px) {
+  /* line 29, /Users/yvesloiseau/Desktop/myCFproject/app/assets/stylesheets/orders.scss */
+  div#order.container-fluid.anchor-order {
+    height: auto;
+  }
+}

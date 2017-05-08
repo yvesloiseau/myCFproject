@@ -29,6 +29,12 @@
             class: 'btn btn-primary btn-sm inline', :method => :get %>
       <% end %>
 
+      <% @buying_product_name = product.name %>
+      <% @buying_product_price = product.price %>
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+
       <% if signed_in? && current_user.admin? %>
 
         <%= link_to edit_product_path(product),

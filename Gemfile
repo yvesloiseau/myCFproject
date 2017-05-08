@@ -69,6 +69,9 @@ gem 'cancancan', '~> 1.16'
 # Pagination gem
 gem 'will_paginate', '~> 3.1.5'
 
+# Stripe
+gem 'stripe'
+
 # Production gem
 group :production do
   gem 'pg'
