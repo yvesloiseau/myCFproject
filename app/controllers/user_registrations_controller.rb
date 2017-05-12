@@ -4,11 +4,6 @@ class UserRegistrationsController < Devise::RegistrationsController
     if @user.persisted?
       UserMailer.welcome(@user).deliver_now
       flash[:success] = "Thanks you for signing-up!"
-      #format.html { redirect  }
-      #format.html { :notice 'Thanks you for signing-up.' }
-      #format.json { render :show, status: :ok, location: @article }
-      #set_flash_message! notice: 'Thanks you for signing-up.' , :signed_up
-      #respond_with resource, location: after_sign_up_path_for(resource)
     end
   end
 

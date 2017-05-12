@@ -1,0 +1,20 @@
+<div class="panel panel-default thankyou-popup">
+  <div class="panel-body">
+    <p>Thank you for buying our product! </p>
+    <br>
+    <p>You will receive your product by ..... in the next 5 days.</p>
+    <br>
+    <p>The Birdy's team!</p>
+  </div>
+
+  <div class="thankyou-button">
+    <!-- Back to Product list -->
+    <%= button_to "Back", static_pages_contact_path,
+      class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+    <!-- Go back HOME-->
+    <%= button_to "Home", root_path,
+      class: 'btn btn-primary btn-sm inline', :method => :get %>
+  </div>
+
+</div>

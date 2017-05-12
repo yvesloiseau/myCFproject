@@ -11,7 +11,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :orders, only: [:index, :show, :create, :destroy]
+  #resources :orders, only: [:index, :show, :create, :destroy]
+  resources :orders
 
   get 'static_pages/index'
 
@@ -23,7 +24,7 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
-  #post 'products/index'
+  post 'payments/create'
 
   # This is lesson 5.1 new root page
   # get 'static_pages/index'

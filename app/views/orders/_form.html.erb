@@ -1,0 +1,63 @@
+<div class="container">
+  <%= form_for(order) do |f| %>
+    <% if order.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(order.errors.count, "error") %>
+          prohibited this order from being saved:</h2>
+
+        <ul>
+        <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <h3>Your email</h3>
+      <h4><%= order.user.email %></h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <div class="field">
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity, size: 5, class: :text_field, step: :any %>
+      </div>
+
+      <div class="field">
+        <%= f.label :net_amount %>
+        <%= f.number_field :net_amount,class: :text_field, step: :any %>
+      </div>
+      <div class="field">
+        <%= f.label :taxes %>
+        <%= f.number_field :taxes, class: :text_field, step: :any %>
+      </div>
+      <div class="field">
+        <%= f.label :total_amount %>
+        <%= f.number_field :total_amount, class: :text_field, step: :any %>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <h4 class="order-product-name">
+        <strong><%= order.product.name %></strong>
+      </h4>
+      <h4 class="order-product-name">
+        <%= order.product.price %></strong>
+      </h4>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

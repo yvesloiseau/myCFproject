@@ -1,1 +1,59 @@
-<h2>Show orders page</h2>
+<!-- *********************************************************************** -->
+<div class="container-fluid anchor-show" id="show">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <p id="notice"><%= notice %></p>
+      <h2>Show orders page</h2>
+      <h2>Order number: <%= @order.id %></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <h2 class="order-product-name">
+        <strong><%= @order.product.name %></strong>
+      </h2>
+        <strong>Order's details:</strong>
+      </h2>
+
+      <div class="order-features">
+        <p class="product-description">
+          <strong>QTY: <%= @order.quantity %></strong>
+        </p>
+        <br>
+        <p>
+          <strong>Net amount:</strong>
+          <%= number_to_currency(@order.net_amount) %>
+        </p>
+        <p>
+          <strong>Taxes:</strong>
+          <%= number_to_currency(@order.taxes) %>
+        </p>
+        <p>
+          <strong>Total amount:</strong>
+          <%= number_to_currency(@order.total_amount) %>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <p><%= image_tag(@order.product.image_url, alt: "Edit Entry",
+          class: "small-bag-image img-responsive")%>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <!-- Edit current product -->
+      <%= button_to "Products", products_path,
+                    class: 'btn btn-primary btn-sm', :method => :get %>
+      <!-- Back to product list -->
+      <%= button_to "Back", orders_path,
+                    class: 'btn btn-primary btn-sm inline', :method => :get %>
+    </div>
+  </div>
+</div>
+
+

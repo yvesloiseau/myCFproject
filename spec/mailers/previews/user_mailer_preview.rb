@@ -7,6 +7,10 @@ class UserMailerPreview < ActionMailer::Preview
 
   def welcome
       UserMailer.welcome("interface_yves@hotmail.com")
-end
+  end
+
+  def customers
+      UserMailer.customers("interface_yves@hotmail.com", "product")
+  end
 
 end

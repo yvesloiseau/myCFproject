@@ -6,41 +6,47 @@
     <table align="center" border="0" cellpadding="0" cellspacing="0" width="600"
            style="border-collapse: collapse;">
       <tr>
-        <td style="color: #153643; font-family: Arial, sans-serif;
+        <td style="color: #5535D2; font-family: Arial, sans-serif;
             font-size: 24px; padding-left:85px; padding-right: 85px;">
-        <b>Welcome to Birdy's golf store!</b>
+        <b>Birdy's online golf store!</b>
       </td>
       <tr>
         <td>
-          <p>Thank you for signing up with <%= @appname %>!</p>
+          <p>Thank you for buying: <%= @product_name %> at <%= @appname %>!</p>
         </td>
       </tr>
       <tr>
-        <td>
-          <p><strong>Your <%= @appname %> Team!</strong></p>
-        </td>
-      </tr>
-      <tr>
-        <td align="center" bgcolor="white" style="padding: 40px 0 30px 0;">
+        <td align="center" bgcolor="#f3f3f3" style="padding: 40px 0 30px 0;
+          border-style: solid; border-color: #5535D2;">
                   <a class="logo-img"
                   href="https://mycfproject.herokuapp.com/"
                   target="_blank">
-          <%= image_tag("Birdy_Golf_Store_TJ.jpg", size: "500x375",
+          <%= image_tag("#{@product_url}", size: "375x375",
                         alt: "Edit Entry", class: "img-two img-responsive",
                         style: "display: block;")%>
           </a>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <p>An amount of <%= number_to_currency(@product_price) %> was taken
+          from your credit card</p>
+        </td>
+        <tr>
+          <td>
+            <p><strong>Your <%= @appname %> Team!</strong></p>
+          </td>
+        </tr>
+      </tr>
       <!-- Email body (3 sections - Title, main comments,
         bottom (divided in two sections separated by some spacing) -->
       <tr>
         <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-      <td style="color: #153643; font-family: Arial, sans-serif;
+      <td style="color: #5535D2; font-family: Arial, sans-serif;
                 font-size: 24px;">
-       <b>Lorem ipsum dolor sit amet!</b>
+       <b>Also chechout our weekly specials!</b>
       </td>
       </tr>
       <tr>
@@ -49,7 +55,7 @@
         </td>
       </tr>
 
-      <!-- Insert here some of the featuresd product on sales this week -->
+      <!-- Insert here some of the featured product on sales this week -->
       <tr>
         <td>
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -57,8 +63,8 @@
             <td width="260" valign="top">
              <table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tr>
-                <td>
-                  <a class="logoimg"
+                <td style="border-style: solid; border-color: #f3f3f3;">
+                  <a class="logo-img"
                   href="https://mycfproject.herokuapp.com/products/7"
                   target="_blank">
                     <%= image_tag("Golf_bag_Cart_Taylormade_SuperV_TJ.jpg",
@@ -88,7 +94,7 @@
         <td width="260" valign="top">
           <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tr>
-              <td>
+              <td style="border-style: solid; border-color: #f3f3f3;">
                 <a class="logoimg"
                 href="https://mycfproject.herokuapp.com/products/19"
                 target="_blank">
@@ -100,13 +106,13 @@
             </tr>
 
             <tr>
-              <td style="padding: 25px 0 5px 5px;">
+              <td style="padding: 20px 0 5px 5px;">
                 Looking for balls ?
               </td>
               </tr>
               <tr>
               <!-- <td style="padding: 25px 0 5px 5px;"> -->
-              <td style="padding: 25px 0 5px 5px;">
+              <td style="padding: 20px 0 5px 5px;">
               We have a great selection of golf balls at all prices and for
               every golfers.
               </td>

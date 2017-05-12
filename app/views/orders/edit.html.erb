@@ -1,0 +1,28 @@
+<!-- *********************************************************************** -->
+<div class="container-fluid anchor-edit" id="edit">
+  <div class="row">
+    <div class="col-md-6 col-xs-6">
+      <div class="edit-product">
+
+
+        <%= render 'form', order: @order %>
+
+      </div>
+
+  <!-- Buttons to create a new product -->
+      <div class="edit-button">
+        <!-- Show current product -->
+        <%= button_to "Show", @order,
+          class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+        <!-- Back to product list -->
+        <%= button_to "Back", orders_path,
+          class: 'btn btn-primary btn-sm inline', :method => :get %>
+
+        <!-- Go back Home-->
+        <%= button_to "Home", root_path, class: 'btn btn-primary btn-sm inline',
+          :method => :get %>
+      </div>
+    </div>
+  </div>
+</div>
