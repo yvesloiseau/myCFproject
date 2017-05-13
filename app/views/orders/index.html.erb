@@ -8,7 +8,6 @@
     <h2>All orders</h2>
   <% elsif signed_in? %>
     <h2>Orders for <%= current_user.first_name %></h2>
-    <h3><%= current_user.id %>&nbsp <%=@my_user.id %></h3>
   <%end %>
 
   <table>
