@@ -1,84 +1,92 @@
 <!-- *********************************************************************** -->
 <div class="container-fluid anchor-order" id="order">
-  <p id="notice"><%= notice %></p>
+  <div class="col-md-12 col-xs-12">
+    <p id="notice"><%= notice %></p>
 
-  <h1 class="h1-orders">Orders</h1>
+    <h1 class="h1-orders">Orders</h1>
 
-  <% if signed_in? && current_user.admin? %>
-    <h2>All orders</h2>
-  <% elsif signed_in? %>
-    <h2>Orders for <%= current_user.first_name %></h2>
-  <%end %>
+    <% if signed_in? && current_user.admin? %>
+      <h2>All orders</h2>
+    <% elsif signed_in? %>
+      <h2>Orders for <%= current_user.first_name %></h2>
+    <%end %>
 
-  <table>
-    <thead>
-      <tr>
-        <th class="orders-form-headers">Number</th>
-        <th class="orders-form-headers">Product</th>
-        <th class="orders-form-headers">Brand</th>
-        <th class="orders-form-headers">Type</th>
-        <th class="orders-form-headers">ID</th>
-        <th class="orders-form-headers">Qty</th>
-        <th class="orders-form-headers">Price</th>
-        <th class="orders-form-headers">Taxes</th>
-        <th class="orders-form-headers">Net amount</th>
-        <th class="orders-form-headers">Status</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <% if signed_in? %>
-    <tbody>
-      <% @orders.each do |order| %>
-      <tr>
-        <td class="orders-form-fields"><%= order.id %></td>
-        <td class="orders-form-fields"><%= order.product.name %></td>
-        <td class="orders-form-fields"><%= order.product.brand %></td>
-        <td class="orders-form-fields"><%= order.product.product_type %></td>
-        <td class="orders-form-fields"><%= order.id %></td>
-        <td class="orders-form-fields"><%= order.quantity %></td>
-        <td class="orders-form-fields"><%= order.net_amount %></td>
-        <td class="orders-form-fields"><%= order.taxes %></td>
-        <td class="orders-form-fields"><%= order.total_amount %></td>
-        <td class="orders-form-fields">In preparation</td>
-        <!-- Future place holder for order status field  -->
+    <div class="orders-table">
+      <table>
+        <thead>
+          <tr>
+            <th class="orders-form-headers">Number</th>
+            <th class="orders-form-headers">Product</th>
+            <th class="orders-form-headers">Brand</th>
+            <th class="orders-form-headers">Type</th>
+            <th class="orders-form-headers">ID</th>
+            <th class="orders-form-headers">Qty</th>
+            <th class="orders-form-headers">Price</th>
+            <th class="orders-form-headers">Taxes</th>
+            <th class="orders-form-headers">Net amount</th>
+            <th class="orders-form-headers">Status</th>
+          </tr>
+        </thead>
+        <% if signed_in? %>
+        <tbody>
+          <% @orders.each do |order| %>
+          <tr>
+            <td class="orders-form-fields"><%= order.id %></td>
+            <td class="orders-form-fields"><%= order.product.name %></td>
+            <td class="orders-form-fields"><%= order.product.brand %></td>
+            <td class="orders-form-fields"><%= order.product.product_type %></td>
+            <td class="orders-form-fields"><%= order.id %></td>
+            <td class="orders-form-fields"><%= order.quantity %></td>
+            <td class="orders-form-fields"><%= order.net_amount %></td>
+            <td class="orders-form-fields"><%= order.taxes %></td>
+            <td class="orders-form-fields"><%= order.total_amount %></td>
+            <td class="orders-form-fields">In preparation</td>
+            <!-- Future place holder for order status field  -->
 
-        <td><%= link_to order, class: "btn btn-default btn-circle" do %>
-                  <span class="glyphicon glyphicon-ok"></span>
-                  <% end %>
-        </td>
+            <td class="no-borders"><%= link_to order,
+                      class: "btn btn-default btn-circle" do %>
+                      <span class="glyphicon glyphicon-ok"></span>
+                      <% end %>
+            </td>
 
-        <% if current_user.admin? %>
-          <td><%= link_to edit_order_path(order),
-                  class: "btn btn-default btn-circle" do %>
-                  <span class="glyphicon glyphicon-edit"></span>
-                  <% end %>
-          </td>
+          </tr>
 
-          <td><%= link_to order, method: :delete,
-                data: { confirm: 'Are you sure?' },
-                class: "btn btn-default btn-circle" do %>
-                <span class="glyphicon glyphicon-remove"></span>
-                <% end %>
-          </td>
+            <% if current_user.admin? %>
+              <td><%= link_to edit_order_path(order),
+                      class: "btn btn-default btn-circle" do %>
+                      <span class="glyphicon glyphicon-edit"></span>
+                      <% end %>
+              </td>
+
+              <td><%= link_to order, method: :delete,
+                    data: { confirm: 'Are you sure?' },
+                    class: "btn btn-default btn-circle" do %>
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <% end %>
+              </td>
+            <% end %>
+            <!-- </tr> -->
+          <% end %>
+        </tbody>
+
         <% end %>
-        </tr>
-      <% end %>
-    </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-xs-6 order-show-btn">
 
-    <% end %>
-  </table>
+        <!-- Edit current product -->
+        <%= button_to "Show details", products_path,
+         class: 'btn btn-primary btn-sm', :method => :get %>
 
+        <!-- Re-direct the user from where he came from -->
+        <%= button_to "Previous", session[:previous_url],
+         class: 'btn btn-primary btn-sm inline', :method => :get  %>
 
-  <!-- Edit current product -->
-  <%= button_to "Show details", products_path,
-   class: 'btn btn-primary btn-sm', :method => :get %>
-
-  <!-- Re-direct the user from where he came from -->
-  <%= button_to "Previous", session[:previous_url],
-   class: 'btn btn-primary btn-sm inline', :method => :get  %>
-
-  <!-- Re-direct the user from where he came from -->
-  <%= button_to "Back", :back, class: 'btn btn-primary btn-sm inline',
-   :method => :get  %>
-
+        <!-- Re-direct the user from where he came from -->
+        <%= button_to "Back", :back, class: 'btn btn-primary btn-sm inline',
+         :method => :get  %>
+      </div>
+    </div>
+  </div>
 </div>

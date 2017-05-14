@@ -8,6 +8,10 @@
       <h2 class="full-product-name">
         <strong><%= @product.name %></strong>
       </h2>
+<% @test_debug = "This is a test of logger output"%>
+<% logger.debug "Product: #{@product.name}"%>
+<% logger.debug "Product: #{@test_debug}"%>
+
 
       <p><%= image_tag(@product.image_url, alt: "Edit Entry",
       class: "full-bag-image img-responsive")%></p>

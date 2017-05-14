@@ -49,6 +49,29 @@ div#order.container-fluid.anchor-order {
   padding-left: 10px;
 }
 
+.order-show-btn {
+  margin-top: 10px;
+  padding-left: 15px;
+
+}
+
+.orders-table {
+  overflow-x:auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 90%;
+//    border: 1px solid #ddd;
+}
+
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+td.no-borders {
+  border: none;
+}
 /****************************************************************************************************/
 /* Breakpoints                                                                                      */
 /****************************************************************************************************/

@@ -13,11 +13,10 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     if signed_in? && !current_user.admin?
-      #@my_user  = current_user
-      @orders = Order.all.where("user_id = ?", current_user.id).order("id DESC")
+      @orders = Order.where("user_id = ?", current_user.id).order("id DESC")
                 .paginate(page: params[:page], per_page: 4)
     elsif current_user.admin?
-      @orders = Order.all.order("id DESC")
+      @orders = Order.order("id DESC")
                 .paginate(page: params[:page], per_page: 4)
     end
   end
@@ -25,7 +24,6 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
-#    @most_recent_orders = @order.id_desc.first
     @most_recent_orders = Order.order("id DESC").paginate(page:
                          params[:page], per_page: 3)
   end
