@@ -80,7 +80,8 @@ class OrdersController < ApplicationController
 private
 
 def set_order
-  @order = Order.find(params[:id])
+  order_user = current_user.id
+  @order = order_user.orders.find(params[:id])
 end
 
 

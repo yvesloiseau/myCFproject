@@ -27,8 +27,8 @@ load_and_authorize_resource
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
     product = @comment.product
+    @comment = product.comments.find(params[:id])
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to products_url,
