@@ -12,9 +12,9 @@
       <% logger.debug "Product: #{@test_debug}"%>
 
 
-      <p><%= image_tag("Golf_ball_TJ.jpg", alt: "Edit Entry",
+      <p><%= image_tag(@product.image_url, alt: "Edit Entry",
       class: "img-zoom full-bag-image img-responsive",
-        data_zoom_image: "Golf_ball_TJ.jpg") %></p>
+        data_zoom_image: @product.image_url) %></p>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
