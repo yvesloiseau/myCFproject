@@ -11,6 +11,8 @@
    <%= stylesheet_link_tag  'application', media: 'all',
    'data-turbolinks-track': 'reload' %>
 
+	<%= javascript_include_tag :defaults %>
+	<%= csrf_meta_tag %>
    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 	<!-- Bootstrap CDN -->
@@ -24,9 +26,44 @@
 
   <body>
 
-	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top navbar-custom"
+	<!-- <nav class="navbar-inverse nav-upper"> -->
+	<nav class="navbar navbar-inverse navbar-static-top navbar-custom nav-upper"
 	role="navigation">
 	  <div class="container-fluid">
+	  <!-- <div class="nav-upper"> -->
+    <ul class="nav navbar-nav menu navbar-upper pull-right upper-nav-links">
+			<li><a href="#" class="inline upper">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+        </a>
+      </li>
+					<% if user_signed_in? %>
+						<li class="upper-first-name"><%= current_user.first_name %></li>
+			      <li class="upper-nav-links"><%= link_to "Profiles",
+			       edit_user_path(current_user),class: "inline upper" %>
+			      </li>
+	        <% end %>
+
+					<% if user_signed_in? %>
+						<li><%= link_to("Logout", destroy_user_session_path,
+						:method => :delete, class: "inline upper") %></li>
+						<li class="upper-first-name"> / </li>
+						<li><%= link_to "Change pwd", edit_user_registration_path,
+						 class: "inline upper" %></li>
+					<% else %>
+						<li><%= link_to("Login", new_user_session_path) %></li>
+						<li class="upper-first-name"> / </li>
+						<li><%= link_to("Sign-up", new_user_registration_path) %></li>
+					<% end %>
+			</ul>
+			<!-- </div> -->
+  </div>
+</nav>
+
+
+	<nav class="navbar navbar-inverse navbar-custom"
+	role="navigation">
+	  <div class="container-fluid">
+
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse"
 	      data-target=".navbar-collapse">
@@ -62,31 +99,6 @@
 					</li>
 	      </ul>
 
-	      <ul class="nav navbar-nav menu pull-right user-nav-links">
-					<% if user_signed_in? %>
-						<li class="user-first-name"><%= current_user.first_name %></li>
-			      <li class="user-nav-links"><%= link_to "Profile",
-			       edit_user_path(current_user) %>
-			      </li>
-	        <% end %>
-
-					<% if user_signed_in? %>
-						<li><%= link_to("Logout", destroy_user_session_path,
-						:method => :delete, class: "inline") %></li>
-						<li class="user-first-name"> / </li>
-						<li><%= link_to "Change pwd", edit_user_registration_path,
-						 class: "inline" %></li>
-					<% else %>
-						<li><%= link_to("Login", new_user_session_path) %></li>
-						<li class="user-first-name"> / </li>
-						<li><%= link_to("Sign-up", new_user_registration_path) %></li>
-					<% end %>
-					<!-- </li> -->
-					<!-- French/English switch - Eventual pop-up window -->
-	        <!-- <li>
-	        	<a class="language pull-right" href="http://localhost:3000/French">FR</a>
-	        </li> -->
-	       </ul>
 	      </div>
 
 	  </div>
@@ -94,8 +106,8 @@
 
 	<!-- Flash to display a notice to users or any alerts -->
 	<% if notice %>
-		<p class="notice"><%= notice %></p>
-  <% end %>
+		<p id="notice"><%= notice %></p>
+	<% end %>
 	<% if alert %>
 	  <div id="alert-area">
 	  	<p class="alert alert-danger"><%= alert %></p>

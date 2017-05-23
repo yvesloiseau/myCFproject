@@ -9,7 +9,7 @@
 .anchor_edit,
 .anchor_new,
 .anchorShow {
-  padding-top: 80px;
+  padding-top: 0px; //80px;
 }
 
 div#product.container-fluid.anchor-product {
@@ -164,8 +164,15 @@ p.link_to, form.button_to, .inline {
   border-radius: 50%;
 }
 
-.glyphicon:hover { color:white; }
-.glyphicon { color:blue; }
+.glyphicon-ok:hover,
+.glyphicon-edit:hover,
+.glyphicon-remove:hover, {
+	color:white;
+	}
+
+.glyphicon-ok,
+.glyphicon-edit,
+.glyphicon-remove { color:blue; }
 
 textarea#product_description {
 	width:  133%;          //34.72222222%;					// 500px;

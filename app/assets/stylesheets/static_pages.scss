@@ -20,17 +20,17 @@ body {
 // *  Nav bar styling rules                             *
 // ******************************************************
 
-	.navbar-nav>li>a {
-	    line-height: 20px;
-	    font-size: 1.75em;
+.navbar-nav>li>a {
+	line-height: 20px;
+	font-size: 1.75em;
 	}
 
  .navbar-nav>li>a {
-	    padding-top: 30px;
+	    padding-top: 7px;
 	    padding-bottom: 20px;
 	}
 
-	div.project-name.navbar-brand {
+div.project-name.navbar-brand {
    padding-top: 10px;
    padding-bottom: 25px;
    margin-bottom: 5px;
@@ -38,6 +38,60 @@ body {
 
 a.language {
 	float: right;
+}
+
+.navbar-inverse.nav-upper {
+//  height: 100px;
+  background-color: black;
+  color: white;
+  min-height: 25px;
+}
+
+.upper-nav-links {
+  font-size: 8px;
+  color: white;
+}
+
+li.upper-first-name {
+  color: white;
+  padding-top: 7px;
+}
+
+.glyphicon-shopping-cart {
+  font-size: 18px;
+  display: block;
+  color: white;
+  }
+
+.glyphicon-shopping-cart:hover {
+  color: #b2d235;
+  }
+
+  .navbar-inverse.nav-upper {
+  height: 20px;
+}
+
+.navbar-inverse.nav-upper ul {
+  float: right;
+  display: table;
+}
+
+div.navbar-collapse.collapse {
+  border-top: none;
+}
+
+nav.navbar.navbar-inverse.navbar-static-top.navbar-custom.nav-upper {
+  margin-bottom: 0;
+  min-height: 27px;
+}
+
+.navbar {
+  margin-bottom: 5px;
+}
+
+.navbar-collapse {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 // ******************************************************
@@ -136,17 +190,17 @@ p, ol, ul, td {
 // *  Anchor tags and pages height                      *
 // ******************************************************
 .anchor-about {
-  padding-top: 80px;
+  padding-top: 0px; //80px;
   }
 
 .anchor-contact {
-  padding-top: 80px;  //*30px;*/
+  padding-top: 0px; //80px;  //*30px;*/
   padding-left: 1em; //*12px;*/
   padding-right: 0px;
 	}
 
 .anchor-index {
-  padding-top: 80px;
+  padding-top: 0px; //80px;
 	}
 
 div#index.container-fluid.anchor-index {
@@ -283,7 +337,7 @@ div#product.container-fluid.anchor-landingpage-products {
 	}
 
 .anchor-landingpage-products {
-  padding-top: 5em; //90px; base at 10px
+  padding-top: 0px; //5em; //90px; base at 10px
   padding-left: 15px;
 	}
 
@@ -331,6 +385,14 @@ div.carousel-inner {
 
 .navbar-inverse .navbar-nav>li>a {
     color: #264553; //#9d9d9d;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+//  color:white;
+}
+
+.navbar-inverse .navbar-upper > li > a {
+  color: white;
 }
 
 h1,

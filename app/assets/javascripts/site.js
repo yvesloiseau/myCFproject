@@ -1,14 +1,18 @@
-$(document).on('turbolinks:load', function(){
+
+var refreshRating = function() {
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
-
     $('.rated').raty({ path: '/assets',
-      readOnly: true,
-      score: function() {
-        return $(this).attr('data-score');
-      }
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        }
     });
+};
 
-    $('.img-zoom').elevateZoom({
+$(document).on('turbolinks:load', function() {
+    refreshRating();
+
+$('.img-zoom').elevateZoom({
         cursor: "crosshair",
         easing: true,
         zoomType: "lens",
@@ -16,7 +20,6 @@ $(document).on('turbolinks:load', function(){
         lensSize: 200
         }
     );
-
 });
 
 // Need to change the following code to hide and show some of the content

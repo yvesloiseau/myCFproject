@@ -7,7 +7,15 @@
 }
 
 .user-first-name {
-  padding-top: 30px;
+  padding-top: 10px;
+  padding-right: 5px;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.upper-first-name {
+  padding-top: 0px;
+  padding-bottom: 0px;
   padding-right: 5px;
   font-size: 10px;
   font-weight: 900;
@@ -21,11 +29,11 @@
 .authenticat-new,
  .password-new,
  .authenticat-edit {
-  margin-top: 90px;
+  margin-top: 0px; //90px;
   }
 
 .anchor-user-profile {
-  padding-top: 80px;
+  padding-top: 0px; // 80px;
   }
 
 div#edit.container-fluid.anchor-use-profile {
