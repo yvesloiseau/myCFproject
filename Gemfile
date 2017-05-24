@@ -72,6 +72,9 @@ gem 'will_paginate', '~> 3.1.5'
 # Stripe
 gem 'stripe'
 
+# Dalli memcache client
+gem 'dalli'
+
 # Production gem
 group :production do
   gem 'pg'

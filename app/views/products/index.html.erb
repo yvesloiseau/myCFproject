@@ -5,7 +5,9 @@
   <% @number_of_products = 0 %>
   <% @first_product_id = 0 %>
 
-  <%= render partial: "product", collection: @products %>
+  <% cache(cache_key_for_products) do %>
+    <%= render partial: "product", collection: @products %>
+  <% end %>
 </div>
 
 <div class="new_pagination">
