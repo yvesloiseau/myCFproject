@@ -178,11 +178,18 @@
       <!-- Comments form to add comments  -->
       <%= render partial: "comments/new_comment" %>
     </div>
-    <!-- Show the comments details -->
+
+    <!-- Show the comments details using AJAX -->
     <div class="col-md-6 col-xs-12">
-      <%= render partial: "comments/comments" %>
-      <%= will_paginate @comments, :class => 'flickr_pagination' %>
+      <div id="comments" data-load="<%= product_comments_path(@product, :format => :js)%>">
+      </div>
     </div>
+
+
+
+
+
+  </div>
   </div>
 
   <div class="row">

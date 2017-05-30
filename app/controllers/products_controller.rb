@@ -32,8 +32,8 @@ class ProductsController < ApplicationController
     @comments = @product.comments.order("created_at DESC").paginate(page:
                          params[:page], per_page: 3)
   # assuming you load the @product in prepare_product
-  @product.viewed!
-  @cahe_key_for_product = @product
+    @product.viewed!
+    #@cache_key_for_product = @product
 
   end
 

@@ -17,3 +17,9 @@
 //= require jquery.elevateZoom-3.0.8.min
 //= require site
 //= require_tree .
+$("div[data-load]").filter(":visible").each(function(){
+
+  var path = $(this).attr('data-load');
+  $(this).load(path);
+
+});
