@@ -2,9 +2,9 @@
 <div class="container-fluid anchor-show" id="show">
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-
-      <!-- Caching products -->
-      <% cache(cache_key_for_products) do %>
+    <% cache_key_for_product = @product %>
+    <% redis_key_for_product = @product %>
+    <% cache_key_for_visits = @product.views %>
 
       <h2 class="full-product-name">
         <strong><%= @product.name %></strong>
@@ -14,10 +14,21 @@
       <% logger.debug "Product: #{@product.name}"%>
       <% logger.debug "Product: #{@test_debug}"%>
 
+      <h6>Views:<span class="badge"><%= @product.views %></span></h6>
+      <h6>Product ID: <%=@product.id %></h6>
+
+      <!-- Caching products -->
+      <% cache(cache_key_for_product) do %>
 
       <p><%= image_tag(@product.image_url, alt: "Edit Entry",
       class: "img-zoom full-bag-image img-responsive",
         data_zoom_image: @product.image_url) %></p>
+
+
+      <% cache(cache_key_for_visits) do %>
+        <h6>Views:<span class="badge"><%= @product.views %></span></h6>
+      <% end %>
+
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -81,7 +92,8 @@
         <% end %>
       </div>
 
-      <% end %> <!-- end of caching products -->
+
+      <% end %>
 
       <!-- Caching comments -->
       <% cache(cache_key_for_comments) do %>

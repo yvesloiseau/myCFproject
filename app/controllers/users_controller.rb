@@ -75,6 +75,9 @@ class UsersController < ApplicationController
     redirect_to main_app.root_url, :alert => exception.message
   end
 
+# using redis to have a count of user with Redis
+#$redis.sadd("user_#{self.id}_friends", user.id)
+
 private
   # Use callbacks to share common setup or constraints between actions.
   def set_user

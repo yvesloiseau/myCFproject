@@ -75,6 +75,12 @@ gem 'stripe'
 # Dalli memcache client
 gem 'dalli'
 
+# Redis gem
+gem 'redis-rails'
+
+# New relic performance analyzer
+gem 'newrelic_rpm'
+
 # Production gem
 group :production do
   gem 'pg'
