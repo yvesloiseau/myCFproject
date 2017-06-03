@@ -2,8 +2,21 @@ class CommentsController < ApplicationController
 load_and_authorize_resource
 
   def index
+    @product = Product.find(params[:product_id])
     @comments = Comment.all
   end
+
+  def show
+  end
+
+  def fetch_comments
+    @comments = @product.comments.order("created_at DESC").paginate(page:
+                         params[:page], per_page: 3)
+    respond_to do |format|
+        format.js
+    end
+  end
+
 
   def create
     @product = Product.find(params[:product_id])

@@ -96,7 +96,6 @@
       <% end %>
 
       <!-- Caching comments -->
-      <% cache(cache_key_for_comments) do %>
 
       <!-- Show comments review rating here -->
       <div class="best-reviews">
@@ -171,7 +170,7 @@
       </div>
     </div>
   </div>
-   <% end %>  <!--End of comment caching -->
+   <!--End of comment caching -->
 
   <div class="row">
     <div class="col-md-6 col-xs-12">
@@ -179,14 +178,15 @@
       <%= render partial: "comments/new_comment" %>
     </div>
 
-    <!-- Show the comments details using AJAX -->
+     <!-- Show the comments details using AJAX -->
     <div class="col-md-6 col-xs-12">
-      <div id="comments" data-load="<%= product_comments_path(@product, :format => :js)%>">
-      </div>
+
+    <!-- Changes for partial view with AJAX -->
+    <div id="comments" data-load=<%= render partial: 'comments/comments' %>></div>
+      <%= will_paginate @comments, :class => 'flickr_pagination' %>
+
+
     </div>
-
-
-
 
 
   </div>

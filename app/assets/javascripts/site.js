@@ -12,15 +12,20 @@ var refreshRating = function() {
 $(document).on('turbolinks:load', function() {
     refreshRating();
 
-$('.img-zoom').elevateZoom({
-        cursor: "crosshair",
-        easing: true,
-        zoomType: "lens",
-        lensShape: "round",
-        lensSize: 200
-        }
-    );
+  $('.img-zoom').elevateZoom({
+          cursor: "crosshair",
+          easing: true,
+          zoomType: "lens",
+          lensShape: "round",
+          lensSize: 200
+          }
+      );
+
+// application.js or any JS file loaded within application.js
+$("#comments").filter(":visible").each(function(){
+  var path = $(this);
+  alert("here");
+  $(this).load(path);
 });
 
-// Need to change the following code to hide and show some of the content
-//  of my pages based on some conditions
+});

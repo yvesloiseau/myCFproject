@@ -39,7 +39,7 @@ class Ability
     else
       can :manage, User, id: user.id
       can :read, User, id: user.id
-      can :create, Comment
+      can :read, :create, Comment
       can :read, Product
       can :read, Order
 #      can :read, :all
