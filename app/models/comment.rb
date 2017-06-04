@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :user
-  belongs_to :product
+  belongs_to :product, touch: true
 
   # Validations
   validates :text, presence: true

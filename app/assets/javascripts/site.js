@@ -24,7 +24,6 @@ $(document).on('turbolinks:load', function() {
 // application.js or any JS file loaded within application.js
 $("#comments").filter(":visible").each(function(){
   var path = $(this);
-  alert("here");
   $(this).load(path);
 });
 

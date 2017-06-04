@@ -20,22 +20,22 @@ class ProductsController < ApplicationController
     else
       @products = Product.all.paginate(page: params[:page], per_page: 4)
     end
+    @page   = params[:page]
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
     #byebug
-    # assuming you load the @product in prepare_product
     @product.viewed!
-    #@cache_key_for_product = @product
-
     @first_comment = @product.comments.rating_desc.first
     @last_comment = @product.comments.rating_desc.last
     @reviews = @product.highest_rating_comment
     @comments = @product.comments.order("created_at DESC").paginate(page:
                          params[:page], per_page: 3)
-  end
+    @comments_page   = params[:page]
+
+end
 
   # GET /products/new
   def new

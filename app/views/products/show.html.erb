@@ -14,8 +14,8 @@
       <% logger.debug "Product: #{@product.name}"%>
       <% logger.debug "Product: #{@test_debug}"%>
 
+      <!-- Showing number of visits on this product -->
       <h6>Views:<span class="badge"><%= @product.views %></span></h6>
-      <h6>Product ID: <%=@product.id %></h6>
 
       <!-- Caching products -->
       <% cache(cache_key_for_product) do %>
@@ -23,12 +23,12 @@
       <p><%= image_tag(@product.image_url, alt: "Edit Entry",
       class: "img-zoom full-bag-image img-responsive",
         data_zoom_image: @product.image_url) %></p>
-
-
-      <% cache(cache_key_for_visits) do %>
+      <!-- Only show visits when user is admin -->
+      <% if signed_in? && current_user.admin? %>
+       <% cache(cache_key_for_visits) do %>
         <h6>Views:<span class="badge"><%= @product.views %></span></h6>
+        <% end %>
       <% end %>
-
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -36,7 +36,6 @@
         <h2>
           <strong>Product features:</strong>
         </h2>
-
         <p class="product-description">
           <strong><%= @product.description %></strong>
         </p>
@@ -57,7 +56,6 @@
           <strong>Price:</strong>
           <%= number_to_currency(@product.price) %>
         </p>
-
         <h3>Other features</h3>
         <p>
           <%= @product.gender %>
@@ -91,11 +89,11 @@
           <% @have_reviews = true %>
         <% end %>
       </div>
-
-
       <% end %>
 
       <!-- Caching comments -->
+      <% cache(cache_key_for_comments) do %>
+      <% end %>
 
       <!-- Show comments review rating here -->
       <div class="best-reviews">
@@ -182,7 +180,8 @@
     <div class="col-md-6 col-xs-12">
 
     <!-- Changes for partial view with AJAX -->
-    <div id="comments" data-load=<%= render partial: 'comments/comments' %>></div>
+    <div id="comments" data-load=<%= render partial: 'comments/comments' %> >
+    </div>
       <%= will_paginate @comments, :class => 'flickr_pagination' %>
 
 

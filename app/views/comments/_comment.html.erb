@@ -1,7 +1,5 @@
 <div class="row reviews">
   <br>
-  <!-- Caching individual comments -->
-  <% cache comment do %>
   <p><%= comment.user.first_name %>
   <small>
     <em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em>
@@ -19,5 +17,5 @@
         <% end %>
     <% end %>
 
-  <% end %> <!-- End of individual comments caching -->
+ <!-- End of individual comments caching -->
 </div>

@@ -4,6 +4,7 @@ load_and_authorize_resource
   def index
     @product = Product.find(params[:product_id])
     @comments = Comment.all
+
   end
 
   def show

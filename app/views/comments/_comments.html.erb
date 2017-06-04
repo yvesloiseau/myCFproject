@@ -6,10 +6,8 @@
       Be the first to review this product
     </h3>
   <% end %>
-
   <% @comments.each do |comment| %>
       <!-- Comments partial to display each comment  -->
       <%= render partial: "comments/comment", locals: { comment: comment } %>
-
   <% end %>
 </div>
