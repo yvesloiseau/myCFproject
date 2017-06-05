@@ -31,6 +31,10 @@ Rails.application.routes.draw do
 	 root 'static_pages#index'
   # This was my root page before  lesson 5.1 (to put back after)
    #root 'static_pages#landing_page'
+
+  # Action cable setup
+  mount ActionCable.server => '/cable'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 
 end
