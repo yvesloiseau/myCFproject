@@ -103,5 +103,5 @@ Rails.application.configure do
   #  Allowing action cable in production
   config.web_socket_server_url = "wss://mycfproject.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://mycfproject.herokuapp.com',
-    'http://your-app-name.herokuapp.com']
+    'http://mycfproject.herokuapp.com']
 end
