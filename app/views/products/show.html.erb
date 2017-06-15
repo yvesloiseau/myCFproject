@@ -1,6 +1,6 @@
 <!-- *********************************************************************** -->
 <div class="container-fluid anchor-show" id="show">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     <% cache_key_for_product = @product %>
     <% redis_key_for_product = @product %>
@@ -179,19 +179,15 @@
      <!-- Show the comments details using AJAX -->
     <div class="col-md-6 col-xs-12">
 
-<!-- Alert sent to users on streaming  channel-->
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+      <!-- Alert sent to users on streaming  channel-->
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
-    <!-- Changes for partial view with AJAX -->
-    <div id="comments" data-load=<%= render partial: 'comments/comments' %> >
+      <!-- Changes for partial view with AJAX -->
+      <div id="comments" data-load=<%= render partial: 'comments/comments' %> >
+      </div>
+        <%= will_paginate @comments, :class => 'flickr_pagination' %>
+      </div>
     </div>
-      <%= will_paginate @comments, :class => 'flickr_pagination' %>
-
-
-    </div>
-
-
-  </div>
   </div>
 
   <div class="row">

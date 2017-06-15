@@ -18,18 +18,15 @@ load_and_authorize_resource
     end
   end
 
-
   def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
+    @user = current_user
     @comment.save
 
     respond_to do |format|
       if @comment.save
-        ActionCable.server.broadcast 'product_channel',
-                            comment: @comment,
-                            average_rating: @comment.product.average_rating
         format.html { redirect_to product_path(@product),
           notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }

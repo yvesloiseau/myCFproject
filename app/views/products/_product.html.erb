@@ -1,10 +1,8 @@
 <!-- *********************************************************************** -->
 <div class="col-md-3 col-xs-6 product-row">
-
     <% cache product do %>
   <h3 class="product-name"><%= product.name %></h3>
      <% logger.debug "Product: #{product.name}"%>
-
 
   <div class="thumbnails product-details">
     <p>
@@ -12,7 +10,6 @@
         <%= image_tag(product.image_url, alt: "Edit Entry",
         class: "bag-image img-responsive")%>    <% end %>
     </p>
-
     <div class="text-box">
       <p><%= product.description %></p>
       <% if @number_of_products == 0 %>
@@ -22,7 +19,6 @@
 
     <h2 class="product-price"><%= number_to_currency(product.price) %></h2>
     <br>
-
     <p class="product-link-button">
       <% if signed_in? && current_user.admin? %>
         <%= link_to product, class: "btn btn-default btn-circle" do %>
@@ -55,13 +51,9 @@
         <% end %>
             <!-- Only show visits when user is admin -->
         <h6>Views:<span class="badge inline"><%= product.views %></span></h6>
-
-
       <% end %>
     </p>
   </div>
 <% end %>
 
 </div>
-
-
