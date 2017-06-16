@@ -21,9 +21,6 @@
       <h6>Views:<span class="badge"><%= @product.views %></span></h6>
 
 <!-- CHACHE KEY FOR PRODUCT WAS HERE -->
-      <!-- Cache key for product -->
-      <!-- Caching products -->
-      <% cache(cache_key_for_product) do %>
 
       <p><%= image_tag(@product.image_url, alt: "Edit Entry",
       class: "img-zoom full-bag-image img-responsive",
@@ -95,7 +92,6 @@
         <% end %>
       </div>
 <!-- End of cache key for product -->
-      <% end %>
 
       <!-- Caching comments -->
       <% cache(cache_key_for_comments) do %>
