@@ -30,7 +30,8 @@ load_and_authorize_resource
         format.html { redirect_to product_path(@product),
           notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
-        format.js
+        # Removed the js processing
+         format.js
         #redirect_to product_path(@product)
       else
         format.html { redirect_to @product,

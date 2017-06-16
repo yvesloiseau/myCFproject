@@ -21,9 +21,6 @@ $(document).on('turbolinks:load', function() {
           }
       );
 
-$("#comments").filter(":visible").each(function(){
-  var path = $(this);
-  $(this).load(path);
-});
+
 
 });

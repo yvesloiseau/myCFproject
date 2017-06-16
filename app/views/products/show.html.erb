@@ -1,7 +1,10 @@
 <!-- *********************************************************************** -->
 <div class="container-fluid anchor-show" id="show">
-  <div class="row" data-product-id="<%= @product.id %>">
+<!-- REMOVING THE DATA PRODUCT ID AND PUT IT LOWER -->
+  <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<!-- All caches where here -->
+    <!-- CACHE REMOVED FROM PRODUCT SHOW PAGE -->
     <% cache_key_for_product = @product %>
     <% redis_key_for_product = @product %>
     <% cache_key_for_visits = @product.views %>
@@ -17,6 +20,8 @@
       <!-- Showing number of visits on this product -->
       <h6>Views:<span class="badge"><%= @product.views %></span></h6>
 
+<!-- CHACHE KEY FOR PRODUCT WAS HERE -->
+      <!-- Cache key for product -->
       <!-- Caching products -->
       <% cache(cache_key_for_product) do %>
 
@@ -89,6 +94,7 @@
           <% @have_reviews = true %>
         <% end %>
       </div>
+<!-- End of cache key for product -->
       <% end %>
 
       <!-- Caching comments -->
@@ -170,7 +176,7 @@
   </div>
    <!--End of comment caching -->
 
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-md-6 col-xs-12">
       <!-- Comments form to add comments  -->
       <%= render partial: "comments/new_comment" %>
@@ -182,10 +188,9 @@
       <!-- Alert sent to users on streaming  channel-->
       <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
-      <!-- Changes for partial view with AJAX -->
-      <div id="comments" data-load=<%= render partial: 'comments/comments' %> >
-      </div>
-        <%= will_paginate @comments, :class => 'flickr_pagination' %>
+      <%= render partial: "comments/comments" %>
+      <%= will_paginate @comments, :class => 'flickr_pagination' %>
+
       </div>
     </div>
   </div>
