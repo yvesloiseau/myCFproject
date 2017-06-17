@@ -4,7 +4,6 @@
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <!-- All caches where here -->
-    <% cache_key_for_visits = @product.views %>
 
       <h2 class="full-product-name">
         <strong><%= @product.name %></strong>
@@ -17,7 +16,7 @@
       <!-- Showing number of visits on this product -->
       <h6>Views:<span class="badge"><%= @product.views %></span></h6>
 
-<!-- CHACHE KEY FOR PRODUCT WAS HERE -->
+<!-- CACHE KEY FOR PRODUCT WAS HERE -->
 
       <p><%= image_tag(@product.image_url, alt: "Edit Entry",
       class: "img-zoom full-bag-image img-responsive",
