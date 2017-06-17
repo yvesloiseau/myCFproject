@@ -23,10 +23,10 @@
         data_zoom_image: @product.image_url) %></p>
       <!-- Only show visits when user is admin -->
       <% if signed_in? && current_user.admin? %>
-       <% cache(cache_key_for_visits) do %>
+<!-- chache key for visit was here -->
         <h6>Views:<span class="badge"><%= @product.views %></span></h6>
         <% end %>
-      <% end %>
+<!-- end for cache key for visits -->
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
