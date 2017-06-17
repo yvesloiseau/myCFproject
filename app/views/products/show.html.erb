@@ -4,9 +4,6 @@
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <!-- All caches where here -->
-    <!-- CACHE REMOVED FROM PRODUCT SHOW PAGE -->
-    <% cache_key_for_product = @product %>
-    <% redis_key_for_product = @product %>
     <% cache_key_for_visits = @product.views %>
 
       <h2 class="full-product-name">
@@ -93,9 +90,7 @@
       </div>
 <!-- End of cache key for product -->
 
-      <!-- Caching comments -->
-      <% cache(cache_key_for_comments) do %>
-      <% end %>
+<!-- CACHE KEY FOR COMMENTS WAS HERE -->
 
       <!-- Show comments review rating here -->
       <div class="best-reviews">
