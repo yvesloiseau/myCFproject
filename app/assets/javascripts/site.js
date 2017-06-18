@@ -20,7 +20,9 @@ $(document).on('turbolinks:load', function() {
           lensSize: 200
           }
       );
-
+$(document).on('turbolinks:load', function() {
+  App.product.listen_to_comments();
+});
 
 
 });

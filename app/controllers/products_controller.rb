@@ -35,7 +35,6 @@ class ProductsController < ApplicationController
     @comments = @product.comments.order("created_at DESC").paginate(page:
                          params[:page], per_page: 3)
     @comments_page   = params[:page]
-
 end
 
   # GET /products/new
