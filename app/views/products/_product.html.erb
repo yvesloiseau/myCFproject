@@ -1,6 +1,6 @@
 <!-- *********************************************************************** -->
 <div class="col-md-3 col-xs-6 product-row">
-    <% cache product do %>
+<!-- CACHE FOR PRODUCT DO WAS HERE -->
   <h3 class="product-name"><%= product.name %></h3>
      <% logger.debug "Product: #{product.name}"%>
 
@@ -8,7 +8,8 @@
     <p>
       <%= link_to product do %>
         <%= image_tag(product.image_url, alt: "Edit Entry",
-        class: "bag-image img-responsive")%>    <% end %>
+        class: "bag-image img-responsive")%>
+        <% end %>
     </p>
     <div class="text-box">
       <p><%= product.description %></p>
@@ -54,6 +55,6 @@
       <% end %>
     </p>
   </div>
-<% end %>
+<!-- END FOR PRODUCT CACHE DO WAS HERE -->
 
 </div>

@@ -2,9 +2,9 @@ $("#new_comment").html("Thank you for your review!");
 
 $("#average-rating").attr('data-score', "<%= @product.average_rating %>");
 
-refreshRating();
-//$(document).on('turbolinks:load ajaxSuccess', function() { refreshRating();
-//});
+//refreshRating();
+$(document).on('turbolinks:load ajaxSuccess', function() { refreshRating();
+});
 
 //  Removed with lesson 6.14
 //  Rendering the single comment that was just added under AJAX
