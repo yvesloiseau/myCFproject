@@ -1,9 +1,13 @@
 <!-- *********************************************************************** -->
 <div class="container-fluid anchor-show" id="show">
-<!-- REMOVING THE DATA PRODUCT ID AND PUT IT LOWER -->
+  <!-- REMOVING THE DATA PRODUCT ID AND PUT IT LOWER -->
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-<!-- All caches where here -->
+    <!-- All caches where here -->
+    <% cache_key_for_product = @product %>
+    <% redis_key_for_product = @product %>
+    <% cache_key_for_visits = @product.views %>
+
 
       <h2 class="full-product-name">
         <strong><%= @product.name %></strong>
@@ -16,17 +20,21 @@
       <!-- Showing number of visits on this product -->
       <h6>Views:<span class="badge"><%= @product.views %></span></h6>
 
-<!-- CACHE KEY FOR PRODUCT WAS HERE -->
+      <!-- CACHE KEY FOR PRODUCT WAS HERE -->
+      <!-- Caching products -->
+      <% cache(cache_key_for_product) do %>
 
       <p><%= image_tag(@product.image_url, alt: "Edit Entry",
       class: "img-zoom full-bag-image img-responsive",
         data_zoom_image: @product.image_url) %></p>
       <!-- Only show visits when user is admin -->
       <% if signed_in? && current_user.admin? %>
-<!-- chache key for visit was here -->
+      <!-- chache key for visit was here -->
+       <% cache(cache_key_for_visits) do %>
         <h6>Views:<span class="badge"><%= @product.views %></span></h6>
         <% end %>
-<!-- end for cache key for visits -->
+      <!-- end for cache key for visits -->
+      <% end %>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -89,7 +97,10 @@
       </div>
 <!-- End of cache key for product -->
 
-<!-- CACHE KEY FOR COMMENTS WAS HERE -->
+      <!-- CACHE KEY FOR COMMENTS WAS HERE -->
+      <!-- Caching comments -->
+      <% cache(cache_key_for_comments) do %>
+      <% end %>
 
       <!-- Show comments review rating here -->
       <div class="best-reviews">

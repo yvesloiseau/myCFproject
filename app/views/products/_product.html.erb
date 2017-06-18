@@ -1,6 +1,8 @@
 <!-- *********************************************************************** -->
 <div class="col-md-3 col-xs-6 product-row">
-<!-- CACHE FOR PRODUCT DO WAS HERE -->
+  <!-- CACHE FOR PRODUCT DO WAS HERE -->
+  <% cache product do %>
+
   <h3 class="product-name"><%= product.name %></h3>
      <% logger.debug "Product: #{product.name}"%>
 
@@ -55,6 +57,6 @@
       <% end %>
     </p>
   </div>
-<!-- END FOR PRODUCT CACHE DO WAS HERE -->
-
+  <!-- END FOR PRODUCT CACHE DO WAS HERE -->
+  <% end %>
 </div>
